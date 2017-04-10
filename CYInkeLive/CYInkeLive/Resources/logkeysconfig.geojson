@@ -1,0 +1,416 @@
+[
+    {
+        "key": "00311100",
+        "realtime": 1,
+        "type": "common",
+        "mark": "安装"
+    },
+    {
+        "key": "00314100",
+        "realtime": 1,
+        "type": "common",
+        "mark": "网络监测的心跳"
+    },
+    {
+        "key": "00311200",
+        "realtime": 1,
+        "type": "batch",
+        "mark": "启动"
+    },
+    {
+        "key": "00311300",
+        "realtime": 1,
+        "type": "batch",
+        "mark": "启动闪屏时长"
+    },
+    {
+        "key": "00311400",
+        "realtime": 1,
+        "type": "batch",
+        "mark": "启动热门时长"
+    },
+    {
+        "key": "00313300",
+        "realtime": 1,
+        "type": "batch",
+        "mark": "三方授权"
+    },
+    {
+        "key": "00313400",
+        "realtime": 1,
+        "type": "batch",
+        "mark": "登录状态"
+    },
+    {
+        "key": "00312100",
+        "realtime": 1,
+        "type": "batch",
+        "mark": "进入大厅"
+    },
+    {
+        "key": "00313100",
+        "realtime": 1,
+        "type": "batch",
+        "mark": "进入登录页面"
+    },
+    {
+        "key": "00313200",
+        "realtime": 1,
+        "type": "batch",
+        "mark": "点击登陆按钮"
+    },
+    {
+        "key": "00313500",
+        "realtime": 1,
+        "type": "batch",
+        "mark": "手机号验证状态"
+    },
+    {
+        "key": "10333000",
+        "realtime": 1,
+        "type": "quality",
+        "mark": "直播打开时长"
+    },
+    {
+        "key": "10337000",
+        "realtime": 1,
+        "type": "quality",
+        "mark": "辅麦打开时长"
+    },
+    {
+        "key": "10335000",
+        "realtime": 1,
+        "type": "quality",
+        "mark": "录播打开时长"
+    },
+    {
+        "key": "10331000",
+        "realtime": 1,
+        "type": "quality",
+        "mark": "直播发布状态"
+    },
+    {
+        "key": "10332000",
+        "realtime": 1,
+        "type": "quality",
+        "mark": "直播发布错误状态"
+    },
+    {
+        "key": "10334000",
+        "realtime": 1,
+        "type": "quality",
+        "mark": "看直播的质量"
+    },
+    {
+        "key": "10336000",
+        "realtime": 1,
+        "type": "quality",
+        "mark": "SIO的连接"
+    },
+    {
+        "key": "10331310",
+        "realtime": 1,
+        "type": "quality",
+        "mark": "UA的handshake命令"
+    },
+    {
+        "key": "10331410",
+        "realtime": 1,
+        "type": "quality",
+        "mark": "SA的连接"
+    },
+    {
+        "key": "10338000",
+        "realtime": 1,
+        "type": "quality",
+        "mark": "进房耗时"
+    },
+    {
+        "key": "10331200",
+        "realtime": 1,
+        "type": "quality",
+        "mark": "短视频动效加载质量"
+    },
+    {
+        "key": "10339000",
+        "realtime": 1,
+        "type": "quality",
+        "mark": "短视频上传质量"
+    },
+    {
+        "key": "10331100",
+        "realtime": 1,
+        "type": "quality",
+        "mark": "短视频下载质量"
+    },
+    {
+        "key": "01321100",
+        "realtime": 1,
+        "type": "click_pv",
+        "mark": "点击事件"
+    },
+    {
+        "key": "01321200",
+        "realtime": 1,
+        "type": "click_pv",
+        "mark": "用户行为pageview"
+    },
+    {
+        "key": "01323210",
+        "realtime": 1,
+        "type": "action",
+        "mark": "观看直播间"
+    },
+    {
+        "key": "01323220",
+        "realtime": 1,
+        "type": "action",
+        "mark": "观看录播间"
+    },
+    {
+        "key": "01323230",
+        "realtime": 1,
+        "type": "action",
+        "mark": "退出录播间"
+    },
+    {
+        "key": "01323110",
+        "realtime": 1,
+        "type": "action",
+        "mark": "开始直播"
+    },
+    {
+        "key": "01323120",
+        "realtime": 1,
+        "type": "action",
+        "mark": "退出直播间"
+    },
+    {
+        "key": "01323130",
+        "realtime": 1,
+        "type": "action",
+        "mark": "本次直播获取的映票"
+    },
+    {
+        "key": "01323310",
+        "realtime": 1,
+        "type": "action",
+        "mark": "开始分享"
+    },
+    {
+        "key": "01323320",
+        "realtime": 1,
+        "type": "action",
+        "mark": "分享结束"
+    },
+    {
+        "key": "01322100",
+        "realtime": 0,
+        "type": "action",
+        "mark": "大厅展示"
+    },
+    {
+        "key": "01322200",
+        "realtime": 0,
+        "type": "action",
+        "mark": "离开大厅热门时滑动到最大位置"
+    },
+    {
+        "key": "01322400",
+        "realtime": 0,
+        "type": "action",
+        "mark": "退出房间回大厅的房间露出"
+    },
+    {
+        "key": "01326100",
+        "realtime": 0,
+        "type": "action",
+        "mark": "搜索频道推荐的房间露出"
+    },
+    {
+        "key": "01325100",
+        "realtime": 1,
+        "type": "action",
+        "mark": "私信点击行为"
+    },
+    {
+        "key": "01325200",
+        "realtime": 0,
+        "type": "action",
+        "mark": "私信推送埋点"
+    },
+    {
+        "key": "01325300",
+        "realtime": 0,
+        "type": "action",
+        "mark": "私信拉取埋点"
+    },
+    {
+        "key": "01325510",
+        "realtime": 1,
+        "type": "action",
+        "mark": "查看充值失败的私信"
+    },
+    {
+        "key": "01325400",
+        "realtime": 1,
+        "type": "action",
+        "mark": "带标识的推送埋点"
+    },
+    {
+        "key": "01328100",
+        "realtime": 1,
+        "type": "action",
+        "mark": "打开短视频"
+    },
+    {
+        "key": "01326100",
+        "realtime": 0,
+        "type": "action",
+        "mark": "搜索频道房间露出"
+    },
+    {
+        "key" : "01328200",
+        "realtime": 0,
+        "type": "action",
+        "mark": "关注页面短视频最大滑动位置"
+    },
+    {
+        "key": "01323410",
+        "realtime": 1,
+        "type": "action",
+        "mark": "发起录屏"
+    },
+    {
+        "key": "01323420",
+        "realtime": 1,
+        "type": "action",
+        "mark": "取消录屏"
+    },
+    {
+        "key": "01323430",
+        "realtime": 1,
+        "type": "action",
+        "mark": "完成录制"
+     },
+     {
+         "key": "01323510",
+         "realtime": 1,
+         "type": "action",
+         "mark": "收到免费礼物push"
+     },
+     {
+         "key": "01323440",
+         "realtime": 1,
+         "type": "action",
+         "mark": "下载录屏"
+     },
+     {
+         "key": "10331610",
+         "realtime": 1,
+         "type": "quality",
+         "mark": "直播预览结束事件"
+     },
+     {
+         "key": "10331510",
+         "realtime": 1,
+         "type": "quality",
+         "mark": "主辅路麦切换"
+     },
+     {
+        "key": "01323610",
+        "realtime": 1,
+        "type": "action",
+        "mark": "关注按钮行为统计"
+     },
+     {
+     "key": "01323520",
+     "realtime": 1,
+     "type": "action",
+     "mark": "直播间第一次送礼消息"
+     },
+     {
+     "key": "10331710",
+     "realtime": 1,
+     "type": "quality",
+     "mark": "短视频打开时间"
+    },
+    {
+     "key": "01328300",
+     "realtime": 1,
+     "type": "action",
+     "mark": "退出短视频事件"
+    },
+    {
+     "key": "01328400",
+     "realtime": 1,
+     "type": "action",
+     "mark": "短视频发布成功事件"
+    },
+    {
+     "key": "01323240",
+     "realtime": 1,
+     "type": "action",
+     "mark": "退出直播间事件"
+    },
+ {
+ "key": "01321010",
+ "realtime": 1,
+ "type": "action",
+ "mark": "点击标签事件"
+ },
+ {
+ "key": "01321020",
+ "realtime": 1,
+ "type": "action",
+ "mark": "退出标签事件"
+ },
+ {
+ "key": "01325600",
+ "realtime": 1,
+ "type": "action",
+ "mark": "打开私信对话页面"
+ },
+ {
+ "key": "01325700",
+ "realtime": 1,
+ "type": "action",
+ "mark": "关闭私信对话页面"
+ },
+ {
+ "key": "01322600",
+ "realtime": 1,
+ "type": "action",
+ "mark": "新用户首次进入是否显示地区热门"
+ },
+ {
+ "key": "01325800",
+ "realtime": 1,
+ "type": "action",
+ "mark": "推送是否开启埋点"
+ },
+ {
+ "key": "01322700",
+ "realtime": 0,
+ "type": "action",
+ "mark": "个人主页最大下滑位置"
+ },
+ {
+ "key": "10331520",
+ "realtime": 1,
+ "type": "quality",
+ "mark": "辅播下麦"
+ },
+ {
+ "key": "10331530",
+ "realtime": 1,
+ "type": "quality",
+ "mark": "连麦时长"
+ },
+ {
+ "key": "01323710",
+ "realtime": 1,
+ "type": "action",
+ "mark": "直播间弹窗"
+ }
+]

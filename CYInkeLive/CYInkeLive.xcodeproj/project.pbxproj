@@ -9,13 +9,133 @@
 /* Begin PBXBuildFile section */
 		AF2C5CD3D1D5C427ED84186A /* libPods-CYInkeLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18AC734A7F524BABF08C161A /* libPods-CYInkeLive.a */; };
 		E74A3E781E9B5334000339F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3E771E9B5334000339F5 /* main.m */; };
-		E74A3E7B1E9B5334000339F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3E7A1E9B5334000339F5 /* AppDelegate.m */; };
-		E74A3E7E1E9B5334000339F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3E7D1E9B5334000339F5 /* ViewController.m */; };
-		E74A3E811E9B5334000339F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E74A3E7F1E9B5334000339F5 /* Main.storyboard */; };
 		E74A3E831E9B5334000339F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E74A3E821E9B5334000339F5 /* Assets.xcassets */; };
 		E74A3E861E9B5334000339F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E74A3E841E9B5334000339F5 /* LaunchScreen.storyboard */; };
 		E74A3E911E9B5334000339F5 /* CYInkeLiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3E901E9B5334000339F5 /* CYInkeLiveTests.m */; };
 		E74A3E9C1E9B5334000339F5 /* CYInkeLiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3E9B1E9B5334000339F5 /* CYInkeLiveUITests.m */; };
+		E74A3ECB1E9B7CC3000339F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3EC51E9B7CC3000339F5 /* AppDelegate.m */; };
+		E74A3ECF1E9B7D49000339F5 /* CYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3ECE1E9B7D49000339F5 /* CYTabBar.m */; };
+		E74A3ED21E9B7D79000339F5 /* CYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3ED11E9B7D79000339F5 /* CYBaseViewController.m */; };
+		E74A3ED51E9B7D94000339F5 /* CYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3ED41E9B7D94000339F5 /* CYTabBarController.m */; };
+		E74A3EDB1E9B819F000339F5 /* area_code_en.txt in Resources */ = {isa = PBXBuildFile; fileRef = E74A3ED91E9B819F000339F5 /* area_code_en.txt */; };
+		E74A3EDC1E9B819F000339F5 /* area_code_zh.txt in Resources */ = {isa = PBXBuildFile; fileRef = E74A3EDA1E9B819F000339F5 /* area_code_zh.txt */; };
+		E74A3F1B1E9B81F8000339F5 /* alivephoto.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F121E9B81F8000339F5 /* alivephoto.fs */; };
+		E74A3F1C1E9B81F8000339F5 /* alivephoto.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F131E9B81F8000339F5 /* alivephoto.vs */; };
+		E74A3F1D1E9B81F8000339F5 /* angle-mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F141E9B81F8000339F5 /* angle-mask@2x.png */; };
+		E74A3F1E1E9B81F8000339F5 /* animateFrame.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F151E9B81F8000339F5 /* animateFrame.fs */; };
+		E74A3F1F1E9B81F8000339F5 /* animateFrame.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F161E9B81F8000339F5 /* animateFrame.vs */; };
+		E74A3F201E9B81F8000339F5 /* animateMask.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F171E9B81F8000339F5 /* animateMask.fs */; };
+		E74A3F211E9B81F8000339F5 /* animateMask.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F181E9B81F8000339F5 /* animateMask.vs */; };
+		E74A3F221E9B81F8000339F5 /* animateSpine.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F191E9B81F8000339F5 /* animateSpine.fs */; };
+		E74A3F231E9B81F8000339F5 /* animateSpine.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F1A1E9B81F8000339F5 /* animateSpine.vs */; };
+		E74A3F251E9B821A000339F5 /* baozoumanhua.zip in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F241E9B821A000339F5 /* baozoumanhua.zip */; };
+		E74A3F2A1E9B8283000339F5 /* bgra.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F261E9B8283000339F5 /* bgra.fs */; };
+		E74A3F2B1E9B8283000339F5 /* blend.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F271E9B8283000339F5 /* blend.fs */; };
+		E74A3F2C1E9B8283000339F5 /* blend2d.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F281E9B8283000339F5 /* blend2d.vs */; };
+		E74A3F2D1E9B8283000339F5 /* blend3d.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F291E9B8283000339F5 /* blend3d.vs */; };
+		E74A3F311E9B82D5000339F5 /* coverMask.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F2F1E9B82D5000339F5 /* coverMask.fs */; };
+		E74A3F321E9B82D5000339F5 /* coverMask.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F301E9B82D5000339F5 /* coverMask.vs */; };
+		E74A3F351E9B82F1000339F5 /* debugFacePt.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F331E9B82F1000339F5 /* debugFacePt.fs */; };
+		E74A3F361E9B82F1000339F5 /* debugFacePt.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F341E9B82F1000339F5 /* debugFacePt.vs */; };
+		E74A3F3A1E9B8302000339F5 /* DebugAppconfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F371E9B8302000339F5 /* DebugAppconfig.plist */; };
+		E74A3F3B1E9B8302000339F5 /* DebugPresetIpList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F381E9B8302000339F5 /* DebugPresetIpList.plist */; };
+		E74A3F3C1E9B8302000339F5 /* DebugPresetServiceinfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F391E9B8302000339F5 /* DebugPresetServiceinfo.plist */; };
+		E74A3F3E1E9B831D000339F5 /* DefaultTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F3D1E9B831D000339F5 /* DefaultTheme.plist */; };
+		E74A3F471E9B8337000339F5 /* drawface.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F3F1E9B8337000339F5 /* drawface.fs */; };
+		E74A3F481E9B8337000339F5 /* drawface.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F401E9B8337000339F5 /* drawface.vs */; };
+		E74A3F491E9B8337000339F5 /* drawfaceAnimate.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F411E9B8337000339F5 /* drawfaceAnimate.fs */; };
+		E74A3F4A1E9B8337000339F5 /* drawfaceBlend.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F421E9B8337000339F5 /* drawfaceBlend.fs */; };
+		E74A3F4B1E9B8337000339F5 /* drawfaceBlend.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F431E9B8337000339F5 /* drawfaceBlend.vs */; };
+		E74A3F4C1E9B8337000339F5 /* EffectIcon.zip in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F441E9B8337000339F5 /* EffectIcon.zip */; };
+		E74A3F4D1E9B8337000339F5 /* EffectUnzip.zip in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F451E9B8337000339F5 /* EffectUnzip.zip */; };
+		E74A3F4E1E9B8337000339F5 /* EmojisList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F461E9B8337000339F5 /* EmojisList.plist */; };
+		E74A3F6D1E9B8351000339F5 /* filter.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F4F1E9B8351000339F5 /* filter.vs */; };
+		E74A3F6E1E9B8351000339F5 /* filterBilateralBlur.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F501E9B8351000339F5 /* filterBilateralBlur.fs */; };
+		E74A3F6F1E9B8351000339F5 /* filterBilateralBlur2.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F511E9B8351000339F5 /* filterBilateralBlur2.fs */; };
+		E74A3F701E9B8351000339F5 /* filterBilateralBlurLei.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F521E9B8351000339F5 /* filterBilateralBlurLei.fs */; };
+		E74A3F711E9B8351000339F5 /* filterBilateralBlurLei.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F531E9B8351000339F5 /* filterBilateralBlurLei.vs */; };
+		E74A3F721E9B8351000339F5 /* filterBrightness.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F541E9B8351000339F5 /* filterBrightness.fs */; };
+		E74A3F731E9B8351000339F5 /* filterColorBalance.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F551E9B8351000339F5 /* filterColorBalance.fs */; };
+		E74A3F741E9B8351000339F5 /* filterColorLevel.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F561E9B8351000339F5 /* filterColorLevel.fs */; };
+		E74A3F751E9B8351000339F5 /* filterContrast.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F571E9B8351000339F5 /* filterContrast.fs */; };
+		E74A3F761E9B8351000339F5 /* filterCurveAdjust.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F581E9B8351000339F5 /* filterCurveAdjust.fs */; };
+		E74A3F771E9B8351000339F5 /* filterCurveAdjustRGB.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F591E9B8351000339F5 /* filterCurveAdjustRGB.fs */; };
+		E74A3F781E9B8351000339F5 /* filterCurveAdjustTex.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F5A1E9B8351000339F5 /* filterCurveAdjustTex.fs */; };
+		E74A3F791E9B8351000339F5 /* filterEmboss.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F5B1E9B8351000339F5 /* filterEmboss.fs */; };
+		E74A3F7A1E9B8351000339F5 /* filterEnlarge2Eye.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F5C1E9B8351000339F5 /* filterEnlarge2Eye.fs */; };
+		E74A3F7B1E9B8351000339F5 /* filterEnlargeEllipse.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F5D1E9B8351000339F5 /* filterEnlargeEllipse.fs */; };
+		E74A3F7C1E9B8351000339F5 /* filterEnlargeEye.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F5E1E9B8351000339F5 /* filterEnlargeEye.fs */; };
+		E74A3F7D1E9B8351000339F5 /* filterHaze.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F5F1E9B8351000339F5 /* filterHaze.fs */; };
+		E74A3F7E1E9B8351000339F5 /* filterHue.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F601E9B8351000339F5 /* filterHue.fs */; };
+		E74A3F7F1E9B8351000339F5 /* filterMonochrome.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F611E9B8351000339F5 /* filterMonochrome.fs */; };
+		E74A3F801E9B8351000339F5 /* filterPencilDrawing.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F621E9B8351000339F5 /* filterPencilDrawing.fs */; };
+		E74A3F811E9B8351000339F5 /* filterPencilDrawing.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F631E9B8351000339F5 /* filterPencilDrawing.vs */; };
+		E74A3F821E9B8351000339F5 /* filterSaturation.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F641E9B8351000339F5 /* filterSaturation.fs */; };
+		E74A3F831E9B8351000339F5 /* filterSaturationFast.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F651E9B8351000339F5 /* filterSaturationFast.fs */; };
+		E74A3F841E9B8351000339F5 /* filterSaturationHSV.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F661E9B8351000339F5 /* filterSaturationHSV.fs */; };
+		E74A3F851E9B8351000339F5 /* filterSharpen.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F671E9B8351000339F5 /* filterSharpen.fs */; };
+		E74A3F861E9B8351000339F5 /* filterSharpen.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F681E9B8351000339F5 /* filterSharpen.vs */; };
+		E74A3F871E9B8351000339F5 /* filterSketch.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F691E9B8351000339F5 /* filterSketch.fs */; };
+		E74A3F881E9B8351000339F5 /* filterSketch.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F6A1E9B8351000339F5 /* filterSketch.vs */; };
+		E74A3F891E9B8351000339F5 /* filterWhiteBalance.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F6B1E9B8351000339F5 /* filterWhiteBalance.fs */; };
+		E74A3F8A1E9B8351000339F5 /* filterWhiteBalanceOp.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F6C1E9B8351000339F5 /* filterWhiteBalanceOp.fs */; };
+		E74A3F8C1E9B835D000339F5 /* fmColorBalance.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F8B1E9B835D000339F5 /* fmColorBalance.fs */; };
+		E74A3F911E9B837A000339F5 /* geometry.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F8D1E9B837A000339F5 /* geometry.fs */; };
+		E74A3F921E9B837A000339F5 /* geometry.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F8E1E9B837A000339F5 /* geometry.vs */; };
+		E74A3F931E9B837A000339F5 /* geometry3d.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F8F1E9B837A000339F5 /* geometry3d.fs */; };
+		E74A3F941E9B837A000339F5 /* geometry3d.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F901E9B837A000339F5 /* geometry3d.vs */; };
+		E74A3F961E9B83F9000339F5 /* inke_gift_resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F951E9B83F9000339F5 /* inke_gift_resource.bundle */; };
+		E74A3F981E9B840D000339F5 /* inke_VC.plist in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F971E9B840D000339F5 /* inke_VC.plist */; };
+		E74A3F9C1E9B8498000339F5 /* logkeysconfig.geojson in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F9B1E9B8498000339F5 /* logkeysconfig.geojson */; };
+		E74A3F9E1E9B84A1000339F5 /* LogOfficialUid.plist in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F9D1E9B84A1000339F5 /* LogOfficialUid.plist */; };
+		E74A3FAB1E9B84F9000339F5 /* normal.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F9F1E9B84F9000339F5 /* normal.fs */; };
+		E74A3FAC1E9B84F9000339F5 /* normal2d.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FA01E9B84F9000339F5 /* normal2d.vs */; };
+		E74A3FAD1E9B84F9000339F5 /* normal3d.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FA11E9B84F9000339F5 /* normal3d.fs */; };
+		E74A3FAE1E9B84F9000339F5 /* normal3d.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FA21E9B84F9000339F5 /* normal3d.vs */; };
+		E74A3FAF1E9B84F9000339F5 /* normal3dPLight.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FA31E9B84F9000339F5 /* normal3dPLight.fs */; };
+		E74A3FB01E9B84F9000339F5 /* normal3dPLight.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FA41E9B84F9000339F5 /* normal3dPLight.vs */; };
+		E74A3FB11E9B84F9000339F5 /* normal3dVLight.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FA51E9B84F9000339F5 /* normal3dVLight.fs */; };
+		E74A3FB21E9B84F9000339F5 /* normal3dVLight.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FA61E9B84F9000339F5 /* normal3dVLight.vs */; };
+		E74A3FB31E9B84F9000339F5 /* NormalV2CT1.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FA71E9B84F9000339F5 /* NormalV2CT1.fs */; };
+		E74A3FB41E9B84F9000339F5 /* NormalV2CT1.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FA81E9B84F9000339F5 /* NormalV2CT1.vs */; };
+		E74A3FB51E9B84F9000339F5 /* NormalV3A.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FA91E9B84F9000339F5 /* NormalV3A.fs */; };
+		E74A3FB61E9B84F9000339F5 /* NormalV3A.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FAA1E9B84F9000339F5 /* NormalV3A.vs */; };
+		E74A3FB81E9B8517000339F5 /* NTalkerUIKitResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FB71E9B8517000339F5 /* NTalkerUIKitResource.bundle */; };
+		E74A3FBB1E9B8523000339F5 /* pencildraw_td.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FB91E9B8523000339F5 /* pencildraw_td.fs */; };
+		E74A3FBC1E9B8523000339F5 /* pencildraw_td.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FBA1E9B8523000339F5 /* pencildraw_td.vs */; };
+		E74A3FBE1E9B8564000339F5 /* province_city.plist in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FBD1E9B8564000339F5 /* province_city.plist */; };
+		E74A3FC01E9B858B000339F5 /* resource.zip in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FBF1E9B858B000339F5 /* resource.zip */; };
+		E74A3FC51E9B8597000339F5 /* rgb2yuv.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FC11E9B8597000339F5 /* rgb2yuv.vs */; };
+		E74A3FC61E9B8597000339F5 /* rgb2yuvnv12.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FC21E9B8597000339F5 /* rgb2yuvnv12.fs */; };
+		E74A3FC71E9B8597000339F5 /* rgb2yuvnv21.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FC31E9B8597000339F5 /* rgb2yuvnv21.fs */; };
+		E74A3FC81E9B8597000339F5 /* rgba.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FC41E9B8597000339F5 /* rgba.fs */; };
+		E74A3FCC1E9B85CC000339F5 /* RoomGuideVertical.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FC91E9B85CC000339F5 /* RoomGuideVertical.bundle */; };
+		E74A3FCD1E9B85CC000339F5 /* screennor.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FCA1E9B85CC000339F5 /* screennor.fs */; };
+		E74A3FCE1E9B85CC000339F5 /* screennor.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FCB1E9B85CC000339F5 /* screennor.vs */; };
+		E74A3FD01E9B85E3000339F5 /* shadercfg.json in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FCF1E9B85E3000339F5 /* shadercfg.json */; };
+		E74A3FD31E9B860C000339F5 /* SkinAnimate3d.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FD11E9B860C000339F5 /* SkinAnimate3d.fs */; };
+		E74A3FD41E9B860C000339F5 /* SkinAnimate3d.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FD21E9B860C000339F5 /* SkinAnimate3d.vs */; };
+		E74A3FD71E9B8613000339F5 /* spineMask.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FD51E9B8613000339F5 /* spineMask.fs */; };
+		E74A3FD81E9B8613000339F5 /* spineMask.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FD61E9B8613000339F5 /* spineMask.vs */; };
+		E74A3FDA1E9B8628000339F5 /* tag_resource.zip in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FD91E9B8628000339F5 /* tag_resource.zip */; };
+		E74A3FDD1E9B862E000339F5 /* texHead.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FDB1E9B862E000339F5 /* texHead.fs */; };
+		E74A3FDE1E9B862E000339F5 /* texHead.vs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FDC1E9B862E000339F5 /* texHead.vs */; };
+		E74A3FE21E9B8682000339F5 /* yuv2rgb.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FDF1E9B8682000339F5 /* yuv2rgb.fs */; };
+		E74A3FE31E9B8682000339F5 /* yuv2rgb12.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FE01E9B8682000339F5 /* yuv2rgb12.fs */; };
+		E74A3FE41E9B8682000339F5 /* yuv2rgb21.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FE11E9B8682000339F5 /* yuv2rgb21.fs */; };
+		E74A3FE61E9B86BC000339F5 /* ZMCert.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E74A3FE51E9B86BC000339F5 /* ZMCert.bundle */; };
+		E74A3FEA1E9B8C24000339F5 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FE91E9B8C24000339F5 /* IJKMediaFramework.framework */; };
+		E74A3FEC1E9B8C39000339F5 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FEB1E9B8C39000339F5 /* VideoToolbox.framework */; };
+		E74A3FEE1E9B8C42000339F5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FED1E9B8C42000339F5 /* OpenGLES.framework */; };
+		E74A3FF01E9B8C49000339F5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FEF1E9B8C49000339F5 /* MobileCoreServices.framework */; };
+		E74A3FF21E9B8C52000339F5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FF11E9B8C52000339F5 /* libz.tbd */; };
+		E74A3FF41E9B8C5C000339F5 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FF31E9B8C5C000339F5 /* libbz2.tbd */; };
+		E74A3FF61E9B8C62000339F5 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FF51E9B8C62000339F5 /* MediaPlayer.framework */; };
+		E74A3FF81E9B8C6A000339F5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FF71E9B8C6A000339F5 /* AudioToolbox.framework */; };
+		E74A3FFA1E9B8C70000339F5 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FF91E9B8C70000339F5 /* CoreVideo.framework */; };
+		E74A3FFC1E9B8C78000339F5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FFB1E9B8C78000339F5 /* CoreMedia.framework */; };
+		E74A3FFE1E9B8C83000339F5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FFD1E9B8C83000339F5 /* AVFoundation.framework */; };
+		E74A40001E9B8C8B000339F5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FFF1E9B8C8B000339F5 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +161,6 @@
 		751CB255170AA015BCF9D6B9 /* Pods-CYInkeLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYInkeLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CYInkeLive/Pods-CYInkeLive.debug.xcconfig"; sourceTree = "<group>"; };
 		E74A3E731E9B5334000339F5 /* CYInkeLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYInkeLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74A3E771E9B5334000339F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E74A3E791E9B5334000339F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E74A3E7A1E9B5334000339F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E74A3E7C1E9B5334000339F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E74A3E7D1E9B5334000339F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E74A3E801E9B5334000339F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E74A3E821E9B5334000339F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E74A3E851E9B5334000339F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E74A3E871E9B5334000339F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +170,134 @@
 		E74A3E971E9B5334000339F5 /* CYInkeLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CYInkeLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74A3E9B1E9B5334000339F5 /* CYInkeLiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYInkeLiveUITests.m; sourceTree = "<group>"; };
 		E74A3E9D1E9B5334000339F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E74A3EC41E9B7CC3000339F5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E74A3EC51E9B7CC3000339F5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E74A3ECD1E9B7D49000339F5 /* CYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTabBar.h; sourceTree = "<group>"; };
+		E74A3ECE1E9B7D49000339F5 /* CYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTabBar.m; sourceTree = "<group>"; };
+		E74A3ED01E9B7D79000339F5 /* CYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYBaseViewController.h; sourceTree = "<group>"; };
+		E74A3ED11E9B7D79000339F5 /* CYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYBaseViewController.m; sourceTree = "<group>"; };
+		E74A3ED31E9B7D94000339F5 /* CYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTabBarController.h; sourceTree = "<group>"; };
+		E74A3ED41E9B7D94000339F5 /* CYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTabBarController.m; sourceTree = "<group>"; };
+		E74A3ED91E9B819F000339F5 /* area_code_en.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = area_code_en.txt; sourceTree = "<group>"; };
+		E74A3EDA1E9B819F000339F5 /* area_code_zh.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = area_code_zh.txt; sourceTree = "<group>"; };
+		E74A3F121E9B81F8000339F5 /* alivephoto.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = alivephoto.fs; sourceTree = "<group>"; };
+		E74A3F131E9B81F8000339F5 /* alivephoto.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = alivephoto.vs; sourceTree = "<group>"; };
+		E74A3F141E9B81F8000339F5 /* angle-mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle-mask@2x.png"; sourceTree = "<group>"; };
+		E74A3F151E9B81F8000339F5 /* animateFrame.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = animateFrame.fs; sourceTree = "<group>"; };
+		E74A3F161E9B81F8000339F5 /* animateFrame.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = animateFrame.vs; sourceTree = "<group>"; };
+		E74A3F171E9B81F8000339F5 /* animateMask.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = animateMask.fs; sourceTree = "<group>"; };
+		E74A3F181E9B81F8000339F5 /* animateMask.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = animateMask.vs; sourceTree = "<group>"; };
+		E74A3F191E9B81F8000339F5 /* animateSpine.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = animateSpine.fs; sourceTree = "<group>"; };
+		E74A3F1A1E9B81F8000339F5 /* animateSpine.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = animateSpine.vs; sourceTree = "<group>"; };
+		E74A3F241E9B821A000339F5 /* baozoumanhua.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = baozoumanhua.zip; sourceTree = "<group>"; };
+		E74A3F261E9B8283000339F5 /* bgra.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = bgra.fs; sourceTree = "<group>"; };
+		E74A3F271E9B8283000339F5 /* blend.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = blend.fs; sourceTree = "<group>"; };
+		E74A3F281E9B8283000339F5 /* blend2d.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = blend2d.vs; sourceTree = "<group>"; };
+		E74A3F291E9B8283000339F5 /* blend3d.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = blend3d.vs; sourceTree = "<group>"; };
+		E74A3F2E1E9B82AB000339F5 /* Candara.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Candara.ttf; sourceTree = "<group>"; };
+		E74A3F2F1E9B82D5000339F5 /* coverMask.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = coverMask.fs; sourceTree = "<group>"; };
+		E74A3F301E9B82D5000339F5 /* coverMask.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = coverMask.vs; sourceTree = "<group>"; };
+		E74A3F331E9B82F1000339F5 /* debugFacePt.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = debugFacePt.fs; sourceTree = "<group>"; };
+		E74A3F341E9B82F1000339F5 /* debugFacePt.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = debugFacePt.vs; sourceTree = "<group>"; };
+		E74A3F371E9B8302000339F5 /* DebugAppconfig.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = DebugAppconfig.plist; sourceTree = "<group>"; };
+		E74A3F381E9B8302000339F5 /* DebugPresetIpList.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = DebugPresetIpList.plist; sourceTree = "<group>"; };
+		E74A3F391E9B8302000339F5 /* DebugPresetServiceinfo.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = DebugPresetServiceinfo.plist; sourceTree = "<group>"; };
+		E74A3F3D1E9B831D000339F5 /* DefaultTheme.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = DefaultTheme.plist; sourceTree = "<group>"; };
+		E74A3F3F1E9B8337000339F5 /* drawface.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = drawface.fs; sourceTree = "<group>"; };
+		E74A3F401E9B8337000339F5 /* drawface.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = drawface.vs; sourceTree = "<group>"; };
+		E74A3F411E9B8337000339F5 /* drawfaceAnimate.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = drawfaceAnimate.fs; sourceTree = "<group>"; };
+		E74A3F421E9B8337000339F5 /* drawfaceBlend.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = drawfaceBlend.fs; sourceTree = "<group>"; };
+		E74A3F431E9B8337000339F5 /* drawfaceBlend.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = drawfaceBlend.vs; sourceTree = "<group>"; };
+		E74A3F441E9B8337000339F5 /* EffectIcon.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = EffectIcon.zip; sourceTree = "<group>"; };
+		E74A3F451E9B8337000339F5 /* EffectUnzip.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = EffectUnzip.zip; sourceTree = "<group>"; };
+		E74A3F461E9B8337000339F5 /* EmojisList.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = EmojisList.plist; sourceTree = "<group>"; };
+		E74A3F4F1E9B8351000339F5 /* filter.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filter.vs; sourceTree = "<group>"; };
+		E74A3F501E9B8351000339F5 /* filterBilateralBlur.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterBilateralBlur.fs; sourceTree = "<group>"; };
+		E74A3F511E9B8351000339F5 /* filterBilateralBlur2.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterBilateralBlur2.fs; sourceTree = "<group>"; };
+		E74A3F521E9B8351000339F5 /* filterBilateralBlurLei.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterBilateralBlurLei.fs; sourceTree = "<group>"; };
+		E74A3F531E9B8351000339F5 /* filterBilateralBlurLei.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterBilateralBlurLei.vs; sourceTree = "<group>"; };
+		E74A3F541E9B8351000339F5 /* filterBrightness.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterBrightness.fs; sourceTree = "<group>"; };
+		E74A3F551E9B8351000339F5 /* filterColorBalance.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterColorBalance.fs; sourceTree = "<group>"; };
+		E74A3F561E9B8351000339F5 /* filterColorLevel.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterColorLevel.fs; sourceTree = "<group>"; };
+		E74A3F571E9B8351000339F5 /* filterContrast.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterContrast.fs; sourceTree = "<group>"; };
+		E74A3F581E9B8351000339F5 /* filterCurveAdjust.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterCurveAdjust.fs; sourceTree = "<group>"; };
+		E74A3F591E9B8351000339F5 /* filterCurveAdjustRGB.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterCurveAdjustRGB.fs; sourceTree = "<group>"; };
+		E74A3F5A1E9B8351000339F5 /* filterCurveAdjustTex.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterCurveAdjustTex.fs; sourceTree = "<group>"; };
+		E74A3F5B1E9B8351000339F5 /* filterEmboss.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterEmboss.fs; sourceTree = "<group>"; };
+		E74A3F5C1E9B8351000339F5 /* filterEnlarge2Eye.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterEnlarge2Eye.fs; sourceTree = "<group>"; };
+		E74A3F5D1E9B8351000339F5 /* filterEnlargeEllipse.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterEnlargeEllipse.fs; sourceTree = "<group>"; };
+		E74A3F5E1E9B8351000339F5 /* filterEnlargeEye.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterEnlargeEye.fs; sourceTree = "<group>"; };
+		E74A3F5F1E9B8351000339F5 /* filterHaze.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterHaze.fs; sourceTree = "<group>"; };
+		E74A3F601E9B8351000339F5 /* filterHue.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterHue.fs; sourceTree = "<group>"; };
+		E74A3F611E9B8351000339F5 /* filterMonochrome.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterMonochrome.fs; sourceTree = "<group>"; };
+		E74A3F621E9B8351000339F5 /* filterPencilDrawing.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterPencilDrawing.fs; sourceTree = "<group>"; };
+		E74A3F631E9B8351000339F5 /* filterPencilDrawing.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterPencilDrawing.vs; sourceTree = "<group>"; };
+		E74A3F641E9B8351000339F5 /* filterSaturation.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterSaturation.fs; sourceTree = "<group>"; };
+		E74A3F651E9B8351000339F5 /* filterSaturationFast.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterSaturationFast.fs; sourceTree = "<group>"; };
+		E74A3F661E9B8351000339F5 /* filterSaturationHSV.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterSaturationHSV.fs; sourceTree = "<group>"; };
+		E74A3F671E9B8351000339F5 /* filterSharpen.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterSharpen.fs; sourceTree = "<group>"; };
+		E74A3F681E9B8351000339F5 /* filterSharpen.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterSharpen.vs; sourceTree = "<group>"; };
+		E74A3F691E9B8351000339F5 /* filterSketch.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterSketch.fs; sourceTree = "<group>"; };
+		E74A3F6A1E9B8351000339F5 /* filterSketch.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterSketch.vs; sourceTree = "<group>"; };
+		E74A3F6B1E9B8351000339F5 /* filterWhiteBalance.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterWhiteBalance.fs; sourceTree = "<group>"; };
+		E74A3F6C1E9B8351000339F5 /* filterWhiteBalanceOp.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = filterWhiteBalanceOp.fs; sourceTree = "<group>"; };
+		E74A3F8B1E9B835D000339F5 /* fmColorBalance.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fmColorBalance.fs; sourceTree = "<group>"; };
+		E74A3F8D1E9B837A000339F5 /* geometry.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = geometry.fs; sourceTree = "<group>"; };
+		E74A3F8E1E9B837A000339F5 /* geometry.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = geometry.vs; sourceTree = "<group>"; };
+		E74A3F8F1E9B837A000339F5 /* geometry3d.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = geometry3d.fs; sourceTree = "<group>"; };
+		E74A3F901E9B837A000339F5 /* geometry3d.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = geometry3d.vs; sourceTree = "<group>"; };
+		E74A3F951E9B83F9000339F5 /* inke_gift_resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = inke_gift_resource.bundle; sourceTree = "<group>"; };
+		E74A3F971E9B840D000339F5 /* inke_VC.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = inke_VC.plist; sourceTree = "<group>"; };
+		E74A3F9B1E9B8498000339F5 /* logkeysconfig.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = logkeysconfig.geojson; sourceTree = "<group>"; };
+		E74A3F9D1E9B84A1000339F5 /* LogOfficialUid.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = LogOfficialUid.plist; sourceTree = "<group>"; };
+		E74A3F9F1E9B84F9000339F5 /* normal.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = normal.fs; sourceTree = "<group>"; };
+		E74A3FA01E9B84F9000339F5 /* normal2d.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = normal2d.vs; sourceTree = "<group>"; };
+		E74A3FA11E9B84F9000339F5 /* normal3d.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = normal3d.fs; sourceTree = "<group>"; };
+		E74A3FA21E9B84F9000339F5 /* normal3d.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = normal3d.vs; sourceTree = "<group>"; };
+		E74A3FA31E9B84F9000339F5 /* normal3dPLight.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = normal3dPLight.fs; sourceTree = "<group>"; };
+		E74A3FA41E9B84F9000339F5 /* normal3dPLight.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = normal3dPLight.vs; sourceTree = "<group>"; };
+		E74A3FA51E9B84F9000339F5 /* normal3dVLight.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = normal3dVLight.fs; sourceTree = "<group>"; };
+		E74A3FA61E9B84F9000339F5 /* normal3dVLight.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = normal3dVLight.vs; sourceTree = "<group>"; };
+		E74A3FA71E9B84F9000339F5 /* NormalV2CT1.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = NormalV2CT1.fs; sourceTree = "<group>"; };
+		E74A3FA81E9B84F9000339F5 /* NormalV2CT1.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = NormalV2CT1.vs; sourceTree = "<group>"; };
+		E74A3FA91E9B84F9000339F5 /* NormalV3A.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = NormalV3A.fs; sourceTree = "<group>"; };
+		E74A3FAA1E9B84F9000339F5 /* NormalV3A.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = NormalV3A.vs; sourceTree = "<group>"; };
+		E74A3FB71E9B8517000339F5 /* NTalkerUIKitResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NTalkerUIKitResource.bundle; sourceTree = "<group>"; };
+		E74A3FB91E9B8523000339F5 /* pencildraw_td.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = pencildraw_td.fs; sourceTree = "<group>"; };
+		E74A3FBA1E9B8523000339F5 /* pencildraw_td.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = pencildraw_td.vs; sourceTree = "<group>"; };
+		E74A3FBD1E9B8564000339F5 /* province_city.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = province_city.plist; sourceTree = "<group>"; };
+		E74A3FBF1E9B858B000339F5 /* resource.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = resource.zip; sourceTree = "<group>"; };
+		E74A3FC11E9B8597000339F5 /* rgb2yuv.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = rgb2yuv.vs; sourceTree = "<group>"; };
+		E74A3FC21E9B8597000339F5 /* rgb2yuvnv12.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = rgb2yuvnv12.fs; sourceTree = "<group>"; };
+		E74A3FC31E9B8597000339F5 /* rgb2yuvnv21.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = rgb2yuvnv21.fs; sourceTree = "<group>"; };
+		E74A3FC41E9B8597000339F5 /* rgba.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = rgba.fs; sourceTree = "<group>"; };
+		E74A3FC91E9B85CC000339F5 /* RoomGuideVertical.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RoomGuideVertical.bundle; sourceTree = "<group>"; };
+		E74A3FCA1E9B85CC000339F5 /* screennor.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = screennor.fs; sourceTree = "<group>"; };
+		E74A3FCB1E9B85CC000339F5 /* screennor.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = screennor.vs; sourceTree = "<group>"; };
+		E74A3FCF1E9B85E3000339F5 /* shadercfg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shadercfg.json; sourceTree = "<group>"; };
+		E74A3FD11E9B860C000339F5 /* SkinAnimate3d.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SkinAnimate3d.fs; sourceTree = "<group>"; };
+		E74A3FD21E9B860C000339F5 /* SkinAnimate3d.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SkinAnimate3d.vs; sourceTree = "<group>"; };
+		E74A3FD51E9B8613000339F5 /* spineMask.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = spineMask.fs; sourceTree = "<group>"; };
+		E74A3FD61E9B8613000339F5 /* spineMask.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = spineMask.vs; sourceTree = "<group>"; };
+		E74A3FD91E9B8628000339F5 /* tag_resource.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = tag_resource.zip; sourceTree = "<group>"; };
+		E74A3FDB1E9B862E000339F5 /* texHead.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = texHead.fs; sourceTree = "<group>"; };
+		E74A3FDC1E9B862E000339F5 /* texHead.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = texHead.vs; sourceTree = "<group>"; };
+		E74A3FDF1E9B8682000339F5 /* yuv2rgb.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = yuv2rgb.fs; sourceTree = "<group>"; };
+		E74A3FE01E9B8682000339F5 /* yuv2rgb12.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = yuv2rgb12.fs; sourceTree = "<group>"; };
+		E74A3FE11E9B8682000339F5 /* yuv2rgb21.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = yuv2rgb21.fs; sourceTree = "<group>"; };
+		E74A3FE51E9B86BC000339F5 /* ZMCert.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZMCert.bundle; sourceTree = "<group>"; };
+		E74A3FE91E9B8C24000339F5 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		E74A3FEB1E9B8C39000339F5 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		E74A3FED1E9B8C42000339F5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		E74A3FEF1E9B8C49000339F5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E74A3FF11E9B8C52000339F5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		E74A3FF31E9B8C5C000339F5 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		E74A3FF51E9B8C62000339F5 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E74A3FF71E9B8C6A000339F5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E74A3FF91E9B8C70000339F5 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		E74A3FFB1E9B8C78000339F5 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		E74A3FFD1E9B8C83000339F5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E74A3FFF1E9B8C8B000339F5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +305,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E74A40001E9B8C8B000339F5 /* libsqlite3.tbd in Frameworks */,
+				E74A3FFE1E9B8C83000339F5 /* AVFoundation.framework in Frameworks */,
+				E74A3FFC1E9B8C78000339F5 /* CoreMedia.framework in Frameworks */,
+				E74A3FFA1E9B8C70000339F5 /* CoreVideo.framework in Frameworks */,
+				E74A3FF81E9B8C6A000339F5 /* AudioToolbox.framework in Frameworks */,
+				E74A3FF61E9B8C62000339F5 /* MediaPlayer.framework in Frameworks */,
+				E74A3FF41E9B8C5C000339F5 /* libbz2.tbd in Frameworks */,
+				E74A3FF21E9B8C52000339F5 /* libz.tbd in Frameworks */,
+				E74A3FF01E9B8C49000339F5 /* MobileCoreServices.framework in Frameworks */,
+				E74A3FEE1E9B8C42000339F5 /* OpenGLES.framework in Frameworks */,
+				E74A3FEC1E9B8C39000339F5 /* VideoToolbox.framework in Frameworks */,
 				AF2C5CD3D1D5C427ED84186A /* libPods-CYInkeLive.a in Frameworks */,
+				E74A3FEA1E9B8C24000339F5 /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +350,17 @@
 		D4920E2FE170D7D9346722D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E74A3FFF1E9B8C8B000339F5 /* libsqlite3.tbd */,
+				E74A3FFD1E9B8C83000339F5 /* AVFoundation.framework */,
+				E74A3FFB1E9B8C78000339F5 /* CoreMedia.framework */,
+				E74A3FF91E9B8C70000339F5 /* CoreVideo.framework */,
+				E74A3FF71E9B8C6A000339F5 /* AudioToolbox.framework */,
+				E74A3FF51E9B8C62000339F5 /* MediaPlayer.framework */,
+				E74A3FF31E9B8C5C000339F5 /* libbz2.tbd */,
+				E74A3FF11E9B8C52000339F5 /* libz.tbd */,
+				E74A3FEF1E9B8C49000339F5 /* MobileCoreServices.framework */,
+				E74A3FED1E9B8C42000339F5 /* OpenGLES.framework */,
+				E74A3FEB1E9B8C39000339F5 /* VideoToolbox.framework */,
 				18AC734A7F524BABF08C161A /* libPods-CYInkeLive.a */,
 			);
 			name = Frameworks;
@@ -125,14 +391,8 @@
 		E74A3E751E9B5334000339F5 /* CYInkeLive */ = {
 			isa = PBXGroup;
 			children = (
-				E74A3E791E9B5334000339F5 /* AppDelegate.h */,
-				E74A3E7A1E9B5334000339F5 /* AppDelegate.m */,
-				E74A3E7C1E9B5334000339F5 /* ViewController.h */,
-				E74A3E7D1E9B5334000339F5 /* ViewController.m */,
-				E74A3E7F1E9B5334000339F5 /* Main.storyboard */,
-				E74A3E821E9B5334000339F5 /* Assets.xcassets */,
-				E74A3E841E9B5334000339F5 /* LaunchScreen.storyboard */,
-				E74A3E871E9B5334000339F5 /* Info.plist */,
+				E74A3ECC1E9B7CCB000339F5 /* Lib */,
+				E74A3EAE1E9B7CC3000339F5 /* Classes */,
 				E74A3E761E9B5334000339F5 /* Supporting Files */,
 			);
 			path = CYInkeLive;
@@ -141,6 +401,10 @@
 		E74A3E761E9B5334000339F5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E74A3ED81E9B7FD9000339F5 /* Resources */,
+				E74A3E821E9B5334000339F5 /* Assets.xcassets */,
+				E74A3E841E9B5334000339F5 /* LaunchScreen.storyboard */,
+				E74A3E871E9B5334000339F5 /* Info.plist */,
 				E74A3E771E9B5334000339F5 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -162,6 +426,352 @@
 				E74A3E9D1E9B5334000339F5 /* Info.plist */,
 			);
 			path = CYInkeLiveUITests;
+			sourceTree = "<group>";
+		};
+		E74A3EAE1E9B7CC3000339F5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E74A3EC31E9B7CC3000339F5 /* Other */,
+				E74A3ECA1E9B7CC3000339F5 /* Tool */,
+				E74A3EAF1E9B7CC3000339F5 /* Base */,
+				E74A3EB71E9B7CC3000339F5 /* Common */,
+				E74A3EBB1E9B7CC3000339F5 /* Home */,
+				E74A3EB31E9B7CC3000339F5 /* Camera */,
+				E74A3EBF1E9B7CC3000339F5 /* Hot */,
+				E74A3EC61E9B7CC3000339F5 /* Search */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E74A3EAF1E9B7CC3000339F5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E74A3EB01E9B7CC3000339F5 /* Controllers */,
+				E74A3EB11E9B7CC3000339F5 /* Model */,
+				E74A3EB21E9B7CC3000339F5 /* Views */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E74A3EB01E9B7CC3000339F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E74A3ED31E9B7D94000339F5 /* CYTabBarController.h */,
+				E74A3ED41E9B7D94000339F5 /* CYTabBarController.m */,
+				E74A3ED01E9B7D79000339F5 /* CYBaseViewController.h */,
+				E74A3ED11E9B7D79000339F5 /* CYBaseViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E74A3EB11E9B7CC3000339F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E74A3EB21E9B7CC3000339F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E74A3ECD1E9B7D49000339F5 /* CYTabBar.h */,
+				E74A3ECE1E9B7D49000339F5 /* CYTabBar.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E74A3EB31E9B7CC3000339F5 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				E74A3EB41E9B7CC3000339F5 /* Controllers */,
+				E74A3EB51E9B7CC3000339F5 /* Model */,
+				E74A3EB61E9B7CC3000339F5 /* Views */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		E74A3EB41E9B7CC3000339F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E74A3EB51E9B7CC3000339F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E74A3EB61E9B7CC3000339F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E74A3EB71E9B7CC3000339F5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E74A3EB81E9B7CC3000339F5 /* Controllers */,
+				E74A3EB91E9B7CC3000339F5 /* Model */,
+				E74A3EBA1E9B7CC3000339F5 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E74A3EB81E9B7CC3000339F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E74A3EB91E9B7CC3000339F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E74A3EBA1E9B7CC3000339F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E74A3EBB1E9B7CC3000339F5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E74A3EBC1E9B7CC3000339F5 /* Controllers */,
+				E74A3EBD1E9B7CC3000339F5 /* Model */,
+				E74A3EBE1E9B7CC3000339F5 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E74A3EBC1E9B7CC3000339F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E74A3EBD1E9B7CC3000339F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E74A3EBE1E9B7CC3000339F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E74A3EBF1E9B7CC3000339F5 /* Hot */ = {
+			isa = PBXGroup;
+			children = (
+				E74A3EC01E9B7CC3000339F5 /* Controllers */,
+				E74A3EC11E9B7CC3000339F5 /* Model */,
+				E74A3EC21E9B7CC3000339F5 /* Views */,
+			);
+			path = Hot;
+			sourceTree = "<group>";
+		};
+		E74A3EC01E9B7CC3000339F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E74A3EC11E9B7CC3000339F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E74A3EC21E9B7CC3000339F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E74A3EC31E9B7CC3000339F5 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E74A3EC41E9B7CC3000339F5 /* AppDelegate.h */,
+				E74A3EC51E9B7CC3000339F5 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		E74A3EC61E9B7CC3000339F5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E74A3EC71E9B7CC3000339F5 /* Controllers */,
+				E74A3EC81E9B7CC3000339F5 /* Model */,
+				E74A3EC91E9B7CC3000339F5 /* Views */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		E74A3EC71E9B7CC3000339F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E74A3EC81E9B7CC3000339F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E74A3EC91E9B7CC3000339F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E74A3ECA1E9B7CC3000339F5 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		E74A3ECC1E9B7CCB000339F5 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				E74A3FE91E9B8C24000339F5 /* IJKMediaFramework.framework */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		E74A3ED81E9B7FD9000339F5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E74A3F121E9B81F8000339F5 /* alivephoto.fs */,
+				E74A3F131E9B81F8000339F5 /* alivephoto.vs */,
+				E74A3F141E9B81F8000339F5 /* angle-mask@2x.png */,
+				E74A3F151E9B81F8000339F5 /* animateFrame.fs */,
+				E74A3F161E9B81F8000339F5 /* animateFrame.vs */,
+				E74A3F171E9B81F8000339F5 /* animateMask.fs */,
+				E74A3F181E9B81F8000339F5 /* animateMask.vs */,
+				E74A3F191E9B81F8000339F5 /* animateSpine.fs */,
+				E74A3F1A1E9B81F8000339F5 /* animateSpine.vs */,
+				E74A3F261E9B8283000339F5 /* bgra.fs */,
+				E74A3F271E9B8283000339F5 /* blend.fs */,
+				E74A3F281E9B8283000339F5 /* blend2d.vs */,
+				E74A3F291E9B8283000339F5 /* blend3d.vs */,
+				E74A3F2F1E9B82D5000339F5 /* coverMask.fs */,
+				E74A3F301E9B82D5000339F5 /* coverMask.vs */,
+				E74A3F331E9B82F1000339F5 /* debugFacePt.fs */,
+				E74A3F341E9B82F1000339F5 /* debugFacePt.vs */,
+				E74A3F2E1E9B82AB000339F5 /* Candara.ttf */,
+				E74A3ED91E9B819F000339F5 /* area_code_en.txt */,
+				E74A3EDA1E9B819F000339F5 /* area_code_zh.txt */,
+				E74A3F3F1E9B8337000339F5 /* drawface.fs */,
+				E74A3F401E9B8337000339F5 /* drawface.vs */,
+				E74A3F8B1E9B835D000339F5 /* fmColorBalance.fs */,
+				E74A3F411E9B8337000339F5 /* drawfaceAnimate.fs */,
+				E74A3F8D1E9B837A000339F5 /* geometry.fs */,
+				E74A3F8E1E9B837A000339F5 /* geometry.vs */,
+				E74A3F8F1E9B837A000339F5 /* geometry3d.fs */,
+				E74A3F901E9B837A000339F5 /* geometry3d.vs */,
+				E74A3F421E9B8337000339F5 /* drawfaceBlend.fs */,
+				E74A3F431E9B8337000339F5 /* drawfaceBlend.vs */,
+				E74A3F4F1E9B8351000339F5 /* filter.vs */,
+				E74A3F501E9B8351000339F5 /* filterBilateralBlur.fs */,
+				E74A3F511E9B8351000339F5 /* filterBilateralBlur2.fs */,
+				E74A3F521E9B8351000339F5 /* filterBilateralBlurLei.fs */,
+				E74A3F531E9B8351000339F5 /* filterBilateralBlurLei.vs */,
+				E74A3F541E9B8351000339F5 /* filterBrightness.fs */,
+				E74A3F551E9B8351000339F5 /* filterColorBalance.fs */,
+				E74A3F561E9B8351000339F5 /* filterColorLevel.fs */,
+				E74A3F571E9B8351000339F5 /* filterContrast.fs */,
+				E74A3F581E9B8351000339F5 /* filterCurveAdjust.fs */,
+				E74A3F591E9B8351000339F5 /* filterCurveAdjustRGB.fs */,
+				E74A3F5A1E9B8351000339F5 /* filterCurveAdjustTex.fs */,
+				E74A3F5B1E9B8351000339F5 /* filterEmboss.fs */,
+				E74A3F5C1E9B8351000339F5 /* filterEnlarge2Eye.fs */,
+				E74A3F5D1E9B8351000339F5 /* filterEnlargeEllipse.fs */,
+				E74A3F5E1E9B8351000339F5 /* filterEnlargeEye.fs */,
+				E74A3F5F1E9B8351000339F5 /* filterHaze.fs */,
+				E74A3F601E9B8351000339F5 /* filterHue.fs */,
+				E74A3F611E9B8351000339F5 /* filterMonochrome.fs */,
+				E74A3F621E9B8351000339F5 /* filterPencilDrawing.fs */,
+				E74A3F631E9B8351000339F5 /* filterPencilDrawing.vs */,
+				E74A3F641E9B8351000339F5 /* filterSaturation.fs */,
+				E74A3F651E9B8351000339F5 /* filterSaturationFast.fs */,
+				E74A3F661E9B8351000339F5 /* filterSaturationHSV.fs */,
+				E74A3F671E9B8351000339F5 /* filterSharpen.fs */,
+				E74A3F681E9B8351000339F5 /* filterSharpen.vs */,
+				E74A3F691E9B8351000339F5 /* filterSketch.fs */,
+				E74A3F6A1E9B8351000339F5 /* filterSketch.vs */,
+				E74A3F6B1E9B8351000339F5 /* filterWhiteBalance.fs */,
+				E74A3F6C1E9B8351000339F5 /* filterWhiteBalanceOp.fs */,
+				E74A3F9F1E9B84F9000339F5 /* normal.fs */,
+				E74A3FA01E9B84F9000339F5 /* normal2d.vs */,
+				E74A3FA11E9B84F9000339F5 /* normal3d.fs */,
+				E74A3FA21E9B84F9000339F5 /* normal3d.vs */,
+				E74A3FA31E9B84F9000339F5 /* normal3dPLight.fs */,
+				E74A3FA41E9B84F9000339F5 /* normal3dPLight.vs */,
+				E74A3FA51E9B84F9000339F5 /* normal3dVLight.fs */,
+				E74A3FA61E9B84F9000339F5 /* normal3dVLight.vs */,
+				E74A3FA71E9B84F9000339F5 /* NormalV2CT1.fs */,
+				E74A3FA81E9B84F9000339F5 /* NormalV2CT1.vs */,
+				E74A3FA91E9B84F9000339F5 /* NormalV3A.fs */,
+				E74A3FAA1E9B84F9000339F5 /* NormalV3A.vs */,
+				E74A3FB91E9B8523000339F5 /* pencildraw_td.fs */,
+				E74A3FBA1E9B8523000339F5 /* pencildraw_td.vs */,
+				E74A3FC11E9B8597000339F5 /* rgb2yuv.vs */,
+				E74A3FC21E9B8597000339F5 /* rgb2yuvnv12.fs */,
+				E74A3FC31E9B8597000339F5 /* rgb2yuvnv21.fs */,
+				E74A3FC41E9B8597000339F5 /* rgba.fs */,
+				E74A3FDB1E9B862E000339F5 /* texHead.fs */,
+				E74A3FDC1E9B862E000339F5 /* texHead.vs */,
+				E74A3FDF1E9B8682000339F5 /* yuv2rgb.fs */,
+				E74A3FE01E9B8682000339F5 /* yuv2rgb12.fs */,
+				E74A3FE11E9B8682000339F5 /* yuv2rgb21.fs */,
+				E74A3FC91E9B85CC000339F5 /* RoomGuideVertical.bundle */,
+				E74A3FCA1E9B85CC000339F5 /* screennor.fs */,
+				E74A3FCB1E9B85CC000339F5 /* screennor.vs */,
+				E74A3FD51E9B8613000339F5 /* spineMask.fs */,
+				E74A3FD61E9B8613000339F5 /* spineMask.vs */,
+				E74A3FD11E9B860C000339F5 /* SkinAnimate3d.fs */,
+				E74A3FD21E9B860C000339F5 /* SkinAnimate3d.vs */,
+				E74A3FD91E9B8628000339F5 /* tag_resource.zip */,
+				E74A3F441E9B8337000339F5 /* EffectIcon.zip */,
+				E74A3F451E9B8337000339F5 /* EffectUnzip.zip */,
+				E74A3F461E9B8337000339F5 /* EmojisList.plist */,
+				E74A3FBF1E9B858B000339F5 /* resource.zip */,
+				E74A3F241E9B821A000339F5 /* baozoumanhua.zip */,
+				E74A3F371E9B8302000339F5 /* DebugAppconfig.plist */,
+				E74A3FCF1E9B85E3000339F5 /* shadercfg.json */,
+				E74A3F971E9B840D000339F5 /* inke_VC.plist */,
+				E74A3F381E9B8302000339F5 /* DebugPresetIpList.plist */,
+				E74A3F391E9B8302000339F5 /* DebugPresetServiceinfo.plist */,
+				E74A3F3D1E9B831D000339F5 /* DefaultTheme.plist */,
+				E74A3F9B1E9B8498000339F5 /* logkeysconfig.geojson */,
+				E74A3F9D1E9B84A1000339F5 /* LogOfficialUid.plist */,
+				E74A3FBD1E9B8564000339F5 /* province_city.plist */,
+				E74A3FE51E9B86BC000339F5 /* ZMCert.bundle */,
+				E74A3FB71E9B8517000339F5 /* NTalkerUIKitResource.bundle */,
+				E74A3F951E9B83F9000339F5 /* inke_gift_resource.bundle */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +839,7 @@
 		E74A3E6B1E9B5334000339F5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CY;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Cyrill;
 				TargetAttributes = {
@@ -276,9 +887,115 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E74A3F311E9B82D5000339F5 /* coverMask.fs in Resources */,
+				E74A3F2B1E9B8283000339F5 /* blend.fs in Resources */,
+				E74A3FAE1E9B84F9000339F5 /* normal3d.vs in Resources */,
+				E74A3F6D1E9B8351000339F5 /* filter.vs in Resources */,
+				E74A3FBE1E9B8564000339F5 /* province_city.plist in Resources */,
+				E74A3F1E1E9B81F8000339F5 /* animateFrame.fs in Resources */,
+				E74A3F7D1E9B8351000339F5 /* filterHaze.fs in Resources */,
+				E74A3FAD1E9B84F9000339F5 /* normal3d.fs in Resources */,
 				E74A3E861E9B5334000339F5 /* LaunchScreen.storyboard in Resources */,
+				E74A3FC01E9B858B000339F5 /* resource.zip in Resources */,
+				E74A3F3E1E9B831D000339F5 /* DefaultTheme.plist in Resources */,
+				E74A3F7E1E9B8351000339F5 /* filterHue.fs in Resources */,
+				E74A3F4A1E9B8337000339F5 /* drawfaceBlend.fs in Resources */,
+				E74A3F471E9B8337000339F5 /* drawface.fs in Resources */,
+				E74A3FE21E9B8682000339F5 /* yuv2rgb.fs in Resources */,
+				E74A3EDB1E9B819F000339F5 /* area_code_en.txt in Resources */,
+				E74A3F761E9B8351000339F5 /* filterCurveAdjust.fs in Resources */,
+				E74A3FCD1E9B85CC000339F5 /* screennor.fs in Resources */,
+				E74A3FB01E9B84F9000339F5 /* normal3dPLight.vs in Resources */,
+				E74A3F4B1E9B8337000339F5 /* drawfaceBlend.vs in Resources */,
+				E74A3F3A1E9B8302000339F5 /* DebugAppconfig.plist in Resources */,
+				E74A3F721E9B8351000339F5 /* filterBrightness.fs in Resources */,
+				E74A3F6E1E9B8351000339F5 /* filterBilateralBlur.fs in Resources */,
+				E74A3F481E9B8337000339F5 /* drawface.vs in Resources */,
+				E74A3F2A1E9B8283000339F5 /* bgra.fs in Resources */,
+				E74A3F9E1E9B84A1000339F5 /* LogOfficialUid.plist in Resources */,
+				E74A3F781E9B8351000339F5 /* filterCurveAdjustTex.fs in Resources */,
+				E74A3F7A1E9B8351000339F5 /* filterEnlarge2Eye.fs in Resources */,
+				E74A3FD71E9B8613000339F5 /* spineMask.fs in Resources */,
+				E74A3FCE1E9B85CC000339F5 /* screennor.vs in Resources */,
+				E74A3F351E9B82F1000339F5 /* debugFacePt.fs in Resources */,
+				E74A3F731E9B8351000339F5 /* filterColorBalance.fs in Resources */,
+				E74A3F3C1E9B8302000339F5 /* DebugPresetServiceinfo.plist in Resources */,
+				E74A3FD01E9B85E3000339F5 /* shadercfg.json in Resources */,
+				E74A3FB81E9B8517000339F5 /* NTalkerUIKitResource.bundle in Resources */,
+				E74A3FC71E9B8597000339F5 /* rgb2yuvnv21.fs in Resources */,
+				E74A3F321E9B82D5000339F5 /* coverMask.vs in Resources */,
+				E74A3F711E9B8351000339F5 /* filterBilateralBlurLei.vs in Resources */,
+				E74A3F251E9B821A000339F5 /* baozoumanhua.zip in Resources */,
+				E74A3FB41E9B84F9000339F5 /* NormalV2CT1.vs in Resources */,
+				E74A3FE31E9B8682000339F5 /* yuv2rgb12.fs in Resources */,
+				E74A3F921E9B837A000339F5 /* geometry.vs in Resources */,
+				E74A3FC51E9B8597000339F5 /* rgb2yuv.vs in Resources */,
+				E74A3FE41E9B8682000339F5 /* yuv2rgb21.fs in Resources */,
+				E74A3EDC1E9B819F000339F5 /* area_code_zh.txt in Resources */,
+				E74A3F841E9B8351000339F5 /* filterSaturationHSV.fs in Resources */,
+				E74A3F791E9B8351000339F5 /* filterEmboss.fs in Resources */,
+				E74A3FCC1E9B85CC000339F5 /* RoomGuideVertical.bundle in Resources */,
+				E74A3F2C1E9B8283000339F5 /* blend2d.vs in Resources */,
+				E74A3F811E9B8351000339F5 /* filterPencilDrawing.vs in Resources */,
+				E74A3FDD1E9B862E000339F5 /* texHead.fs in Resources */,
+				E74A3F1D1E9B81F8000339F5 /* angle-mask@2x.png in Resources */,
+				E74A3F221E9B81F8000339F5 /* animateSpine.fs in Resources */,
+				E74A3F771E9B8351000339F5 /* filterCurveAdjustRGB.fs in Resources */,
+				E74A3F7B1E9B8351000339F5 /* filterEnlargeEllipse.fs in Resources */,
+				E74A3F211E9B81F8000339F5 /* animateMask.vs in Resources */,
+				E74A3FAC1E9B84F9000339F5 /* normal2d.vs in Resources */,
+				E74A3F8A1E9B8351000339F5 /* filterWhiteBalanceOp.fs in Resources */,
+				E74A3F861E9B8351000339F5 /* filterSharpen.vs in Resources */,
+				E74A3F941E9B837A000339F5 /* geometry3d.vs in Resources */,
+				E74A3F701E9B8351000339F5 /* filterBilateralBlurLei.fs in Resources */,
+				E74A3FDA1E9B8628000339F5 /* tag_resource.zip in Resources */,
+				E74A3FC81E9B8597000339F5 /* rgba.fs in Resources */,
+				E74A3F961E9B83F9000339F5 /* inke_gift_resource.bundle in Resources */,
+				E74A3FD41E9B860C000339F5 /* SkinAnimate3d.vs in Resources */,
+				E74A3F831E9B8351000339F5 /* filterSaturationFast.fs in Resources */,
+				E74A3F751E9B8351000339F5 /* filterContrast.fs in Resources */,
+				E74A3FD81E9B8613000339F5 /* spineMask.vs in Resources */,
+				E74A3F741E9B8351000339F5 /* filterColorLevel.fs in Resources */,
+				E74A3F361E9B82F1000339F5 /* debugFacePt.vs in Resources */,
+				E74A3FE61E9B86BC000339F5 /* ZMCert.bundle in Resources */,
+				E74A3F931E9B837A000339F5 /* geometry3d.fs in Resources */,
+				E74A3FAB1E9B84F9000339F5 /* normal.fs in Resources */,
+				E74A3FC61E9B8597000339F5 /* rgb2yuvnv12.fs in Resources */,
+				E74A3F8C1E9B835D000339F5 /* fmColorBalance.fs in Resources */,
+				E74A3F4C1E9B8337000339F5 /* EffectIcon.zip in Resources */,
+				E74A3F6F1E9B8351000339F5 /* filterBilateralBlur2.fs in Resources */,
+				E74A3F801E9B8351000339F5 /* filterPencilDrawing.fs in Resources */,
+				E74A3FBC1E9B8523000339F5 /* pencildraw_td.vs in Resources */,
+				E74A3FDE1E9B862E000339F5 /* texHead.vs in Resources */,
+				E74A3F891E9B8351000339F5 /* filterWhiteBalance.fs in Resources */,
+				E74A3F201E9B81F8000339F5 /* animateMask.fs in Resources */,
+				E74A3FB11E9B84F9000339F5 /* normal3dVLight.fs in Resources */,
+				E74A3F851E9B8351000339F5 /* filterSharpen.fs in Resources */,
+				E74A3F871E9B8351000339F5 /* filterSketch.fs in Resources */,
 				E74A3E831E9B5334000339F5 /* Assets.xcassets in Resources */,
-				E74A3E811E9B5334000339F5 /* Main.storyboard in Resources */,
+				E74A3FAF1E9B84F9000339F5 /* normal3dPLight.fs in Resources */,
+				E74A3F4E1E9B8337000339F5 /* EmojisList.plist in Resources */,
+				E74A3F7F1E9B8351000339F5 /* filterMonochrome.fs in Resources */,
+				E74A3FB21E9B84F9000339F5 /* normal3dVLight.vs in Resources */,
+				E74A3F9C1E9B8498000339F5 /* logkeysconfig.geojson in Resources */,
+				E74A3F231E9B81F8000339F5 /* animateSpine.vs in Resources */,
+				E74A3F821E9B8351000339F5 /* filterSaturation.fs in Resources */,
+				E74A3F7C1E9B8351000339F5 /* filterEnlargeEye.fs in Resources */,
+				E74A3FB31E9B84F9000339F5 /* NormalV2CT1.fs in Resources */,
+				E74A3F2D1E9B8283000339F5 /* blend3d.vs in Resources */,
+				E74A3FB61E9B84F9000339F5 /* NormalV3A.vs in Resources */,
+				E74A3F881E9B8351000339F5 /* filterSketch.vs in Resources */,
+				E74A3F1B1E9B81F8000339F5 /* alivephoto.fs in Resources */,
+				E74A3F491E9B8337000339F5 /* drawfaceAnimate.fs in Resources */,
+				E74A3F911E9B837A000339F5 /* geometry.fs in Resources */,
+				E74A3F3B1E9B8302000339F5 /* DebugPresetIpList.plist in Resources */,
+				E74A3FBB1E9B8523000339F5 /* pencildraw_td.fs in Resources */,
+				E74A3F4D1E9B8337000339F5 /* EffectUnzip.zip in Resources */,
+				E74A3F981E9B840D000339F5 /* inke_VC.plist in Resources */,
+				E74A3FD31E9B860C000339F5 /* SkinAnimate3d.fs in Resources */,
+				E74A3F1F1E9B81F8000339F5 /* animateFrame.vs in Resources */,
+				E74A3FB51E9B84F9000339F5 /* NormalV3A.fs in Resources */,
+				E74A3F1C1E9B81F8000339F5 /* alivephoto.vs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,9 +1068,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E74A3E7E1E9B5334000339F5 /* ViewController.m in Sources */,
-				E74A3E7B1E9B5334000339F5 /* AppDelegate.m in Sources */,
+				E74A3ECB1E9B7CC3000339F5 /* AppDelegate.m in Sources */,
 				E74A3E781E9B5334000339F5 /* main.m in Sources */,
+				E74A3ED51E9B7D94000339F5 /* CYTabBarController.m in Sources */,
+				E74A3ECF1E9B7D49000339F5 /* CYTabBar.m in Sources */,
+				E74A3ED21E9B7D79000339F5 /* CYBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,14 +1108,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E74A3E7F1E9B5334000339F5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E74A3E801E9B5334000339F5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E74A3E841E9B5334000339F5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -502,7 +1213,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7ENE4DHQ7N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CYInkeLive/Lib",
+				);
 				INFOPLIST_FILE = CYInkeLive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cyrill.CYInkeLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -515,7 +1231,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7ENE4DHQ7N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CYInkeLive/Lib",
+				);
 				INFOPLIST_FILE = CYInkeLive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cyrill.CYInkeLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -591,6 +1312,7 @@
 				E74A3EA21E9B5334000339F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E74A3EA31E9B5334000339F5 /* Build configuration list for PBXNativeTarget "CYInkeLiveTests" */ = {
 			isa = XCConfigurationList;
@@ -599,6 +1321,7 @@
 				E74A3EA51E9B5334000339F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E74A3EA61E9B5334000339F5 /* Build configuration list for PBXNativeTarget "CYInkeLiveUITests" */ = {
 			isa = XCConfigurationList;
@@ -607,6 +1330,7 @@
 				E74A3EA81E9B5334000339F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
