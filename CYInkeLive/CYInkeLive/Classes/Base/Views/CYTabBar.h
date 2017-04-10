@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class CYTabBar;
+
+@protocol CYTabBarDelegate <UITabBarDelegate>
+
+@optional
+- (void)cameraButtonClick:(CYTabBar *)tabBar;
+
+@end
+
 @interface CYTabBar : UITabBar
+
+@property (nonatomic, weak) id <CYTabBarDelegate>cDelegate;
 
 @end

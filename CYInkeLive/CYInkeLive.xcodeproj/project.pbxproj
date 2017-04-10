@@ -15,7 +15,7 @@
 		E74A3E9C1E9B5334000339F5 /* CYInkeLiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3E9B1E9B5334000339F5 /* CYInkeLiveUITests.m */; };
 		E74A3ECB1E9B7CC3000339F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3EC51E9B7CC3000339F5 /* AppDelegate.m */; };
 		E74A3ECF1E9B7D49000339F5 /* CYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3ECE1E9B7D49000339F5 /* CYTabBar.m */; };
-		E74A3ED21E9B7D79000339F5 /* CYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3ED11E9B7D79000339F5 /* CYBaseViewController.m */; };
+		E74A3ED21E9B7D79000339F5 /* CYBaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3ED11E9B7D79000339F5 /* CYBaseNavViewController.m */; };
 		E74A3ED51E9B7D94000339F5 /* CYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3ED41E9B7D94000339F5 /* CYTabBarController.m */; };
 		E74A3EDB1E9B819F000339F5 /* area_code_en.txt in Resources */ = {isa = PBXBuildFile; fileRef = E74A3ED91E9B819F000339F5 /* area_code_en.txt */; };
 		E74A3EDC1E9B819F000339F5 /* area_code_zh.txt in Resources */ = {isa = PBXBuildFile; fileRef = E74A3EDA1E9B819F000339F5 /* area_code_zh.txt */; };
@@ -136,6 +136,10 @@
 		E74A3FFC1E9B8C78000339F5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FFB1E9B8C78000339F5 /* CoreMedia.framework */; };
 		E74A3FFE1E9B8C83000339F5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FFD1E9B8C83000339F5 /* AVFoundation.framework */; };
 		E74A40001E9B8C8B000339F5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FFF1E9B8C8B000339F5 /* libsqlite3.tbd */; };
+		E74A40081E9B94B1000339F5 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40071E9B94B1000339F5 /* UIView+Frame.m */; };
+		E74A400B1E9B96EE000339F5 /* CYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A400A1E9B96EE000339F5 /* CYHomeViewController.m */; };
+		E74A400E1E9B96FA000339F5 /* CYCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A400D1E9B96FA000339F5 /* CYCameraViewController.m */; };
+		E74A40151E9B9749000339F5 /* CYMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40141E9B9749000339F5 /* CYMeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,8 +178,8 @@
 		E74A3EC51E9B7CC3000339F5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E74A3ECD1E9B7D49000339F5 /* CYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTabBar.h; sourceTree = "<group>"; };
 		E74A3ECE1E9B7D49000339F5 /* CYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTabBar.m; sourceTree = "<group>"; };
-		E74A3ED01E9B7D79000339F5 /* CYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYBaseViewController.h; sourceTree = "<group>"; };
-		E74A3ED11E9B7D79000339F5 /* CYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYBaseViewController.m; sourceTree = "<group>"; };
+		E74A3ED01E9B7D79000339F5 /* CYBaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYBaseNavViewController.h; sourceTree = "<group>"; };
+		E74A3ED11E9B7D79000339F5 /* CYBaseNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYBaseNavViewController.m; sourceTree = "<group>"; };
 		E74A3ED31E9B7D94000339F5 /* CYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTabBarController.h; sourceTree = "<group>"; };
 		E74A3ED41E9B7D94000339F5 /* CYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTabBarController.m; sourceTree = "<group>"; };
 		E74A3ED91E9B819F000339F5 /* area_code_en.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = area_code_en.txt; sourceTree = "<group>"; };
@@ -298,6 +302,15 @@
 		E74A3FFB1E9B8C78000339F5 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		E74A3FFD1E9B8C83000339F5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E74A3FFF1E9B8C8B000339F5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		E74A40061E9B94B1000339F5 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		E74A40071E9B94B1000339F5 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		E74A40091E9B96EE000339F5 /* CYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYHomeViewController.h; sourceTree = "<group>"; };
+		E74A400A1E9B96EE000339F5 /* CYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYHomeViewController.m; sourceTree = "<group>"; };
+		E74A400C1E9B96FA000339F5 /* CYCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYCameraViewController.h; sourceTree = "<group>"; };
+		E74A400D1E9B96FA000339F5 /* CYCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYCameraViewController.m; sourceTree = "<group>"; };
+		E74A40131E9B9749000339F5 /* CYMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMeViewController.h; sourceTree = "<group>"; };
+		E74A40141E9B9749000339F5 /* CYMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMeViewController.m; sourceTree = "<group>"; };
+		E74A40161E9B98B1000339F5 /* YKAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAPI.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +414,7 @@
 		E74A3E761E9B5334000339F5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E74A40161E9B98B1000339F5 /* YKAPI.h */,
 				E74A3ED81E9B7FD9000339F5 /* Resources */,
 				E74A3E821E9B5334000339F5 /* Assets.xcassets */,
 				E74A3E841E9B5334000339F5 /* LaunchScreen.storyboard */,
@@ -437,8 +451,10 @@
 				E74A3EB71E9B7CC3000339F5 /* Common */,
 				E74A3EBB1E9B7CC3000339F5 /* Home */,
 				E74A3EB31E9B7CC3000339F5 /* Camera */,
+				E74A400F1E9B973F000339F5 /* Me */,
 				E74A3EBF1E9B7CC3000339F5 /* Hot */,
 				E74A3EC61E9B7CC3000339F5 /* Search */,
+				E74A40051E9B8F1F000339F5 /* Live */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -458,8 +474,8 @@
 			children = (
 				E74A3ED31E9B7D94000339F5 /* CYTabBarController.h */,
 				E74A3ED41E9B7D94000339F5 /* CYTabBarController.m */,
-				E74A3ED01E9B7D79000339F5 /* CYBaseViewController.h */,
-				E74A3ED11E9B7D79000339F5 /* CYBaseViewController.m */,
+				E74A3ED01E9B7D79000339F5 /* CYBaseNavViewController.h */,
+				E74A3ED11E9B7D79000339F5 /* CYBaseNavViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -493,6 +509,8 @@
 		E74A3EB41E9B7CC3000339F5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E74A400C1E9B96FA000339F5 /* CYCameraViewController.h */,
+				E74A400D1E9B96FA000339F5 /* CYCameraViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -555,6 +573,8 @@
 		E74A3EBC1E9B7CC3000339F5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E74A40091E9B96EE000339F5 /* CYHomeViewController.h */,
+				E74A400A1E9B96EE000339F5 /* CYHomeViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -647,6 +667,8 @@
 		E74A3ECA1E9B7CC3000339F5 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				E74A40061E9B94B1000339F5 /* UIView+Frame.h */,
+				E74A40071E9B94B1000339F5 /* UIView+Frame.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -772,6 +794,46 @@
 				E74A3F951E9B83F9000339F5 /* inke_gift_resource.bundle */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E74A40051E9B8F1F000339F5 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		E74A400F1E9B973F000339F5 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				E74A40101E9B973F000339F5 /* Controllers */,
+				E74A40111E9B973F000339F5 /* Model */,
+				E74A40121E9B973F000339F5 /* Views */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		E74A40101E9B973F000339F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E74A40131E9B9749000339F5 /* CYMeViewController.h */,
+				E74A40141E9B9749000339F5 /* CYMeViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E74A40111E9B973F000339F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E74A40121E9B973F000339F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1068,11 +1130,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E74A40081E9B94B1000339F5 /* UIView+Frame.m in Sources */,
 				E74A3ECB1E9B7CC3000339F5 /* AppDelegate.m in Sources */,
+				E74A400B1E9B96EE000339F5 /* CYHomeViewController.m in Sources */,
 				E74A3E781E9B5334000339F5 /* main.m in Sources */,
 				E74A3ED51E9B7D94000339F5 /* CYTabBarController.m in Sources */,
 				E74A3ECF1E9B7D49000339F5 /* CYTabBar.m in Sources */,
-				E74A3ED21E9B7D79000339F5 /* CYBaseViewController.m in Sources */,
+				E74A3ED21E9B7D79000339F5 /* CYBaseNavViewController.m in Sources */,
+				E74A400E1E9B96FA000339F5 /* CYCameraViewController.m in Sources */,
+				E74A40151E9B9749000339F5 /* CYMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
