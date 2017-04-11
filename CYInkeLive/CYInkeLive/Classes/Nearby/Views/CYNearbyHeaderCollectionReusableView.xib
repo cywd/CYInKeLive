@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0Td-Ng-IIl" customClass="CYNearbyHeaderCollectionReusableView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在直播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3F7-sd-gIC">
+                    <rect key="frame" x="52" y="15" width="67" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="67" id="eEH-Rr-jT4"/>
+                        <constraint firstAttribute="height" constant="21" id="hTe-Aw-our"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nearby_icon_now_live" translatesAutoresizingMaskIntoConstraints="NO" id="aLK-ng-PcQ">
+                    <rect key="frame" x="16" y="16" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="iuL-0Y-y9t"/>
+                        <constraint firstAttribute="height" constant="20" id="t7I-zH-TEY"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOM-SL-hjI">
+                    <rect key="frame" x="242" y="16" width="62" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="62" id="NTy-Fa-F8s"/>
+                        <constraint firstAttribute="height" constant="21" id="wd9-7y-iTT"/>
+                    </constraints>
+                    <state key="normal" title="看全部">
+                        <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="chooseClick:" destination="0Td-Ng-IIl" eventType="touchUpInside" id="VsR-0Q-okE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="3F7-sd-gIC" firstAttribute="leading" secondItem="aLK-ng-PcQ" secondAttribute="trailing" constant="16" id="0p0-Ju-ufZ"/>
+                <constraint firstItem="aLK-ng-PcQ" firstAttribute="top" secondItem="0Td-Ng-IIl" secondAttribute="top" constant="16" id="Hk1-z5-sHC"/>
+                <constraint firstAttribute="bottom" secondItem="AOM-SL-hjI" secondAttribute="bottom" constant="13" id="U4C-b9-EdG"/>
+                <constraint firstItem="AOM-SL-hjI" firstAttribute="top" secondItem="0Td-Ng-IIl" secondAttribute="top" constant="16" id="au7-Oq-gln"/>
+                <constraint firstAttribute="trailing" secondItem="AOM-SL-hjI" secondAttribute="trailing" constant="16" id="dEj-zp-nsd"/>
+                <constraint firstItem="aLK-ng-PcQ" firstAttribute="leading" secondItem="0Td-Ng-IIl" secondAttribute="leading" constant="16" id="hZV-Ad-ZCX"/>
+                <constraint firstItem="aLK-ng-PcQ" firstAttribute="bottom" secondItem="3F7-sd-gIC" secondAttribute="bottom" id="kPX-05-qba"/>
+            </constraints>
+            <connections>
+                <outlet property="chooseBtn" destination="AOM-SL-hjI" id="WTz-gC-Not"/>
+            </connections>
+            <point key="canvasLocation" x="-400" y="38"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="nearby_icon_now_live" width="14" height="14"/>
+    </resources>
+</document>

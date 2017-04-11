@@ -152,6 +152,8 @@
 		E78F91581E9C90550033E336 /* CYHotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F914E1E9C88820033E336 /* CYHotTableViewCell.m */; };
 		E78F915B1E9C91120033E336 /* CYFollowEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F915A1E9C91120033E336 /* CYFollowEmptyView.m */; };
 		E78F915F1E9CABA50033E336 /* CYNearbyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F915D1E9CABA50033E336 /* CYNearbyCollectionViewCell.m */; };
+		E78F91691E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F91671E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.m */; };
+		E78F916A1E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78F91681E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -345,6 +347,9 @@
 		E78F915A1E9C91120033E336 /* CYFollowEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYFollowEmptyView.m; sourceTree = "<group>"; };
 		E78F915C1E9CABA50033E336 /* CYNearbyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYNearbyCollectionViewCell.h; sourceTree = "<group>"; };
 		E78F915D1E9CABA50033E336 /* CYNearbyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYNearbyCollectionViewCell.m; sourceTree = "<group>"; };
+		E78F91661E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYNearbyHeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		E78F91671E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYNearbyHeaderCollectionReusableView.m; sourceTree = "<group>"; };
+		E78F91681E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYNearbyHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -925,6 +930,9 @@
 			children = (
 				E78F915C1E9CABA50033E336 /* CYNearbyCollectionViewCell.h */,
 				E78F915D1E9CABA50033E336 /* CYNearbyCollectionViewCell.m */,
+				E78F91661E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.h */,
+				E78F91671E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.m */,
+				E78F91681E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1154,6 +1162,7 @@
 				E74A3F861E9B8351000339F5 /* filterSharpen.vs in Resources */,
 				E74A3F941E9B837A000339F5 /* geometry3d.vs in Resources */,
 				E74A3F701E9B8351000339F5 /* filterBilateralBlurLei.fs in Resources */,
+				E78F916A1E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.xib in Resources */,
 				E74A3FDA1E9B8628000339F5 /* tag_resource.zip in Resources */,
 				E74A3FC81E9B8597000339F5 /* rgba.fs in Resources */,
 				E74A3F961E9B83F9000339F5 /* inke_gift_resource.bundle in Resources */,
@@ -1288,6 +1297,7 @@
 				E74A40831E9C709A000339F5 /* AppDelegate.m in Sources */,
 				E78F91501E9C88820033E336 /* CYHotTableViewCell.m in Sources */,
 				E74A40881E9C70F7000339F5 /* CYTopTitleView.m in Sources */,
+				E78F91691E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.m in Sources */,
 				E74A40791E9C709A000339F5 /* CYBaseNavViewController.m in Sources */,
 				E74A40851E9C709A000339F5 /* UIView+Frame.m in Sources */,
 				E74A40841E9C709A000339F5 /* CYSearchViewController.m in Sources */,

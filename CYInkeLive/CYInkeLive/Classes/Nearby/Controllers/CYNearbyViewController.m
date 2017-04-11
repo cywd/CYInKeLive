@@ -13,6 +13,7 @@
 #import "CYLiveModel.h"
 #import <MJExtension.h>
 #import <AFNetworking.h>
+#import "CYNearbyHeaderCollectionReusableView.h"
 
 #define nearbyMargin 3
 
@@ -27,6 +28,10 @@
 
 @property (nonatomic, assign) NSInteger index;
 
+@property (nonatomic, strong) UIAlertController *alertVc;
+
+@property (nonatomic, copy) NSString *limitStr;
+
 @end
 
 @implementation CYNearbyViewController
@@ -35,6 +40,8 @@
     [super viewDidLoad];
 
     _index = 0;
+    
+    _limitStr = @"看全部";
     
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.collectionView];
@@ -76,6 +83,23 @@
     return CGSizeMake([UIScreen mainScreen].bounds.size.width, 50);
 }
 
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    UICollectionReusableView *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CYNearbyHeaderId" forIndexPath:indexPath];
+    
+    if ([reusableView isKindOfClass:[CYNearbyHeaderCollectionReusableView class]]) {
+        CYNearbyHeaderCollectionReusableView *headView = (CYNearbyHeaderCollectionReusableView *)reusableView;
+        [headView setBtnTitle:_limitStr];
+        __weak typeof(self) weakSelf = self;
+        [headView setChooseCondition:^{
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            [strongSelf showAcition];
+        }];
+    }
+    
+    return reusableView;
+}
+
+
 #pragma CLLocationManagerDelegate
 //定位成功
 - (void)locationManager:(CLLocationManager *)manager
@@ -114,6 +138,41 @@
     }];
 }
 
+//选择限制条件
+- (void)showAcition{
+    [self presentViewController:self.alertVc animated:YES completion:^{
+        NSLog(@"已经弹出");
+    }];
+}
+
+- (void)changeRequestURLWithIndex:(NSInteger)index {
+    //限制条件未知  0为查看全部  1查看女生  2为男生
+    NSString *limitStr = [NSString stringWithFormat:@"&interest=%zd",index];
+    
+    if ([self.requestUrl rangeOfString:@"&interest"].location == NSNotFound) {
+        self.requestUrl = [NSString stringWithFormat:@"%@%@",self.requestUrl,limitStr];
+    } else {
+        NSArray *arr = [self.requestUrl componentsSeparatedByString:@"&interest"];
+        self.requestUrl = [NSString stringWithFormat:@"%@%@",arr[0],limitStr];
+    }
+    
+    switch (index) {
+        case 0:
+            _limitStr = @"看全部";
+            break;
+        case 1:
+            _limitStr = @"只看女";
+            break;
+        case 2:
+            _limitStr = @"只看男";
+            break;
+        default:
+            break;
+    }
+    
+    [self loadData];
+}
+
 - (NSMutableArray *)dataArray
 {
     if (!_dataArray) {
@@ -147,9 +206,32 @@
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         [_collectionView registerClass:[CYNearbyCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([CYNearbyCollectionViewCell class])];
-        
+        [_collectionView registerNib:[UINib nibWithNibName:@"CYNearbyHeaderCollectionReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CYNearbyHeaderId"];
     }
     return _collectionView;
+}
+
+- (UIAlertController *)alertVc
+{
+    if (!_alertVc) {
+        _alertVc = [UIAlertController alertControllerWithTitle:@"选择" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        UIAlertAction *allAction = [UIAlertAction actionWithTitle:@"看全部" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self changeRequestURLWithIndex:0];
+        }];
+        UIAlertAction *manAction = [UIAlertAction actionWithTitle:@"只看男" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self changeRequestURLWithIndex:2];
+        }];
+        UIAlertAction *faleAction = [UIAlertAction actionWithTitle:@"只看女" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self changeRequestURLWithIndex:1];
+        }];
+        
+        [_alertVc addAction:allAction];
+        [_alertVc addAction:manAction];
+        [_alertVc addAction:faleAction];
+        [_alertVc addAction:cancelAction];
+    }
+    return _alertVc;
 }
 
 @end
