@@ -17,6 +17,7 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - LFLiveKit (2.6)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
@@ -36,6 +37,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - FMDB
+  - LFLiveKit
   - Masonry
   - MBProgressHUD
   - MJExtension
@@ -48,6 +50,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  LFLiveKit: 2219563721f8aa0f188effc3395a06e2d53b23f2
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
@@ -56,6 +59,6 @@ SPEC CHECKSUMS:
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   UMengUShare: b208ac3bcf1f63d11a100b359990e9d77a0f2085
 
-PODFILE CHECKSUM: 79ce3ce215289691cac4003efac2465546f4c96f
+PODFILE CHECKSUM: 89ae9dfd1ddc3d95213165b63b38f1dae1512264
 
 COCOAPODS: 1.2.0
