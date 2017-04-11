@@ -12,5 +12,6 @@ pod 'FMDB'
 pod 'UMengUShare/UI'
 pod 'UMengUShare/Social/WeChat'
 pod 'Reachability'
+pod 'LFLiveKit'
  
 end
