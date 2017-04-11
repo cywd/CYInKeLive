@@ -13,10 +13,6 @@
 		E74A3E861E9B5334000339F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E74A3E841E9B5334000339F5 /* LaunchScreen.storyboard */; };
 		E74A3E911E9B5334000339F5 /* CYInkeLiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3E901E9B5334000339F5 /* CYInkeLiveTests.m */; };
 		E74A3E9C1E9B5334000339F5 /* CYInkeLiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3E9B1E9B5334000339F5 /* CYInkeLiveUITests.m */; };
-		E74A3ECB1E9B7CC3000339F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3EC51E9B7CC3000339F5 /* AppDelegate.m */; };
-		E74A3ECF1E9B7D49000339F5 /* CYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3ECE1E9B7D49000339F5 /* CYTabBar.m */; };
-		E74A3ED21E9B7D79000339F5 /* CYBaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3ED11E9B7D79000339F5 /* CYBaseNavViewController.m */; };
-		E74A3ED51E9B7D94000339F5 /* CYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3ED41E9B7D94000339F5 /* CYTabBarController.m */; };
 		E74A3EDB1E9B819F000339F5 /* area_code_en.txt in Resources */ = {isa = PBXBuildFile; fileRef = E74A3ED91E9B819F000339F5 /* area_code_en.txt */; };
 		E74A3EDC1E9B819F000339F5 /* area_code_zh.txt in Resources */ = {isa = PBXBuildFile; fileRef = E74A3EDA1E9B819F000339F5 /* area_code_zh.txt */; };
 		E74A3F1B1E9B81F8000339F5 /* alivephoto.fs in Resources */ = {isa = PBXBuildFile; fileRef = E74A3F121E9B81F8000339F5 /* alivephoto.fs */; };
@@ -136,10 +132,20 @@
 		E74A3FFC1E9B8C78000339F5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FFB1E9B8C78000339F5 /* CoreMedia.framework */; };
 		E74A3FFE1E9B8C83000339F5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FFD1E9B8C83000339F5 /* AVFoundation.framework */; };
 		E74A40001E9B8C8B000339F5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E74A3FFF1E9B8C8B000339F5 /* libsqlite3.tbd */; };
-		E74A40081E9B94B1000339F5 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40071E9B94B1000339F5 /* UIView+Frame.m */; };
-		E74A400B1E9B96EE000339F5 /* CYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A400A1E9B96EE000339F5 /* CYHomeViewController.m */; };
-		E74A400E1E9B96FA000339F5 /* CYCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A400D1E9B96FA000339F5 /* CYCameraViewController.m */; };
-		E74A40151E9B9749000339F5 /* CYMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40141E9B9749000339F5 /* CYMeViewController.m */; };
+		E74A40791E9C709A000339F5 /* CYBaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40381E9C709A000339F5 /* CYBaseNavViewController.m */; };
+		E74A407A1E9C709A000339F5 /* CYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A403A1E9C709A000339F5 /* CYTabBarController.m */; };
+		E74A407B1E9C709A000339F5 /* CYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A403E1E9C709A000339F5 /* CYTabBar.m */; };
+		E74A407C1E9C709A000339F5 /* CYCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40421E9C709A000339F5 /* CYCameraViewController.m */; };
+		E74A407D1E9C709A000339F5 /* CYFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A404C1E9C709A000339F5 /* CYFollowViewController.m */; };
+		E74A407E1E9C709A000339F5 /* CYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40521E9C709A000339F5 /* CYHomeViewController.m */; };
+		E74A407F1E9C709A000339F5 /* CYHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40581E9C709A000339F5 /* CYHotViewController.m */; };
+		E74A40801E9C709A000339F5 /* CYLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A405E1E9C709A000339F5 /* CYLiveViewController.m */; };
+		E74A40811E9C709A000339F5 /* CYMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40641E9C709A000339F5 /* CYMeViewController.m */; };
+		E74A40821E9C709A000339F5 /* CYNearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A406A1E9C709A000339F5 /* CYNearbyViewController.m */; };
+		E74A40831E9C709A000339F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A406F1E9C709A000339F5 /* AppDelegate.m */; };
+		E74A40841E9C709A000339F5 /* CYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40731E9C709A000339F5 /* CYSearchViewController.m */; };
+		E74A40851E9C709A000339F5 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40781E9C709A000339F5 /* UIView+Frame.m */; };
+		E74A40881E9C70F7000339F5 /* CYTopTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40871E9C70F7000339F5 /* CYTopTitleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,14 +180,6 @@
 		E74A3E971E9B5334000339F5 /* CYInkeLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CYInkeLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74A3E9B1E9B5334000339F5 /* CYInkeLiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYInkeLiveUITests.m; sourceTree = "<group>"; };
 		E74A3E9D1E9B5334000339F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E74A3EC41E9B7CC3000339F5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E74A3EC51E9B7CC3000339F5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E74A3ECD1E9B7D49000339F5 /* CYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTabBar.h; sourceTree = "<group>"; };
-		E74A3ECE1E9B7D49000339F5 /* CYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTabBar.m; sourceTree = "<group>"; };
-		E74A3ED01E9B7D79000339F5 /* CYBaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYBaseNavViewController.h; sourceTree = "<group>"; };
-		E74A3ED11E9B7D79000339F5 /* CYBaseNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYBaseNavViewController.m; sourceTree = "<group>"; };
-		E74A3ED31E9B7D94000339F5 /* CYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTabBarController.h; sourceTree = "<group>"; };
-		E74A3ED41E9B7D94000339F5 /* CYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTabBarController.m; sourceTree = "<group>"; };
 		E74A3ED91E9B819F000339F5 /* area_code_en.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = area_code_en.txt; sourceTree = "<group>"; };
 		E74A3EDA1E9B819F000339F5 /* area_code_zh.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = area_code_zh.txt; sourceTree = "<group>"; };
 		E74A3F121E9B81F8000339F5 /* alivephoto.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = alivephoto.fs; sourceTree = "<group>"; };
@@ -302,15 +300,35 @@
 		E74A3FFB1E9B8C78000339F5 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		E74A3FFD1E9B8C83000339F5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E74A3FFF1E9B8C8B000339F5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		E74A40061E9B94B1000339F5 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
-		E74A40071E9B94B1000339F5 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
-		E74A40091E9B96EE000339F5 /* CYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYHomeViewController.h; sourceTree = "<group>"; };
-		E74A400A1E9B96EE000339F5 /* CYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYHomeViewController.m; sourceTree = "<group>"; };
-		E74A400C1E9B96FA000339F5 /* CYCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYCameraViewController.h; sourceTree = "<group>"; };
-		E74A400D1E9B96FA000339F5 /* CYCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYCameraViewController.m; sourceTree = "<group>"; };
-		E74A40131E9B9749000339F5 /* CYMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMeViewController.h; sourceTree = "<group>"; };
-		E74A40141E9B9749000339F5 /* CYMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMeViewController.m; sourceTree = "<group>"; };
 		E74A40161E9B98B1000339F5 /* YKAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKAPI.h; sourceTree = "<group>"; };
+		E74A40371E9C709A000339F5 /* CYBaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYBaseNavViewController.h; sourceTree = "<group>"; };
+		E74A40381E9C709A000339F5 /* CYBaseNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYBaseNavViewController.m; sourceTree = "<group>"; };
+		E74A40391E9C709A000339F5 /* CYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTabBarController.h; sourceTree = "<group>"; };
+		E74A403A1E9C709A000339F5 /* CYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTabBarController.m; sourceTree = "<group>"; };
+		E74A403D1E9C709A000339F5 /* CYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTabBar.h; sourceTree = "<group>"; };
+		E74A403E1E9C709A000339F5 /* CYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTabBar.m; sourceTree = "<group>"; };
+		E74A40411E9C709A000339F5 /* CYCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYCameraViewController.h; sourceTree = "<group>"; };
+		E74A40421E9C709A000339F5 /* CYCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYCameraViewController.m; sourceTree = "<group>"; };
+		E74A404B1E9C709A000339F5 /* CYFollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFollowViewController.h; sourceTree = "<group>"; };
+		E74A404C1E9C709A000339F5 /* CYFollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYFollowViewController.m; sourceTree = "<group>"; };
+		E74A40511E9C709A000339F5 /* CYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYHomeViewController.h; sourceTree = "<group>"; };
+		E74A40521E9C709A000339F5 /* CYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYHomeViewController.m; sourceTree = "<group>"; };
+		E74A40571E9C709A000339F5 /* CYHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYHotViewController.h; sourceTree = "<group>"; };
+		E74A40581E9C709A000339F5 /* CYHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYHotViewController.m; sourceTree = "<group>"; };
+		E74A405D1E9C709A000339F5 /* CYLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLiveViewController.h; sourceTree = "<group>"; };
+		E74A405E1E9C709A000339F5 /* CYLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLiveViewController.m; sourceTree = "<group>"; };
+		E74A40631E9C709A000339F5 /* CYMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMeViewController.h; sourceTree = "<group>"; };
+		E74A40641E9C709A000339F5 /* CYMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMeViewController.m; sourceTree = "<group>"; };
+		E74A40691E9C709A000339F5 /* CYNearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYNearbyViewController.h; sourceTree = "<group>"; };
+		E74A406A1E9C709A000339F5 /* CYNearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYNearbyViewController.m; sourceTree = "<group>"; };
+		E74A406E1E9C709A000339F5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E74A406F1E9C709A000339F5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E74A40721E9C709A000339F5 /* CYSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYSearchViewController.h; sourceTree = "<group>"; };
+		E74A40731E9C709A000339F5 /* CYSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSearchViewController.m; sourceTree = "<group>"; };
+		E74A40771E9C709A000339F5 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		E74A40781E9C709A000339F5 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		E74A40861E9C70F7000339F5 /* CYTopTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTopTitleView.h; sourceTree = "<group>"; };
+		E74A40871E9C70F7000339F5 /* CYTopTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTopTitleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -405,7 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				E74A3ECC1E9B7CCB000339F5 /* Lib */,
-				E74A3EAE1E9B7CC3000339F5 /* Classes */,
+				E74A40341E9C709A000339F5 /* Classes */,
 				E74A3E761E9B5334000339F5 /* Supporting Files */,
 			);
 			path = CYInkeLive;
@@ -440,237 +458,6 @@
 				E74A3E9D1E9B5334000339F5 /* Info.plist */,
 			);
 			path = CYInkeLiveUITests;
-			sourceTree = "<group>";
-		};
-		E74A3EAE1E9B7CC3000339F5 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				E74A3EC31E9B7CC3000339F5 /* Other */,
-				E74A3ECA1E9B7CC3000339F5 /* Tool */,
-				E74A3EAF1E9B7CC3000339F5 /* Base */,
-				E74A3EB71E9B7CC3000339F5 /* Common */,
-				E74A3EBB1E9B7CC3000339F5 /* Home */,
-				E74A3EB31E9B7CC3000339F5 /* Camera */,
-				E74A400F1E9B973F000339F5 /* Me */,
-				E74A3EBF1E9B7CC3000339F5 /* Hot */,
-				E74A3EC61E9B7CC3000339F5 /* Search */,
-				E74A40051E9B8F1F000339F5 /* Live */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		E74A3EAF1E9B7CC3000339F5 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				E74A3EB01E9B7CC3000339F5 /* Controllers */,
-				E74A3EB11E9B7CC3000339F5 /* Model */,
-				E74A3EB21E9B7CC3000339F5 /* Views */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		E74A3EB01E9B7CC3000339F5 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				E74A3ED31E9B7D94000339F5 /* CYTabBarController.h */,
-				E74A3ED41E9B7D94000339F5 /* CYTabBarController.m */,
-				E74A3ED01E9B7D79000339F5 /* CYBaseNavViewController.h */,
-				E74A3ED11E9B7D79000339F5 /* CYBaseNavViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E74A3EB11E9B7CC3000339F5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		E74A3EB21E9B7CC3000339F5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				E74A3ECD1E9B7D49000339F5 /* CYTabBar.h */,
-				E74A3ECE1E9B7D49000339F5 /* CYTabBar.m */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		E74A3EB31E9B7CC3000339F5 /* Camera */ = {
-			isa = PBXGroup;
-			children = (
-				E74A3EB41E9B7CC3000339F5 /* Controllers */,
-				E74A3EB51E9B7CC3000339F5 /* Model */,
-				E74A3EB61E9B7CC3000339F5 /* Views */,
-			);
-			path = Camera;
-			sourceTree = "<group>";
-		};
-		E74A3EB41E9B7CC3000339F5 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				E74A400C1E9B96FA000339F5 /* CYCameraViewController.h */,
-				E74A400D1E9B96FA000339F5 /* CYCameraViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E74A3EB51E9B7CC3000339F5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		E74A3EB61E9B7CC3000339F5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		E74A3EB71E9B7CC3000339F5 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				E74A3EB81E9B7CC3000339F5 /* Controllers */,
-				E74A3EB91E9B7CC3000339F5 /* Model */,
-				E74A3EBA1E9B7CC3000339F5 /* Views */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		E74A3EB81E9B7CC3000339F5 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E74A3EB91E9B7CC3000339F5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		E74A3EBA1E9B7CC3000339F5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		E74A3EBB1E9B7CC3000339F5 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				E74A3EBC1E9B7CC3000339F5 /* Controllers */,
-				E74A3EBD1E9B7CC3000339F5 /* Model */,
-				E74A3EBE1E9B7CC3000339F5 /* Views */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		E74A3EBC1E9B7CC3000339F5 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				E74A40091E9B96EE000339F5 /* CYHomeViewController.h */,
-				E74A400A1E9B96EE000339F5 /* CYHomeViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E74A3EBD1E9B7CC3000339F5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		E74A3EBE1E9B7CC3000339F5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		E74A3EBF1E9B7CC3000339F5 /* Hot */ = {
-			isa = PBXGroup;
-			children = (
-				E74A3EC01E9B7CC3000339F5 /* Controllers */,
-				E74A3EC11E9B7CC3000339F5 /* Model */,
-				E74A3EC21E9B7CC3000339F5 /* Views */,
-			);
-			path = Hot;
-			sourceTree = "<group>";
-		};
-		E74A3EC01E9B7CC3000339F5 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E74A3EC11E9B7CC3000339F5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		E74A3EC21E9B7CC3000339F5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		E74A3EC31E9B7CC3000339F5 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				E74A3EC41E9B7CC3000339F5 /* AppDelegate.h */,
-				E74A3EC51E9B7CC3000339F5 /* AppDelegate.m */,
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
-		E74A3EC61E9B7CC3000339F5 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				E74A3EC71E9B7CC3000339F5 /* Controllers */,
-				E74A3EC81E9B7CC3000339F5 /* Model */,
-				E74A3EC91E9B7CC3000339F5 /* Views */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		E74A3EC71E9B7CC3000339F5 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E74A3EC81E9B7CC3000339F5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		E74A3EC91E9B7CC3000339F5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		E74A3ECA1E9B7CC3000339F5 /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-				E74A40061E9B94B1000339F5 /* UIView+Frame.h */,
-				E74A40071E9B94B1000339F5 /* UIView+Frame.m */,
-			);
-			path = Tool;
 			sourceTree = "<group>";
 		};
 		E74A3ECC1E9B7CCB000339F5 /* Lib */ = {
@@ -796,44 +583,375 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		E74A40051E9B8F1F000339F5 /* Live */ = {
+		E74A40341E9C709A000339F5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E74A406D1E9C709A000339F5 /* Other */,
+				E74A40761E9C709A000339F5 /* Tool */,
+				E74A40451E9C709A000339F5 /* Common */,
+				E74A40351E9C709A000339F5 /* Base */,
+				E74A404F1E9C709A000339F5 /* Home */,
+				E74A403F1E9C709A000339F5 /* Camera */,
+				E74A40611E9C709A000339F5 /* Me */,
+				E74A40551E9C709A000339F5 /* Hot */,
+				E74A40491E9C709A000339F5 /* Follow */,
+				E74A40671E9C709A000339F5 /* Nearby */,
+				E74A405B1E9C709A000339F5 /* Live */,
+				E74A40701E9C709A000339F5 /* Search */,
 			);
-			path = Live;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		E74A400F1E9B973F000339F5 /* Me */ = {
+		E74A40351E9C709A000339F5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				E74A40101E9B973F000339F5 /* Controllers */,
-				E74A40111E9B973F000339F5 /* Model */,
-				E74A40121E9B973F000339F5 /* Views */,
+				E74A40361E9C709A000339F5 /* Controllers */,
+				E74A403B1E9C709A000339F5 /* Models */,
+				E74A403C1E9C709A000339F5 /* Views */,
 			);
-			path = Me;
+			path = Base;
 			sourceTree = "<group>";
 		};
-		E74A40101E9B973F000339F5 /* Controllers */ = {
+		E74A40361E9C709A000339F5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E74A40131E9B9749000339F5 /* CYMeViewController.h */,
-				E74A40141E9B9749000339F5 /* CYMeViewController.m */,
+				E74A40371E9C709A000339F5 /* CYBaseNavViewController.h */,
+				E74A40381E9C709A000339F5 /* CYBaseNavViewController.m */,
+				E74A40391E9C709A000339F5 /* CYTabBarController.h */,
+				E74A403A1E9C709A000339F5 /* CYTabBarController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		E74A40111E9B973F000339F5 /* Model */ = {
+		E74A403B1E9C709A000339F5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		E74A40121E9B973F000339F5 /* Views */ = {
+		E74A403C1E9C709A000339F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E74A403D1E9C709A000339F5 /* CYTabBar.h */,
+				E74A403E1E9C709A000339F5 /* CYTabBar.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E74A403F1E9C709A000339F5 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				E74A40401E9C709A000339F5 /* Controllers */,
+				E74A40431E9C709A000339F5 /* Models */,
+				E74A40441E9C709A000339F5 /* Views */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		E74A40401E9C709A000339F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E74A40411E9C709A000339F5 /* CYCameraViewController.h */,
+				E74A40421E9C709A000339F5 /* CYCameraViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E74A40431E9C709A000339F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E74A40441E9C709A000339F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E74A40451E9C709A000339F5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E74A40461E9C709A000339F5 /* Controllers */,
+				E74A40471E9C709A000339F5 /* Models */,
+				E74A40481E9C709A000339F5 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E74A40461E9C709A000339F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E74A40471E9C709A000339F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E74A40481E9C709A000339F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E74A40491E9C709A000339F5 /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+				E74A404A1E9C709A000339F5 /* Controllers */,
+				E74A404D1E9C709A000339F5 /* Models */,
+				E74A404E1E9C709A000339F5 /* Views */,
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		E74A404A1E9C709A000339F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E74A404B1E9C709A000339F5 /* CYFollowViewController.h */,
+				E74A404C1E9C709A000339F5 /* CYFollowViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E74A404D1E9C709A000339F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E74A404E1E9C709A000339F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E74A404F1E9C709A000339F5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E74A40501E9C709A000339F5 /* Controllers */,
+				E74A40531E9C709A000339F5 /* Models */,
+				E74A40541E9C709A000339F5 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E74A40501E9C709A000339F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E74A40511E9C709A000339F5 /* CYHomeViewController.h */,
+				E74A40521E9C709A000339F5 /* CYHomeViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E74A40531E9C709A000339F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E74A40541E9C709A000339F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E74A40861E9C70F7000339F5 /* CYTopTitleView.h */,
+				E74A40871E9C70F7000339F5 /* CYTopTitleView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E74A40551E9C709A000339F5 /* Hot */ = {
+			isa = PBXGroup;
+			children = (
+				E74A40561E9C709A000339F5 /* Controllers */,
+				E74A40591E9C709A000339F5 /* Models */,
+				E74A405A1E9C709A000339F5 /* Views */,
+			);
+			path = Hot;
+			sourceTree = "<group>";
+		};
+		E74A40561E9C709A000339F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E74A40571E9C709A000339F5 /* CYHotViewController.h */,
+				E74A40581E9C709A000339F5 /* CYHotViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E74A40591E9C709A000339F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E74A405A1E9C709A000339F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E74A405B1E9C709A000339F5 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				E74A405C1E9C709A000339F5 /* Controllers */,
+				E74A405F1E9C709A000339F5 /* Models */,
+				E74A40601E9C709A000339F5 /* Views */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		E74A405C1E9C709A000339F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E74A405D1E9C709A000339F5 /* CYLiveViewController.h */,
+				E74A405E1E9C709A000339F5 /* CYLiveViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E74A405F1E9C709A000339F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E74A40601E9C709A000339F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E74A40611E9C709A000339F5 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				E74A40621E9C709A000339F5 /* Controllers */,
+				E74A40651E9C709A000339F5 /* Models */,
+				E74A40661E9C709A000339F5 /* Views */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		E74A40621E9C709A000339F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E74A40631E9C709A000339F5 /* CYMeViewController.h */,
+				E74A40641E9C709A000339F5 /* CYMeViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E74A40651E9C709A000339F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E74A40661E9C709A000339F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E74A40671E9C709A000339F5 /* Nearby */ = {
+			isa = PBXGroup;
+			children = (
+				E74A40681E9C709A000339F5 /* Controllers */,
+				E74A406B1E9C709A000339F5 /* Models */,
+				E74A406C1E9C709A000339F5 /* Views */,
+			);
+			path = Nearby;
+			sourceTree = "<group>";
+		};
+		E74A40681E9C709A000339F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E74A40691E9C709A000339F5 /* CYNearbyViewController.h */,
+				E74A406A1E9C709A000339F5 /* CYNearbyViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E74A406B1E9C709A000339F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E74A406C1E9C709A000339F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E74A406D1E9C709A000339F5 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E74A406E1E9C709A000339F5 /* AppDelegate.h */,
+				E74A406F1E9C709A000339F5 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		E74A40701E9C709A000339F5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E74A40711E9C709A000339F5 /* Controllers */,
+				E74A40741E9C709A000339F5 /* Models */,
+				E74A40751E9C709A000339F5 /* Views */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		E74A40711E9C709A000339F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E74A40721E9C709A000339F5 /* CYSearchViewController.h */,
+				E74A40731E9C709A000339F5 /* CYSearchViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E74A40741E9C709A000339F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E74A40751E9C709A000339F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E74A40761E9C709A000339F5 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E74A40771E9C709A000339F5 /* UIView+Frame.h */,
+				E74A40781E9C709A000339F5 /* UIView+Frame.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1130,15 +1248,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E74A40081E9B94B1000339F5 /* UIView+Frame.m in Sources */,
-				E74A3ECB1E9B7CC3000339F5 /* AppDelegate.m in Sources */,
-				E74A400B1E9B96EE000339F5 /* CYHomeViewController.m in Sources */,
 				E74A3E781E9B5334000339F5 /* main.m in Sources */,
-				E74A3ED51E9B7D94000339F5 /* CYTabBarController.m in Sources */,
-				E74A3ECF1E9B7D49000339F5 /* CYTabBar.m in Sources */,
-				E74A3ED21E9B7D79000339F5 /* CYBaseNavViewController.m in Sources */,
-				E74A400E1E9B96FA000339F5 /* CYCameraViewController.m in Sources */,
-				E74A40151E9B9749000339F5 /* CYMeViewController.m in Sources */,
+				E74A407D1E9C709A000339F5 /* CYFollowViewController.m in Sources */,
+				E74A40801E9C709A000339F5 /* CYLiveViewController.m in Sources */,
+				E74A407E1E9C709A000339F5 /* CYHomeViewController.m in Sources */,
+				E74A40811E9C709A000339F5 /* CYMeViewController.m in Sources */,
+				E74A407C1E9C709A000339F5 /* CYCameraViewController.m in Sources */,
+				E74A407B1E9C709A000339F5 /* CYTabBar.m in Sources */,
+				E74A40821E9C709A000339F5 /* CYNearbyViewController.m in Sources */,
+				E74A40831E9C709A000339F5 /* AppDelegate.m in Sources */,
+				E74A40881E9C70F7000339F5 /* CYTopTitleView.m in Sources */,
+				E74A40791E9C709A000339F5 /* CYBaseNavViewController.m in Sources */,
+				E74A40851E9C709A000339F5 /* UIView+Frame.m in Sources */,
+				E74A40841E9C709A000339F5 /* CYSearchViewController.m in Sources */,
+				E74A407F1E9C709A000339F5 /* CYHotViewController.m in Sources */,
+				E74A407A1E9C709A000339F5 /* CYTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
