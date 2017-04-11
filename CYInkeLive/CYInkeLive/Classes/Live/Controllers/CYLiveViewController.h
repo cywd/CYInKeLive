@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class CYLiveModel;
+
 @interface CYLiveViewController : UIViewController
+
+@property (nonatomic, strong) CYLiveModel *model;
 
 @end

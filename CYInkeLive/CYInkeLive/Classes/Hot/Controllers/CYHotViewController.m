@@ -66,9 +66,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-//    CYLiveViewController *liveVc = [[CYLiveViewController alloc] init];
-////    liveVc.model = self.dataArray[indexPath.row];
-//    [self presentViewController:liveVc animated:YES completion:nil];
+    CYLiveViewController *liveVc = [[CYLiveViewController alloc] init];
+    liveVc.model = self.dataArray[indexPath.row];
+    [self.navigationController pushViewController:liveVc animated:YES];
 }
 
 #pragma mark - lazy
