@@ -24,6 +24,19 @@
     return self;
 }
 
+#pragma mark - override
+// 响应超出superview的button
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    UIView *v = [super hitTest:point withEvent:event];
+    if (v == nil) {
+        CGPoint tp = [self.cameraButton convertPoint:point fromView:self];
+        if (CGRectContainsPoint(self.cameraButton.bounds, tp)) {
+            v = self.cameraButton;
+        }
+    }
+    return v;
+}
+
 - (void)layoutSubviews {
     [super layoutSubviews];
     
