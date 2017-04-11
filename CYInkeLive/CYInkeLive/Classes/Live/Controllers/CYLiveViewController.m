@@ -7,8 +7,11 @@
 //
 
 #import "CYLiveViewController.h"
+#import <IJKMediaFramework/IJKMediaFramework.h>
 
 @interface CYLiveViewController ()
+
+@property (nonatomic, strong) IJKFFMoviePlayerController *player;
 
 @end
 
@@ -17,6 +20,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    // 界面消失要停止
+    [_player pause];
+    [_player stop];
+    [_player shutdown];
 }
 
 - (void)didReceiveMemoryWarning {

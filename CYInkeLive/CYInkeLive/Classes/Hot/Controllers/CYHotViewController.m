@@ -7,8 +7,18 @@
 //
 
 #import "CYHotViewController.h"
+#import "CYHotTableViewCell.h"
+#import <AFNetworking.h>
+#import "YKAPI.h"
+#import <MJExtension.h>
+#import "CYLiveModel.h"
+#import "CYCreatorModel.h"
+#import "CYLiveViewController.h"
 
-@interface CYHotViewController ()
+@interface CYHotViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -16,8 +26,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor redColor];
+    
+    [self.view addSubview:self.tableView];
+    
+    [self requestData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,14 +37,60 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)requestData {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager GET:INKeUrl parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *appDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        
+        self.dataArray = [CYLiveModel mj_objectArrayWithKeyValuesArray:appDic[@"lives"]];
+        [self.tableView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
-*/
+
+#pragma mark - 数据源方法
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CYHotTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([CYHotTableViewCell class])];
+    cell.model = self.dataArray[indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+//    CYLiveViewController *liveVc = [[CYLiveViewController alloc] init];
+////    liveVc.model = self.dataArray[indexPath.row];
+//    [self presentViewController:liveVc animated:YES completion:nil];
+}
+
+#pragma mark - lazy
+- (NSMutableArray *)dataArray
+{
+    if (!_dataArray) {
+        _dataArray = [[NSMutableArray alloc] init];
+    }
+    return _dataArray;
+}
+
+- (UITableView *)tableView
+{
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-113) style:UITableViewStylePlain];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+        _tableView.rowHeight = [UIScreen mainScreen].bounds.size.width * 1.3 + 1;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [_tableView registerClass:[CYHotTableViewCell class] forCellReuseIdentifier:NSStringFromClass([CYHotTableViewCell class])];
+    }
+    return _tableView;
+}
 
 @end
