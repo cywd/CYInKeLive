@@ -81,90 +81,11 @@
     [self.view insertSubview:self.topSideView aboveSubview:self.showView];
     [self.view addSubview:self.closeButton];
     
-//    [self.view addSubview:self.anchorView];
-//    [self.topSideView addSubview:self.bottomTool];
-//    
-//    [self.topSideView addSubview:self.keyBoardView];
-//    [self.topSideView addSubview:self.messageTableView];
-//    [self.topSideView addSubview:self.presentView];
-//    
-//    [self.view addSubview:self.danmuView];
-    
-    
     [self.closeButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view).offset(-14);
         make.right.equalTo(self.view).offset(-10);
         make.width.height.equalTo(@40);
     }];
-    
-//    [self registerForKeyboardNotifications];
-    
-    //送礼物
-//    WEAKSELF;
-//    [self.giftView setGiftClick:^(NSInteger tag) {
-//        [weakSelf chooseGift:tag + 100];
-//    }];
-//    //显示底部工具栏
-//    [self.giftView setGrayClick:^{
-//        [weakSelf bottomToolShow];
-//    }];
-}
-
-- (void)registerForKeyboardNotifications {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardWillShowNotification object:nil];
-    
-    [[NSNotificationCenter defaultCenter]  addObserver:self selector:@selector(keyboardWasHidden:) name:UIKeyboardWillHideNotification object:nil];
-    
-    tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapEvent:)];
-    [self.view addGestureRecognizer:tapGesture];
-}
-
-// 键盘弹起
-- (void)keyboardWasShown:(NSNotification*)notification {
-//    NSDictionary *info = [notification userInfo];
-//    CGRect keyboardRect = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-//    if (self.keyBoardView) {
-//        self.keyBoardView.frame = CGRectMake(self.keyBoardView.frame.origin.x, CGRectGetMaxY(self.view.frame)-CGRectGetHeight(self.keyBoardView.frame)-keyboardRect.size.height, CGRectGetWidth(self.keyBoardView.frame), CGRectGetHeight(self.keyBoardView.frame));
-//    }
-//    
-//    if (self.messageTableView) {
-//        self.messageTableView.frame = CGRectMake(0, CGRectGetMaxY(self.view.frame)-CGRectGetHeight(self.keyBoardView.frame)-keyboardRect.size.height - CGRectGetHeight(self.messageTableView.frame) -10, CGRectGetWidth(self.messageTableView.frame), 120);
-//    }
-//    if (self.danmuView) {
-//        self.danmuView.frame = CGRectMake(self.danmuView.frame.origin.x, CGRectGetMinY(self.messageTableView.frame)-CGRectGetHeight(self.danmuView.frame), CGRectGetWidth(self.danmuView.frame), CGRectGetHeight(self.danmuView.frame));
-//    }
-}
-
-// 键盘隐藏
-- (void)keyboardWasHidden:(NSNotification*)notification {
-//    if (self.keyBoardView) {
-//        self.keyBoardView.frame = CGRectMake(0, CGRectGetMaxY(self.view.frame), self.view.bounds.size.width, 44);
-//    }
-//    if (self.messageTableView) {
-//        self.messageTableView.frame = CGRectMake(0, CGRectGetMaxY(self.view.frame)-180, CGRectGetWidth(self.view.frame)/3*2, 120);
-//    }
-//    if (self.danmuView) {
-//        self.danmuView.frame = CGRectMake(self.danmuView.frame.origin.x, CGRectGetMinY(self.messageTableView.frame)-CGRectGetHeight(self.danmuView.frame), CGRectGetWidth(self.danmuView.frame), CGRectGetHeight(self.danmuView.frame));
-//    }
-}
-
-- (void)tapEvent:(UITapGestureRecognizer*)recognizer {
-//    DMHeartFlyView* heart = [[DMHeartFlyView alloc]initWithFrame:CGRectMake(0, 0, 46, 46)];
-//    [self.view addSubview:heart];
-//    CGPoint fountainSource = CGPointMake(SCREEN_WIDTH - 40, self.view.bounds.size.height - 90);
-//    heart.center = fountainSource;
-//    [heart animateInView:self.view];
-    
-    
-//    CGPoint point = [recognizer locationInView:self.view];
-//    CGRect rect = [self.view convertRect:self.keyBoardView.frame toView:self.view];
-//    if (CGRectContainsPoint(rect, point)) {
-//        
-//    }else{
-//        if (self.keyBoardView.isEdit) {
-//            [self.keyBoardView editEndTextField];
-//        }
-//    }
 }
 
 - (void)repareStartPlay {
@@ -181,7 +102,6 @@
     playerVc.view.frame = [UIScreen mainScreen].bounds;
 
     [self.view insertSubview:playerVc.view atIndex:1];
-    
 }
 
 - (UIView *)showView{
@@ -194,16 +114,18 @@
 }
 
 
-- (UIImageView *)backdropView{
+- (UIImageView *)backdropView {
     if (_backdropView == nil) {
-        _backdropView = [[UIImageView alloc]init];
+        _backdropView = [[UIImageView alloc] init];
         _backdropView.frame = self.view.bounds;
-        NSString *urlStr = [NSString stringWithFormat:@"%@",self.model.creator.portrait];
-        [_backdropView sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:[UIImage imageNamed:@"swipe_bg"]];
+        _backdropView.contentMode = UIViewContentModeScaleAspectFill;
+        // 虚化
         UIVisualEffect *effcet = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
         UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:effcet];
         visualEffectView.frame = _backdropView.bounds;
         [_backdropView addSubview:visualEffectView];
+        NSString *urlStr = [NSString stringWithFormat:@"%@",self.model.creator.portrait];
+        [_backdropView sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:[UIImage imageNamed:@"swipe_bg"]];
     }
     return _backdropView;
 }
