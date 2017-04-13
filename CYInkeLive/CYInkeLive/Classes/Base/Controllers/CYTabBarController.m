@@ -73,6 +73,11 @@
     [self animatedWIthIndex:index];
 }
 
+- (void)cameraButtonClick:(CYTabBar *)tabBar {
+    CYCameraViewController *vc = [[CYCameraViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
 #pragma mark - private
 - (void)animatedWIthIndex:(NSInteger)index {
     NSMutableArray *tabArr = [NSMutableArray array];

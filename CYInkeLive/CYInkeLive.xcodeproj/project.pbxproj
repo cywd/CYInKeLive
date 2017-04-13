@@ -146,6 +146,9 @@
 		E74A40841E9C709A000339F5 /* CYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40731E9C709A000339F5 /* CYSearchViewController.m */; };
 		E74A40851E9C709A000339F5 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40781E9C709A000339F5 /* UIView+Frame.m */; };
 		E74A40881E9C70F7000339F5 /* CYTopTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40871E9C70F7000339F5 /* CYTopTitleView.m */; };
+		E770B76F1E9F20DE00B1F10E /* CYStartLiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = E770B76E1E9F20DE00B1F10E /* CYStartLiveView.m */; };
+		E770B7741E9F246000B1F10E /* UIControl+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = E770B7711E9F246000B1F10E /* UIControl+Add.m */; };
+		E770B7751E9F246000B1F10E /* UIView+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = E770B7731E9F246000B1F10E /* UIView+Add.m */; };
 		E78F91501E9C88820033E336 /* CYHotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F914E1E9C88820033E336 /* CYHotTableViewCell.m */; };
 		E78F91541E9C8BF50033E336 /* CYLiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F91531E9C8BF50033E336 /* CYLiveModel.m */; };
 		E78F91571E9C8C150033E336 /* CYCreatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F91561E9C8C150033E336 /* CYCreatorModel.m */; };
@@ -337,6 +340,12 @@
 		E74A40781E9C709A000339F5 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		E74A40861E9C70F7000339F5 /* CYTopTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTopTitleView.h; sourceTree = "<group>"; };
 		E74A40871E9C70F7000339F5 /* CYTopTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTopTitleView.m; sourceTree = "<group>"; };
+		E770B76D1E9F20DE00B1F10E /* CYStartLiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYStartLiveView.h; sourceTree = "<group>"; };
+		E770B76E1E9F20DE00B1F10E /* CYStartLiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYStartLiveView.m; sourceTree = "<group>"; };
+		E770B7701E9F246000B1F10E /* UIControl+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+Add.h"; sourceTree = "<group>"; };
+		E770B7711E9F246000B1F10E /* UIControl+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Add.m"; sourceTree = "<group>"; };
+		E770B7721E9F246000B1F10E /* UIView+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Add.h"; sourceTree = "<group>"; };
+		E770B7731E9F246000B1F10E /* UIView+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Add.m"; sourceTree = "<group>"; };
 		E78F914D1E9C88820033E336 /* CYHotTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYHotTableViewCell.h; sourceTree = "<group>"; };
 		E78F914E1E9C88820033E336 /* CYHotTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYHotTableViewCell.m; sourceTree = "<group>"; };
 		E78F91521E9C8BF50033E336 /* CYLiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLiveModel.h; sourceTree = "<group>"; };
@@ -357,6 +366,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E74A3FEE1E9B8C42000339F5 /* OpenGLES.framework in Frameworks */,
 				E74A40001E9B8C8B000339F5 /* libsqlite3.tbd in Frameworks */,
 				E74A3FFE1E9B8C83000339F5 /* AVFoundation.framework in Frameworks */,
 				E74A3FFC1E9B8C78000339F5 /* CoreMedia.framework in Frameworks */,
@@ -366,7 +376,6 @@
 				E74A3FF41E9B8C5C000339F5 /* libbz2.tbd in Frameworks */,
 				E74A3FF21E9B8C52000339F5 /* libz.tbd in Frameworks */,
 				E74A3FF01E9B8C49000339F5 /* MobileCoreServices.framework in Frameworks */,
-				E74A3FEE1E9B8C42000339F5 /* OpenGLES.framework in Frameworks */,
 				E74A3FEC1E9B8C39000339F5 /* VideoToolbox.framework in Frameworks */,
 				AF2C5CD3D1D5C427ED84186A /* libPods-CYInkeLive.a in Frameworks */,
 				E74A3FEA1E9B8C24000339F5 /* IJKMediaFramework.framework in Frameworks */,
@@ -689,6 +698,8 @@
 		E74A40441E9C709A000339F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E770B76D1E9F20DE00B1F10E /* CYStartLiveView.h */,
+				E770B76E1E9F20DE00B1F10E /* CYStartLiveView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -982,6 +993,10 @@
 		E74A40761E9C709A000339F5 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				E770B7701E9F246000B1F10E /* UIControl+Add.h */,
+				E770B7711E9F246000B1F10E /* UIControl+Add.m */,
+				E770B7721E9F246000B1F10E /* UIView+Add.h */,
+				E770B7731E9F246000B1F10E /* UIView+Add.m */,
 				E74A40771E9C709A000339F5 /* UIView+Frame.h */,
 				E74A40781E9C709A000339F5 /* UIView+Frame.m */,
 			);
@@ -1284,8 +1299,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E78F915B1E9C91120033E336 /* CYFollowEmptyView.m in Sources */,
+				E770B7741E9F246000B1F10E /* UIControl+Add.m in Sources */,
 				E74A3E781E9B5334000339F5 /* main.m in Sources */,
 				E74A407D1E9C709A000339F5 /* CYFollowViewController.m in Sources */,
+				E770B7751E9F246000B1F10E /* UIView+Add.m in Sources */,
 				E74A40801E9C709A000339F5 /* CYLiveViewController.m in Sources */,
 				E74A407E1E9C709A000339F5 /* CYHomeViewController.m in Sources */,
 				E74A40811E9C709A000339F5 /* CYMeViewController.m in Sources */,
@@ -1304,6 +1321,7 @@
 				E74A407F1E9C709A000339F5 /* CYHotViewController.m in Sources */,
 				E78F91571E9C8C150033E336 /* CYCreatorModel.m in Sources */,
 				E74A407A1E9C709A000339F5 /* CYTabBarController.m in Sources */,
+				E770B76F1E9F20DE00B1F10E /* CYStartLiveView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

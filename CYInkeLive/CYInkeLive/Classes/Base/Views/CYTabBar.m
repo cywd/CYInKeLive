@@ -19,22 +19,23 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        [self addSubview:self.cameraButton];
+//        [self addSubview:self.cameraButton];
     }
     return self;
 }
 
 #pragma mark - override
+// 从最下层往上遍历， 如果button在item下，最后找到的是item，响应item
 // 响应超出superview的button
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    UIView *v = [super hitTest:point withEvent:event];
-    if (v == nil) {
-        CGPoint tp = [self.cameraButton convertPoint:point fromView:self];
-        if (CGRectContainsPoint(self.cameraButton.bounds, tp)) {
-            v = self.cameraButton;
+    UIView *view = [super hitTest:point withEvent:event];
+    if (view == nil) {
+        CGPoint tmpPoint = [self.cameraButton convertPoint:point fromView:self];
+        if (CGRectContainsPoint(self.cameraButton.bounds, tmpPoint)) {
+            view = self.cameraButton;
         }
     }
-    return v;
+    return view;
 }
 
 - (void)layoutSubviews {
@@ -55,6 +56,7 @@
             }
         }
     }
+    
 }
 
 - (UIButton *)cameraButton {
@@ -64,6 +66,7 @@
         [_cameraButton addTarget:self action:@selector(cameraButtonClick) forControlEvents:UIControlEventTouchUpInside];
         _cameraButton.frame = CGRectMake(0, 0, _cameraButton.currentBackgroundImage.size.width, _cameraButton.currentBackgroundImage.size.height);
         self.backgroundColor = [UIColor whiteColor];
+        [self addSubview:_cameraButton];
     }
     return _cameraButton;
 }
