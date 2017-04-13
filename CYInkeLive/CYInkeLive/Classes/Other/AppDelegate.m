@@ -20,6 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [self installUncaughtExceptionHandler];
+    
     self.window= [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     CYTabBarController *tabbarVC = [[CYTabBarController alloc] init];
@@ -64,6 +66,19 @@
     [[SDImageCache sharedImageCache] clearMemory];
 }
 
+// 获取崩溃日志
+- (void)installUncaughtExceptionHandler {
+    NSSetUncaughtExceptionHandler(&UncaughtExceptionHandler);
+}
 
+void UncaughtExceptionHandler(NSException *exception) {
+    NSArray *arr = [exception callStackSymbols];
+    NSString *reason = [exception reason];
+    NSString *name = [exception name];
+    NSString *currentVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    NSString *urlStr = [NSString stringWithFormat:@"mailto://lichunyang@outlook.com?subjectBug&body=感谢您的配合！<br><br><br>""错误详情(%@):<br>%@<br>--------------------------<br>%@<br>-------------<br>%@", currentVersion, name, reason, [arr componentsJoinedByString:@"<br>"]];
+    NSURL *url = [NSURL URLWithString:[urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    [[UIApplication sharedApplication] openURL:url];
+}
 
 @end
