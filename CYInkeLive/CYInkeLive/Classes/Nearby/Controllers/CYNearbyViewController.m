@@ -14,6 +14,7 @@
 #import <MJExtension.h>
 #import <AFNetworking.h>
 #import "CYNearbyHeaderCollectionReusableView.h"
+#import "CYMainRefrashGifHeader.h"
 
 #define nearbyMargin 3
 
@@ -121,20 +122,25 @@
 }
 
 - (void)setUpLocation {
-    [self loadData];
+    CYMainRefrashGifHeader *header = [CYMainRefrashGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
+    header.lastUpdatedTimeLabel.hidden = YES;
+    header.stateLabel.hidden = YES;
+    [header beginRefreshing];
+    self.collectionView.mj_header = header;
 }
 
 - (void)loadData {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [manager GET:self.requestUrl parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self.dataArray removeAllObjects];
         NSDictionary *appDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         
         self.dataArray = [CYLiveModel mj_objectArrayWithKeyValuesArray:appDic[@"lives"]];
+        [self.collectionView.mj_header endRefreshing];
         [self.collectionView reloadData];
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        [self.collectionView.mj_header endRefreshing];
     }];
 }
 

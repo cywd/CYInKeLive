@@ -14,6 +14,7 @@
 #import "CYLiveModel.h"
 #import "CYCreatorModel.h"
 #import "CYLiveViewController.h"
+#import "CYMainRefrashGifHeader.h"
 
 @interface CYHotViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -29,7 +30,11 @@
     
     [self.view addSubview:self.tableView];
     
-    [self requestData];
+    CYMainRefrashGifHeader *header = [CYMainRefrashGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
+    header.lastUpdatedTimeLabel.hidden = YES;
+    header.stateLabel.hidden = YES;
+    [header beginRefreshing];
+    self.tableView.mj_header = header;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,17 +42,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)requestData {
+- (void)loadData {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [manager GET:INKeUrl parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self.dataArray removeAllObjects];
         NSDictionary *appDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         
         self.dataArray = [CYLiveModel mj_objectArrayWithKeyValuesArray:appDic[@"lives"]];
         [self.tableView reloadData];
-        
+        [self.tableView.mj_header endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        [self.tableView.mj_header endRefreshing];
     }];
 }
 
