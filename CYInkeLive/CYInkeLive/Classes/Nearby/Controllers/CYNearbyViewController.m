@@ -176,7 +176,8 @@
             break;
     }
     
-    [self loadData];
+//    [self loadData];
+    [self.collectionView.mj_header beginRefreshing];
 }
 
 - (NSMutableArray *)dataArray
@@ -238,6 +239,14 @@
         [_alertVc addAction:cancelAction];
     }
     return _alertVc;
+}
+
+- (void)dealloc {
+    self.collectionView.dataSource = nil;
+    self.collectionView.delegate = nil;
+    self.locationManager.delegate = nil;
+    
+    
 }
 
 @end

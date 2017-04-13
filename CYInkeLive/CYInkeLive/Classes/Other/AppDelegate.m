@@ -20,6 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    // 异常处理
     [self installUncaughtExceptionHandler];
     
     self.window= [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

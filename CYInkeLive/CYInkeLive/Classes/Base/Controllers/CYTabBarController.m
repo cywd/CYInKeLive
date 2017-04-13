@@ -13,6 +13,7 @@
 #import "CYHomeViewController.h"
 #import "CYCameraViewController.h"
 #import "CYMeViewController.h"
+#import "CYCameraView.h"
 
 @interface CYTabBarController () <CYTabBarDelegate>
 
@@ -74,8 +75,28 @@
 }
 
 - (void)cameraButtonClick:(CYTabBar *)tabBar {
-    CYCameraViewController *vc = [[CYCameraViewController alloc] init];
-    [self presentViewController:vc animated:YES completion:nil];
+    CYCameraView *popCamera = [[CYCameraView alloc] initWithFrame:self.view.bounds];
+    [popCamera setButtonClick:^(NSInteger tag) {
+        switch (tag) {
+            case 50:
+                //直播
+            {
+                CYCameraViewController *vc = [[CYCameraViewController alloc] init];
+                [self presentViewController:vc animated:YES completion:nil];
+            }
+                break;
+            case 51:
+                //短视频
+            {
+                
+                
+            }
+                break;
+            default:
+                break;
+        }
+    }];
+    [popCamera popShow];
 }
 
 #pragma mark - private
