@@ -23,7 +23,7 @@
 
 @property (nonatomic,strong)UIButton *closeButton;
 
-@property (nonatomic,strong)UIView *backView;
+@property (nonatomic,strong)UIView *bgView;
 
 
 @end
@@ -39,7 +39,7 @@
 }
 
 - (void)creatUI{
-    [self addSubview:self.backView];
+    [self addSubview:self.bgView];
     [self addSubview:self.liveButton];
     [self addSubview:self.videoButton];
     [self addSubview:self.closeButton];
@@ -126,12 +126,12 @@
     return _closeButton;
 }
 
-- (UIView *)backView{
-    if (_backView == nil) {
-        _backView = [[UIView alloc]initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 50 - LiveWidth, [UIScreen mainScreen].bounds.size.width, LiveWidth)];
-        _backView.backgroundColor = [UIColor whiteColor];
+- (UIView *)bgView{
+    if (_bgView == nil) {
+        _bgView = [[UIView alloc]initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 50 - LiveWidth, [UIScreen mainScreen].bounds.size.width, LiveWidth)];
+        _bgView.backgroundColor = [UIColor whiteColor];
     }
-    return _backView;
+    return _bgView;
 }
 
 @end

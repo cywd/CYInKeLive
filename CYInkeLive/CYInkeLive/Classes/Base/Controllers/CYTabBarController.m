@@ -24,9 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIView *backView = [[UIView alloc] initWithFrame:self.view.frame];
-    backView.backgroundColor = [UIColor whiteColor];
-    [self.tabBar insertSubview:backView atIndex:0];
+    UIView *bgView = [[UIView alloc] initWithFrame:self.view.frame];
+    bgView.backgroundColor = [UIColor whiteColor];
+    [self.tabBar insertSubview:bgView atIndex:0];
     self.tabBar.opaque = YES;
     self.tabBar.tintColor = [UIColor blackColor];
     
