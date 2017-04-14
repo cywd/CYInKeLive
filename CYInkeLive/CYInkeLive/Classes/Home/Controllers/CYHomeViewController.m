@@ -83,8 +83,7 @@
     [self presentViewController:nav animated:YES completion:nil];
 }
 
-- (CYTopTitleView *)titleView
-{
+- (CYTopTitleView *)titleView {
     if (!_titleView) {
         __weak typeof(self) weakSelf = self;
         _titleView = [[CYTopTitleView alloc] initWithFrame:CGRectMake(0, 0, 240, 44)];

@@ -37,8 +37,8 @@
     [self setImages:idleImages duration:1.f forState:MJRefreshStateRefreshing];
 }
 
-//压缩图片
-- (UIImage *)scaleToSize:(UIImage *)img size:(CGSize)size{
+// 压缩图片
+- (UIImage *)scaleToSize:(UIImage *)img size:(CGSize)size {
     UIGraphicsBeginImageContext(size);
     [img drawInRect:CGRectMake(0, 0, size.width, size.height)];
     UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
