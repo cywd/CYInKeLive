@@ -29,6 +29,9 @@
 // 响应超出superview的button
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     UIView *view = [super hitTest:point withEvent:event];
+    if (self.hidden) {
+        return view;
+    }
     if (view == nil) {
         CGPoint tmpPoint = [self.cameraButton convertPoint:point fromView:self];
         if (CGRectContainsPoint(self.cameraButton.bounds, tmpPoint)) {

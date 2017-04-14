@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF2C5CD3D1D5C427ED84186A /* libPods-CYInkeLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18AC734A7F524BABF08C161A /* libPods-CYInkeLive.a */; };
+		E7129A271EA0A20800D9E155 /* CYBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7129A261EA0A20800D9E155 /* CYBottomView.m */; };
 		E74A3E781E9B5334000339F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3E771E9B5334000339F5 /* main.m */; };
 		E74A3E831E9B5334000339F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E74A3E821E9B5334000339F5 /* Assets.xcassets */; };
 		E74A3E861E9B5334000339F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E74A3E841E9B5334000339F5 /* LaunchScreen.storyboard */; };
@@ -183,6 +184,8 @@
 		18AC734A7F524BABF08C161A /* libPods-CYInkeLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CYInkeLive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		332A6B2B5F09DD74CF393A6C /* Pods-CYInkeLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYInkeLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-CYInkeLive/Pods-CYInkeLive.release.xcconfig"; sourceTree = "<group>"; };
 		751CB255170AA015BCF9D6B9 /* Pods-CYInkeLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYInkeLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CYInkeLive/Pods-CYInkeLive.debug.xcconfig"; sourceTree = "<group>"; };
+		E7129A251EA0A20800D9E155 /* CYBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYBottomView.h; sourceTree = "<group>"; };
+		E7129A261EA0A20800D9E155 /* CYBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYBottomView.m; sourceTree = "<group>"; };
 		E74A3E731E9B5334000339F5 /* CYInkeLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYInkeLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74A3E771E9B5334000339F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E74A3E821E9B5334000339F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -888,6 +891,8 @@
 			children = (
 				E7CB7B8A1EA09159003E8C78 /* CYAnchorView.h */,
 				E7CB7B8B1EA09159003E8C78 /* CYAnchorView.m */,
+				E7129A251EA0A20800D9E155 /* CYBottomView.h */,
+				E7129A261EA0A20800D9E155 /* CYBottomView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1338,6 +1343,7 @@
 				E770B77B1E9F2C9600B1F10E /* CYCameraView.m in Sources */,
 				E74A407F1E9C709A000339F5 /* CYHotViewController.m in Sources */,
 				E78F91571E9C8C150033E336 /* CYCreatorModel.m in Sources */,
+				E7129A271EA0A20800D9E155 /* CYBottomView.m in Sources */,
 				E74A407A1E9C709A000339F5 /* CYTabBarController.m in Sources */,
 				E770B76F1E9F20DE00B1F10E /* CYStartLiveView.m in Sources */,
 			);

@@ -13,12 +13,15 @@
 #import <Masonry.h>
 #import <IJKMediaFramework/IJKMediaFramework.h>
 #import "CYAnchorView.h"
+#import "CYBottomView.h"
 
 @interface CYLiveViewController ()
 
 @property (nonatomic, strong) IJKFFMoviePlayerController *player;
 
 @property (nonatomic, strong) CYAnchorView *anchorView;
+
+@property (nonatomic, strong) CYBottomView *bottomTool;
 
 //最上层的视图
 @property (nonatomic, strong) UIView *topSideView;
@@ -87,6 +90,8 @@
     
     [self.view addSubview:self.anchorView];
     self.anchorView.model = self.model;
+    
+    [self.topSideView addSubview:self.bottomTool];
     
     [self.closeButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view).offset(-14);
@@ -171,6 +176,41 @@
         _anchorView = [[CYAnchorView alloc]initWithFrame:CGRectMake(10, 30, 150, 36)];
     }
     return _anchorView;
+}
+
+- (CYBottomView *)bottomTool{
+    
+    if (_bottomTool == nil) {
+        _bottomTool = [[CYBottomView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 64, [UIScreen mainScreen].bounds.size.width, 64)];
+
+        [_bottomTool setButtonClick:^(NSInteger tag) {
+            switch (tag) {
+                case 100:
+                    //发送消息/弹幕
+                {
+                    
+                }
+                    break;
+                case 101:
+                    //礼物
+                {
+                    
+                }
+                    
+                    break;
+                case 102:
+                    //显示分享面板
+                {
+                    
+                }
+                    
+                    break;
+                default:
+                    break;
+            }
+        }];
+    }
+    return _bottomTool;
 }
 
 
