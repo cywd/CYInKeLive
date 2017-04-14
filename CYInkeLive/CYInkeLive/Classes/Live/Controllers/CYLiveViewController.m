@@ -12,10 +12,14 @@
 #import <UIImageView+WebCache.h>
 #import <Masonry.h>
 #import <IJKMediaFramework/IJKMediaFramework.h>
+#import "CYAnchorView.h"
 
 @interface CYLiveViewController ()
 
 @property (nonatomic, strong) IJKFFMoviePlayerController *player;
+
+@property (nonatomic, strong) CYAnchorView *anchorView;
+
 //最上层的视图
 @property (nonatomic, strong) UIView *topSideView;
 //直播窗口
@@ -80,6 +84,9 @@
     [self.showView addSubview:self.backdropView];
     [self.view insertSubview:self.topSideView aboveSubview:self.showView];
     [self.view addSubview:self.closeButton];
+    
+    [self.view addSubview:self.anchorView];
+    self.anchorView.model = self.model;
     
     [self.closeButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view).offset(-14);
@@ -156,6 +163,14 @@
         return;
     }
     [self.navigationController popViewControllerAnimated:NO];
+}
+
+// 主播
+- (CYAnchorView *)anchorView {
+    if (!_anchorView) {
+        _anchorView = [[CYAnchorView alloc]initWithFrame:CGRectMake(10, 30, 150, 36)];
+    }
+    return _anchorView;
 }
 
 

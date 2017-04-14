@@ -159,6 +159,7 @@
 		E78F915F1E9CABA50033E336 /* CYNearbyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F915D1E9CABA50033E336 /* CYNearbyCollectionViewCell.m */; };
 		E78F91691E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F91671E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.m */; };
 		E78F916A1E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78F91681E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.xib */; };
+		E7CB7B8C1EA09159003E8C78 /* CYAnchorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CB7B8B1EA09159003E8C78 /* CYAnchorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -365,6 +366,8 @@
 		E78F91661E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYNearbyHeaderCollectionReusableView.h; sourceTree = "<group>"; };
 		E78F91671E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYNearbyHeaderCollectionReusableView.m; sourceTree = "<group>"; };
 		E78F91681E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYNearbyHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		E7CB7B8A1EA09159003E8C78 /* CYAnchorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAnchorView.h; sourceTree = "<group>"; };
+		E7CB7B8B1EA09159003E8C78 /* CYAnchorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAnchorView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -883,6 +886,8 @@
 		E74A40601E9C709A000339F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E7CB7B8A1EA09159003E8C78 /* CYAnchorView.h */,
+				E7CB7B8B1EA09159003E8C78 /* CYAnchorView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1316,6 +1321,7 @@
 				E74A40801E9C709A000339F5 /* CYLiveViewController.m in Sources */,
 				E74A407E1E9C709A000339F5 /* CYHomeViewController.m in Sources */,
 				E74A40811E9C709A000339F5 /* CYMeViewController.m in Sources */,
+				E7CB7B8C1EA09159003E8C78 /* CYAnchorView.m in Sources */,
 				E74A407C1E9C709A000339F5 /* CYCameraViewController.m in Sources */,
 				E78F915F1E9CABA50033E336 /* CYNearbyCollectionViewCell.m in Sources */,
 				E770B7781E9F25AE00B1F10E /* CYMainRefrashGifHeader.m in Sources */,

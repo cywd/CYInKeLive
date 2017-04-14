@@ -94,15 +94,15 @@
         make.width.equalTo(@100);
     }];
     
-    _onLineLabel = [[UILabel alloc]init];
+    _onLineLabel = [[UILabel alloc] init];
     _onLineLabel.textAlignment = NSTextAlignmentRight;
     _onLineLabel.font = [UIFont systemFontOfSize:15];
-    _onLineLabel.textColor = [UIColor orangeColor];
+//    _onLineLabel.textColor = [UIColor orangeColor];
     [self.contentView addSubview:_onLineLabel];
     [_onLineLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_nameLabel.mas_top);
         make.right.equalTo(self.contentView.mas_right).offset(-10);
-        make.width.equalTo(@70);
+        make.width.equalTo(@100);
         make.height.equalTo(@45);
     }];
     
@@ -140,7 +140,13 @@
     }
     
     _nameLabel.text = model.creator.nick;
-    _onLineLabel.text = [NSString stringWithFormat:@"%zd",model.online_users];
+    NSString *online_usersStr = [NSString stringWithFormat:@"%zd",model.online_users];
+    NSString *onLineText = [NSString stringWithFormat:@"%@人在看", online_usersStr];
+    NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:onLineText];
+    [str addAttribute:NSForegroundColorAttributeName value:[UIColor orangeColor] range:NSMakeRange(0, online_usersStr.length)];
+    
+    _onLineLabel.attributedText = str;
+    
     [_coverImageView sd_setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"live_empty_bg"]];
 }
 
