@@ -8,6 +8,7 @@
 
 #import "CYTabBar.h"
 #import "UIView+Frame.h"
+#import "YKConst.h"
 
 @interface CYTabBar ()
 
@@ -44,21 +45,32 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
+    static BOOL added = NO;
+    
     self.cameraButton.centerY = self.height * 0.125;
     
     CGFloat tabBarItemWidth = self.width / 3;
     self.cameraButton.centerX = self.width * 0.5;
     CGFloat tabBarItemIndex = 0;
-    for (UIView *childItem in self.subviews) {
-        if ([childItem isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
-            childItem.width = tabBarItemWidth;
-            childItem.x = tabBarItemIndex*tabBarItemWidth;
-            tabBarItemIndex ++;
-            if (tabBarItemIndex == 1) {
-                tabBarItemIndex ++;
-            }
+    for (UIControl *control in self.subviews) {
+        
+        if (![control isKindOfClass:[UIControl class]] || [control isKindOfClass:[UIButton class]]) continue;
+        control.width = tabBarItemWidth;
+        control.x = tabBarItemWidth * tabBarItemIndex;
+        tabBarItemIndex ++;
+        if (tabBarItemIndex == 1) {
+            tabBarItemIndex++;
+        }
+        
+        if (added == NO) {
+            // 监听按钮点击
+            [control addTarget:self action:@selector(controlClick) forControlEvents:UIControlEventTouchUpInside];
         }
     }
+}
+
+- (void)controlClick {
+    [[NSNotificationCenter defaultCenter] postNotificationName:CYTabBarDidSelectNotification object:nil userInfo:nil];
 }
 
 - (UIButton *)cameraButton {

@@ -11,6 +11,8 @@
 #import "CYNearbyViewController.h"
 #import "CYFollowViewController.h"
 #import "CYTopTitleView.h"
+#import "CYSearchViewController.h"
+#import "CYBaseNavViewController.h"
 
 @interface CYHomeViewController () <UIScrollViewDelegate>
 
@@ -28,10 +30,10 @@
     
     self.navigationItem.titleView = self.titleView;
     
-    UIImage *leftImg = [UIImage imageNamed:@"left_search"];
+    UIImage *leftImg = [UIImage imageNamed:@"search_"];
     leftImg = [leftImg imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:leftImg style:UIBarButtonItemStylePlain target:self action:@selector(enterSearchClick)];
-    UIImage *rightImg = [UIImage imageNamed:@"right_message"];
+    UIImage *rightImg = [UIImage imageNamed:@"message"];
     rightImg = [rightImg imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:rightImg style:UIBarButtonItemStylePlain target:self action:nil];
     [self.view addSubview:self.homeScrollView];
@@ -76,7 +78,9 @@
 }
 
 - (void)enterSearchClick {
-    
+    CYSearchViewController *searchVC = [[CYSearchViewController alloc] init];
+    CYBaseNavViewController *nav = [[CYBaseNavViewController alloc] initWithRootViewController:searchVC];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (CYTopTitleView *)titleView

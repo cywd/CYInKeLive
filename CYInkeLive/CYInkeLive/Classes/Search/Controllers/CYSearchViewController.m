@@ -7,8 +7,11 @@
 //
 
 #import "CYSearchViewController.h"
+#import "CYSearchView.h"
 
 @interface CYSearchViewController ()
+
+@property (nonatomic, strong) CYSearchView *searchView;
 
 @end
 
@@ -16,7 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.titleView = self.searchView;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +30,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//搜索栏
+- (CYSearchView *)searchView{
+    if (!_searchView) {
+        _searchView = [[CYSearchView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 30)];
+        __weak typeof(self) weakSelf = self;
+        [_searchView setCancleBlock:^{
+            [weakSelf dismissViewControllerAnimated:YES completion:nil];
+        }];
+    }
+    return _searchView;
 }
-*/
+
 
 @end

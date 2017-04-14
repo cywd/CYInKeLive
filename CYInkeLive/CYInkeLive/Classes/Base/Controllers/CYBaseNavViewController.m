@@ -14,12 +14,14 @@
 
 @implementation CYBaseNavViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
++ (void)initialize {
     UINavigationBar *barAppearance = [UINavigationBar appearance];
     barAppearance.barTintColor = [UIColor colorWithRed:62/255.0 green:173/255.0 blue:176/255.0 alpha:1.0];
     [barAppearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {

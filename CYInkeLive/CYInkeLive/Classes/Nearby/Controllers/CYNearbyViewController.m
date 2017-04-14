@@ -15,10 +15,15 @@
 #import <AFNetworking.h>
 #import "CYNearbyHeaderCollectionReusableView.h"
 #import "CYMainRefrashGifHeader.h"
+#import "UIView+CYDisplay.h"
+#import "YKConst.h"
 
 #define nearbyMargin 3
 
 @interface CYNearbyViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate, CLLocationManagerDelegate>
+
+/** 上次选中的索引(或者控制器) */
+@property (nonatomic, assign) NSInteger lastSelectedIndex;
 
 //定位
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -100,7 +105,6 @@
     return reusableView;
 }
 
-
 #pragma CLLocationManagerDelegate
 //定位成功
 - (void)locationManager:(CLLocationManager *)manager
@@ -127,6 +131,8 @@
     header.stateLabel.hidden = YES;
     [header beginRefreshing];
     self.collectionView.mj_header = header;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarSelect) name:CYTabBarDidSelectNotification object:nil];
 }
 
 - (void)loadData {
@@ -178,6 +184,22 @@
     
 //    [self loadData];
     [self.collectionView.mj_header beginRefreshing];
+}
+
+- (void)tabBarSelect {
+    
+    if (![self.collectionView isDisplayedInScreen]) {
+        return;
+    }
+    
+    // 如果是连续点击2次，直接刷新
+    if (self.lastSelectedIndex == self.tabBarController.selectedIndex && self.tabBarController.selectedViewController == self.navigationController) {
+        
+        [self.collectionView.mj_header beginRefreshing];
+    }
+    
+    // 记录这一次选中的索引
+    self.lastSelectedIndex = self.tabBarController.selectedIndex;
 }
 
 - (NSMutableArray *)dataArray

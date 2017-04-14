@@ -15,11 +15,16 @@
 #import "CYCreatorModel.h"
 #import "CYLiveViewController.h"
 #import "CYMainRefrashGifHeader.h"
+#import "YKConst.h"
+#import "UIView+CYDisplay.h"
 
 @interface CYHotViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) UITableView *tableView;
+
+/** 上次选中的索引(或者控制器) */
+@property (nonatomic, assign) NSInteger lastSelectedIndex;
 
 @end
 
@@ -35,6 +40,8 @@
     header.stateLabel.hidden = YES;
     [header beginRefreshing];
     self.tableView.mj_header = header;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarSelect) name:CYTabBarDidSelectNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -75,6 +82,22 @@
     CYLiveViewController *liveVc = [[CYLiveViewController alloc] init];
     liveVc.model = self.dataArray[indexPath.row];
     [self.navigationController pushViewController:liveVc animated:YES];
+}
+
+- (void)tabBarSelect {
+    
+    if (![self.tableView isDisplayedInScreen]) {
+        return;
+    }
+    
+    // 如果是连续点击2次，直接刷新
+    if (self.lastSelectedIndex == self.tabBarController.selectedIndex && self.tabBarController.selectedViewController == self.navigationController) {
+        
+        [self.tableView.mj_header beginRefreshing];
+    }
+    
+    // 记录这一次选中的索引
+    self.lastSelectedIndex = self.tabBarController.selectedIndex;
 }
 
 #pragma mark - lazy
