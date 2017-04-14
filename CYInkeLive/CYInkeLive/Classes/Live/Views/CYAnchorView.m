@@ -38,6 +38,7 @@
     
     self.layer.cornerRadius = 15;
     self.layer.masksToBounds = YES;
+    
     [self addSubview:self.iconImageView];
     [self addSubview:self.liveLabel];
     [self addSubview:self.lineLabel];

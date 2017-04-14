@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -39,21 +40,30 @@
                         <constraint firstAttribute="height" constant="21" id="wd9-7y-iTT"/>
                     </constraints>
                     <state key="normal" title="看全部">
-                        <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.19784072041511536" green="0.86120766401290894" blue="0.81007647514343262" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="chooseClick:" destination="0Td-Ng-IIl" eventType="touchUpInside" id="VsR-0Q-okE"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shaixuan_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Bat-LE-b1w">
+                    <rect key="frame" x="221" y="16" width="21" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Bat-LE-b1w" secondAttribute="height" multiplier="1:1" id="Y70-0f-PpX"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <constraints>
                 <constraint firstItem="3F7-sd-gIC" firstAttribute="leading" secondItem="aLK-ng-PcQ" secondAttribute="trailing" constant="16" id="0p0-Ju-ufZ"/>
                 <constraint firstItem="aLK-ng-PcQ" firstAttribute="top" secondItem="0Td-Ng-IIl" secondAttribute="top" constant="16" id="Hk1-z5-sHC"/>
                 <constraint firstAttribute="bottom" secondItem="AOM-SL-hjI" secondAttribute="bottom" constant="13" id="U4C-b9-EdG"/>
                 <constraint firstItem="AOM-SL-hjI" firstAttribute="top" secondItem="0Td-Ng-IIl" secondAttribute="top" constant="16" id="au7-Oq-gln"/>
+                <constraint firstItem="Bat-LE-b1w" firstAttribute="top" secondItem="AOM-SL-hjI" secondAttribute="top" id="bHF-6w-hD3"/>
                 <constraint firstAttribute="trailing" secondItem="AOM-SL-hjI" secondAttribute="trailing" constant="16" id="dEj-zp-nsd"/>
                 <constraint firstItem="aLK-ng-PcQ" firstAttribute="leading" secondItem="0Td-Ng-IIl" secondAttribute="leading" constant="16" id="hZV-Ad-ZCX"/>
                 <constraint firstItem="aLK-ng-PcQ" firstAttribute="bottom" secondItem="3F7-sd-gIC" secondAttribute="bottom" id="kPX-05-qba"/>
+                <constraint firstItem="Bat-LE-b1w" firstAttribute="height" secondItem="AOM-SL-hjI" secondAttribute="height" id="pXi-zL-mk5"/>
+                <constraint firstItem="AOM-SL-hjI" firstAttribute="leading" secondItem="Bat-LE-b1w" secondAttribute="trailing" id="vyK-SD-fku"/>
             </constraints>
             <connections>
                 <outlet property="chooseBtn" destination="AOM-SL-hjI" id="WTz-gC-Not"/>
@@ -63,5 +73,6 @@
     </objects>
     <resources>
         <image name="nearby_icon_now_live" width="14" height="14"/>
+        <image name="shaixuan_icon" width="22" height="22"/>
     </resources>
 </document>
