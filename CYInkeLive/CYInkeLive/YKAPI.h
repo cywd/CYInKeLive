@@ -13,10 +13,10 @@
 #pragma 映客接口
 
 //映客所有接口？？？
-#define AllUrl @"http://serviceinfo.inke.com/serviceinfo/info?uid=133825214"
+#define AllUrl @"http://serviceinfo.inke.com/serviceinfo/info?uid=38448526"
 
 //热门
-#define INKeUrl @"http://service.inke.com/api/live/simpleall?uid=133825214"
+#define INKeUrl @"http://service.inke.com/api/live/simpleall?uid=38448526"
 
 //附近
 #define NearByUrl @"http:/service.ingkee.com/api/live/near_recommend?uid=247164228&latitude=%f&longitude=%f"
@@ -24,13 +24,13 @@
 #define NearFakeUrl @"http:/service.ingkee.com/api/live/near_recommend?uid=247164228&latitude=31.347102&longitude=121.5117"
 
 //搜索页面
-#define SEARCHURL @"http://service.inke.com/api/recommend/aggregate?&uid=133825214"
+#define SEARCHURL @"http://service.inke.com/api/recommend/aggregate?&uid=38448526"
 
 //搜索更多(小清新、好声音、搞笑达人)
-#define SEARCHMOREURL @"http://service.inke.com/api/live/themesearch?uid=133825214&keyword=%@"
+#define SEARCHMOREURL @"http://service.inke.com/api/live/themesearch?uid=38448526&keyword=%@"
 
 //搜索结果
-#define SEARCHRESULTURL @"http://service.inke.com/api/user/search?uid=133825214&count=25&keyword=%@"
+#define SEARCHRESULTURL @"http://service.inke.com/api/user/search?uid=38448526&count=25&keyword=%@"
 
 
 

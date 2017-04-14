@@ -1486,6 +1486,7 @@
 			baseConfigurationReference = 751CB255170AA015BCF9D6B9 /* Pods-CYInkeLive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 7ENE4DHQ7N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1504,6 +1505,7 @@
 			baseConfigurationReference = 332A6B2B5F09DD74CF393A6C /* Pods-CYInkeLive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 7ENE4DHQ7N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
