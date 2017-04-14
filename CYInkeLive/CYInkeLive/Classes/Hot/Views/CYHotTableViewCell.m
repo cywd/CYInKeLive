@@ -15,25 +15,25 @@
 @interface CYHotTableViewCell ()
 
 //头像
-@property (nonatomic,strong)UIImageView *iconImageView;
+@property (nonatomic,strong) UIImageView *iconImageView;
 
 //名字
-@property (nonatomic,strong)UILabel *nameLabel;
+@property (nonatomic,strong) UILabel *nameLabel;
 
 //所在城市
-@property (nonatomic,strong)UILabel *cityLabel;
+@property (nonatomic,strong) UILabel *cityLabel;
 
 //在线人数
-@property (nonatomic,strong)UILabel *onLineLabel;
+@property (nonatomic,strong) UILabel *onLineLabel;
 
 //封面
-@property (nonatomic,strong)UIImageView *coverImageView;
+@property (nonatomic,strong) UIImageView *coverImageView;
 
 //心情？？
-@property (nonatomic,strong)UILabel *moodLabel;
+@property (nonatomic,strong) UILabel *moodLabel;
 
 //直播logo
-@property (nonatomic,strong)UIImageView *logoImageView;
+@property (nonatomic,strong) UIImageView *logoImageView;
 
 @end
 

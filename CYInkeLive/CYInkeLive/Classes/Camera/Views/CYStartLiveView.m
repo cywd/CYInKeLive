@@ -56,7 +56,7 @@
 }
 
 #pragma mark ---- <加载视频录制>
-- (void)requestAccessForVideo{
+- (void)requestAccessForVideo {
     __weak typeof(self) _self = self;
     AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     switch (status) {
@@ -87,7 +87,7 @@
 }
 
 #pragma mark ---- <加载音频录制>
-- (void)requestAccessForAudio{
+- (void)requestAccessForAudio {
     AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
     switch (status) {
         case AVAuthorizationStatusNotDetermined:{
@@ -110,23 +110,23 @@
 #pragma mark ---- <LFStreamingSessionDelegate>
 
 /** live status changed will callback */
-- (void)liveSession:(nullable LFLiveSession *)session liveStateDidChange:(LFLiveState)state{
+- (void)liveSession:(nullable LFLiveSession *)session liveStateDidChange:(LFLiveState)state {
     
 }
 
 /** live debug info callback */
-- (void)liveSession:(nullable LFLiveSession *)session debugInfo:(nullable LFLiveDebug*)debugInfo{
+- (void)liveSession:(nullable LFLiveSession *)session debugInfo:(nullable LFLiveDebug*)debugInfo {
     
 }
 
 /** callback socket errorcode */
-- (void)liveSession:(nullable LFLiveSession*)session errorCode:(LFLiveSocketErrorCode)errorCode{
+- (void)liveSession:(nullable LFLiveSession*)session errorCode:(LFLiveSocketErrorCode)errorCode {
     
 }
 
 #pragma mark ---- <创建会话>
-- (LFLiveSession*)session{
-    if(!_session){
+- (LFLiveSession*)session {
+    if(!_session) {
         _session = [[LFLiveSession alloc] initWithAudioConfiguration:[LFLiveAudioConfiguration defaultConfiguration] videoConfiguration:[LFLiveVideoConfiguration defaultConfiguration]];
         _session.running = YES;
         _session.preView = self;
@@ -135,7 +135,7 @@
 }
 
 #pragma mark ---- <界面容器>
-- (UIView*)containerView{
+- (UIView*)containerView {
     if(!_containerView){
         _containerView = [UIView new];
         _containerView.frame = self.bounds;
@@ -146,7 +146,7 @@
 }
 
 #pragma mark ---- <关闭界面>
-- (UIButton*)closeButton{
+- (UIButton*)closeButton {
     
     // 显示状态栏
     [[UIApplication sharedApplication] setStatusBarHidden:false];
@@ -168,8 +168,8 @@
 }
 
 #pragma mark ---- <切换摄像头>
-- (UIButton*)cameraButton{
-    if(!_cameraButton){
+- (UIButton*)cameraButton {
+    if(!_cameraButton) {
         _cameraButton = [UIButton new];
         
         //位置
@@ -187,7 +187,7 @@
 }
 
 #pragma mark ---- <美颜功能>
-- (UIButton*)beautyButton{
+- (UIButton*)beautyButton {
     if(!_beautyButton){
         _beautyButton = [UIButton new];
         
@@ -208,7 +208,7 @@
 
 #pragma mark ---- <开始录制>
 //调用LF的API开始录制
-- (UIButton *)startLiveButton{
+- (UIButton *)startLiveButton {
     if(!_startLiveButton){
         
         _startLiveButton = [UIButton new];

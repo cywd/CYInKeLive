@@ -98,7 +98,7 @@
     return _titleView;
 }
 
-- (UIScrollView *)homeScrollView{
+- (UIScrollView *)homeScrollView {
     if (!_homeScrollView) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
         _homeScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];

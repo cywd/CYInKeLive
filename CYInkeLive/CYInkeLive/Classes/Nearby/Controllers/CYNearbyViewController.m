@@ -30,7 +30,7 @@
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
 
-@property (nonatomic, copy)NSString *requestUrl;
+@property (nonatomic, copy) NSString *requestUrl;
 
 @property (nonatomic, assign) NSInteger index;
 

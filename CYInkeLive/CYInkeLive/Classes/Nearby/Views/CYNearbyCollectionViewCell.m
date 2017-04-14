@@ -15,15 +15,15 @@
 @interface CYNearbyCollectionViewCell ()
 
 //头像
-@property (nonatomic,strong)UIImageView *iconImageView;
+@property (nonatomic,strong) UIImageView *iconImageView;
 
 //等级
-@property (nonatomic,strong)UIImageView *rankImageView;
+@property (nonatomic,strong) UIImageView *rankImageView;
 
 //距离
-@property (nonatomic,strong)UILabel *distanceLabel;
+@property (nonatomic,strong) UILabel *distanceLabel;
 
-@property (nonatomic,strong)NSMutableArray *arr;
+@property (nonatomic,strong) NSMutableArray *arr;
 
 @end
 

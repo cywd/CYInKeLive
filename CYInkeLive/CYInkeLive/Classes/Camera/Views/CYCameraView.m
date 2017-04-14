@@ -16,14 +16,14 @@
 @interface CYCameraView ()
 
 //直播
-@property (nonatomic,strong)UIButton *liveButton;
+@property (nonatomic,strong) UIButton *liveButton;
 
 //短视频
-@property (nonatomic,strong)UIButton *videoButton;
+@property (nonatomic,strong) UIButton *videoButton;
 
-@property (nonatomic,strong)UIButton *closeButton;
+@property (nonatomic,strong) UIButton *closeButton;
 
-@property (nonatomic,strong)UIView *bgView;
+@property (nonatomic,strong) UIView *bgView;
 
 
 @end

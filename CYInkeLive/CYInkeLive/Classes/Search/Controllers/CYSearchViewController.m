@@ -31,7 +31,7 @@
 }
 
 //搜索栏
-- (CYSearchView *)searchView{
+- (CYSearchView *)searchView {
     if (!_searchView) {
         _searchView = [[CYSearchView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 30)];
         __weak typeof(self) weakSelf = self;
