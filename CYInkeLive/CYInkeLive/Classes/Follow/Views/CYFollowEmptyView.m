@@ -16,10 +16,10 @@
 
 @interface CYFollowEmptyView ()
 
-//空视图
+// 空视图
 @property (nonatomic,strong) UIImageView *emptyImageView;
 
-//提示跳转按钮
+// 提示跳转按钮
 @property (nonatomic,strong) UIButton *skipButton;
 
 @end

@@ -43,7 +43,7 @@
     return _searchBar;
 }
 
-//取消
+// 取消
 - (void)cancleClick {
     if (self.cancleBlock) {
         self.cancleBlock();

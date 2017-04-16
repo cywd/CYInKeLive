@@ -31,7 +31,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-//搜索栏
+// 搜索栏
 - (CYSearchView *)searchView {
     if (!_searchView) {
         _searchView = [[CYSearchView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 30)];

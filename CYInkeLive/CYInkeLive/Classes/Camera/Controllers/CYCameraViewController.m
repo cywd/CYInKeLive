@@ -28,7 +28,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     /*
-    //由小变大的圆形动画
+    // 由小变大的圆形动画
     CGFloat radius = [UIScreen mainScreen].bounds.size.height;
     UIBezierPath *startMask =  [UIBezierPath bezierPathWithOvalInRect:CGRectMake(self.view.centerX, self.view.centerY, 0, 0)];
     UIBezierPath *endMask = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(CGRectMake(self.view.centerX, self.view.centerY, 0, 0), -radius, -radius)];
@@ -49,7 +49,7 @@
     [super didReceiveMemoryWarning];
 }
 
-//开始直播采集
+// 开始直播采集
 - (void)startLiveStream {
     CYStartLiveView *view = [[CYStartLiveView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:view];

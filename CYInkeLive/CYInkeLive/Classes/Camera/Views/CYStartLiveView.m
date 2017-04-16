@@ -13,16 +13,16 @@
 
 @interface CYStartLiveView () <LFLiveSessionDelegate>
 
-//美颜
+// 美颜
 @property (nonatomic, strong) UIButton *beautyButton;
 
-//切换前后摄像头
+// 切换前后摄像头
 @property (nonatomic, strong) UIButton *cameraButton;
 
-//关闭
+// 关闭
 @property (nonatomic, strong) UIButton *closeButton;
 
-//开始直播
+// 开始直播
 @property (nonatomic, strong) UIButton *startLiveButton;
 
 @property (nonatomic, strong) UIView *containerView;
@@ -40,10 +40,10 @@
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor clearColor];
         
-        //加载视频录制
+        // 加载视频录制
         [self requestAccessForVideo];
         
-        //加载音频录制
+        // 加载音频录制
         [self requestAccessForAudio];
         
         [self addSubview:self.containerView];
@@ -154,7 +154,7 @@
     if(!_closeButton){
         _closeButton = [UIButton new];
         
-        //位置
+        // 位置
         _closeButton.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 30 * 2, 30, 30, 30);
         
         [_closeButton setImage:[UIImage imageNamed:@"mg_room_btn_guan_h"] forState:UIControlStateNormal];
@@ -172,7 +172,7 @@
     if(!_cameraButton) {
         _cameraButton = [UIButton new];
         
-        //位置
+        // 位置
         _cameraButton.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 30 * 4, 30, 30, 30);
         
         [_cameraButton setImage:[UIImage imageNamed:@"camra_preview"] forState:UIControlStateNormal];
@@ -191,7 +191,7 @@
     if(!_beautyButton){
         _beautyButton = [UIButton new];
         
-        //位置
+        // 位置
         _beautyButton.frame = CGRectMake(30, 30, 30, 30);
         
         [_beautyButton setImage:[UIImage imageNamed:@"camra_beauty"] forState:UIControlStateSelected];
@@ -207,13 +207,13 @@
 }
 
 #pragma mark ---- <开始录制>
-//调用LF的API开始录制
+// 调用LF的API开始录制
 - (UIButton *)startLiveButton {
     if(!_startLiveButton){
         
         _startLiveButton = [UIButton new];
         
-        //位置
+        // 位置
         _startLiveButton.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - 200) * 0.5, [UIScreen mainScreen].bounds.size.height - 100, 200, 40);
         
         _startLiveButton.layer.cornerRadius = _startLiveButton.frame.size.height * 0.5;

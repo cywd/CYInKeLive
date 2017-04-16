@@ -10,15 +10,15 @@
 
 @interface CYRecommendTableViewCell ()
 
-//头像
+// 头像
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 
-//昵称、等级
+// 昵称、等级
 @property (weak, nonatomic) IBOutlet UILabel *nickNameLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *subTextLabel;
 
-//关注
+// 关注
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 
 @end

@@ -25,7 +25,7 @@
 /** 上次选中的索引(或者控制器) */
 @property (nonatomic, assign) NSInteger lastSelectedIndex;
 
-//定位
+// 定位
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
@@ -106,7 +106,7 @@
 }
 
 #pragma CLLocationManagerDelegate
-//定位成功
+// 定位成功
 - (void)locationManager:(CLLocationManager *)manager
     didUpdateToLocation:(CLLocation *)newLocation
            fromLocation:(CLLocation *)oldLocation {
@@ -118,7 +118,7 @@
     [self setUpLocation];
     _index ++;
 }
-//定位失败
+// 定位失败
 - (void)locationManager:(CLLocationManager *)manager
        didFailWithError:(NSError *)error {
     self.requestUrl = [NSString stringWithFormat:NearFakeUrl];
@@ -150,7 +150,7 @@
     }];
 }
 
-//选择限制条件
+// 选择限制条件
 - (void)showAcition{
     [self presentViewController:self.alertVc animated:YES completion:^{
         NSLog(@"已经弹出");
@@ -158,7 +158,7 @@
 }
 
 - (void)changeRequestURLWithIndex:(NSInteger)index {
-    //限制条件未知  0为查看全部  1查看女生  2为男生
+    // 限制条件未知  0为查看全部  1查看女生  2为男生
     NSString *limitStr = [NSString stringWithFormat:@"&interest=%zd",index];
     
     if ([self.requestUrl rangeOfString:@"&interest"].location == NSNotFound) {

@@ -52,15 +52,15 @@
 }
 
 - (void)initChildViewControllers {
-    //关注
+    // 关注
     CYFollowViewController *followVc = [[CYFollowViewController alloc]init];
     [self addChildViewController:followVc];
     
-    //热门
+    // 热门
     CYHotViewController *mainVc = [[CYHotViewController alloc]init];
     [self addChildViewController:mainVc];
     
-    //附近
+    // 附近
     CYNearbyViewController *nearVc = [[CYNearbyViewController alloc]init];
     [self addChildViewController:nearVc];
     

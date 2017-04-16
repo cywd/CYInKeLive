@@ -9,16 +9,16 @@
 #import "CYCameraView.h"
 #import <Masonry.h>
 
-#define LiveWidth [UIScreen mainScreen].bounds.size.width/2 //button的宽高
-#define LiveGetY [UIScreen mainScreen].bounds.size.height - 50 - [UIScreen mainScreen].bounds.size.width/2 //灰色区域高度
+#define LiveWidth [UIScreen mainScreen].bounds.size.width/2 // button的宽高
+#define LiveGetY [UIScreen mainScreen].bounds.size.height - 50 - [UIScreen mainScreen].bounds.size.width/2 // 灰色区域高度
 
 
 @interface CYCameraView ()
 
-//直播
+// 直播
 @property (nonatomic,strong) UIButton *liveButton;
 
-//短视频
+// 短视频
 @property (nonatomic,strong) UIButton *videoButton;
 
 @property (nonatomic,strong) UIButton *closeButton;
@@ -65,7 +65,7 @@
 //        [_liveButton layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleTop imageTitleSpace:5];
         _liveButton.tag = 50;
         [_liveButton addTarget:self action:@selector(liveClick:) forControlEvents:UIControlEventTouchUpInside];
-        //关键帧  damp阻尼
+        // 关键帧  damp阻尼
         [UIView animateWithDuration:0.8 delay:0.1 usingSpringWithDamping:0.6 initialSpringVelocity:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
             _liveButton.frame = CGRectMake(0, LiveGetY, LiveWidth, LiveWidth);
         } completion:^(BOOL finished) {
@@ -87,7 +87,7 @@
         _videoButton.tag = 51;
         [_videoButton addTarget:self action:@selector(liveClick:) forControlEvents:UIControlEventTouchUpInside];
 //        [_videoButton layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleTop imageTitleSpace:5];
-        //关键帧  damp阻尼
+        // 关键帧  damp阻尼
         [UIView animateWithDuration:0.8 delay:0.1 usingSpringWithDamping:0.5 initialSpringVelocity:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
             _videoButton.frame = CGRectMake(LiveWidth, LiveGetY, LiveWidth, LiveWidth);
         } completion:^(BOOL finished) {

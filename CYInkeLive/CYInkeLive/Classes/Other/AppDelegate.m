@@ -62,7 +62,7 @@
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
 {
-    //清除缓存
+    // 清除缓存
     [[SDWebImageManager sharedManager] cancelAll];
     [[SDImageCache sharedImageCache] clearMemory];
 }

@@ -13,10 +13,10 @@
 // 消息弹幕
 @property (nonatomic,strong)UIButton *inforButton;
 
-//礼物
+// 礼物
 @property (nonatomic,strong)UIButton *giftButton;
 
-//分享
+// 分享
 @property (nonatomic,strong)UIButton *shareButton;
 
 @property (nonatomic,strong)NSArray *imageArr;

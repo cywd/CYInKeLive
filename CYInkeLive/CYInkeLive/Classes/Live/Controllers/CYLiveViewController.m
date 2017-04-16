@@ -23,20 +23,20 @@
 
 @property (nonatomic, strong) CYBottomView *bottomTool;
 
-//最上层的视图
+// 最上层的视图
 @property (nonatomic, strong) UIView *topSideView;
-//直播窗口
+// 直播窗口
 @property (nonatomic, strong) UIView *showView;
-//占位图
+// 占位图
 @property (nonatomic, strong) UIImageView *backdropView;
 
-//关闭直播
+// 关闭直播
 @property (nonatomic, strong) UIButton *closeButton;
 
-//连麦视屏窗口数
+// 连麦视屏窗口数
 @property (nonatomic, strong) NSMutableArray *remoteArray;
 
-//分享平台
+// 分享平台
 @property (nonatomic, nonnull,strong) NSMutableArray *platformArr;
 
 @property (nonatomic, strong) NSString *adressStr;
@@ -59,7 +59,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self creatUI];
     
-    //拉流
+    // 拉流
     [self repareStartPlay];
 }
 
@@ -142,7 +142,7 @@
     return _backdropView;
 }
 
-//最上层视图
+// 最上层视图
 - (UIView *)topSideView{
     if (_topSideView == nil) {
         _topSideView = [[UIView alloc]initWithFrame:self.view.bounds];
@@ -151,7 +151,7 @@
     return _topSideView;
 }
 
-//关闭按钮
+// 关闭按钮
 - (UIButton *)closeButton{
     if (_closeButton == nil) {
         _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -161,7 +161,7 @@
     return _closeButton;
 }
 
-//关闭直播
+// 关闭直播
 - (void)closeRoom{
     //有连麦窗口则不能直接关闭
     if (self.remoteArray.count > 0) {
@@ -186,20 +186,20 @@
         [_bottomTool setButtonClick:^(NSInteger tag) {
             switch (tag) {
                 case 100:
-                    //发送消息/弹幕
+                    // 发送消息/弹幕
                 {
                     
                 }
                     break;
                 case 101:
-                    //礼物
+                    // 礼物
                 {
                     
                 }
                     
                     break;
                 case 102:
-                    //显示分享面板
+                    // 显示分享面板
                 {
                     
                 }

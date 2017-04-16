@@ -30,7 +30,7 @@
     self.tabBar.opaque = YES;
     self.tabBar.tintColor = [UIColor blackColor];
     
-    //隐藏tabBar上的线
+    // 隐藏tabBar上的线
     [[UITabBar appearance] setShadowImage:[UIImage new]];
     [[UITabBar appearance] setBackgroundImage:[[UIImage alloc]init]];
     
@@ -47,12 +47,12 @@
 }
 
 - (void)initChildViewControllers {
-    //首页
+    // 首页
     CYHomeViewController *homePageVC = [[CYHomeViewController alloc] init];
     CYBaseNavViewController *homeNav = [[CYBaseNavViewController alloc] initWithRootViewController:homePageVC];
     [self addChildViewController:homeNav image:@"tab_live" selectedImage:@"tab_live_p"];
     
-    //个人
+    // 个人
     CYMeViewController *meVC = [[CYMeViewController alloc] init];
     CYBaseNavViewController *meNav = [[CYBaseNavViewController alloc] initWithRootViewController:meVC];
     [self addChildViewController:meNav image:@"tab_me" selectedImage:@"tab_me_p"];
@@ -61,7 +61,7 @@
 
 - (void)addChildViewController:(UIViewController *)nav image:(NSString *)image selectedImage:(NSString *)selectedImage {
     UIViewController *childViewController = nav.childViewControllers.firstObject;
-    //tabBarItem图片,显示原图，否则变形
+    // tabBarItem图片,显示原图，否则变形
     UIImage *normal = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     childViewController.tabBarItem.image = normal;
     childViewController.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -79,14 +79,14 @@
     [popCamera setButtonClick:^(NSInteger tag) {
         switch (tag) {
             case 50:
-                //直播
+                // 直播
             {
                 CYCameraViewController *vc = [[CYCameraViewController alloc] init];
                 [self presentViewController:vc animated:YES completion:nil];
             }
                 break;
             case 51:
-                //短视频
+                // 短视频
             {
                 
                 
