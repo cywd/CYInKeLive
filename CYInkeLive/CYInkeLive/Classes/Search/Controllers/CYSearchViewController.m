@@ -12,6 +12,7 @@
 @interface CYSearchViewController ()
 
 @property (nonatomic, strong) CYSearchView *searchView;
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 

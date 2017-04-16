@@ -27,7 +27,7 @@
     return self;
 }
 
-- (UISearchBar *)searchBar{
+- (UISearchBar *)searchBar {
     if (!_searchBar) {
         _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width - 75, 30)];
         [_searchBar setSearchBarStyle:UISearchBarStyleDefault];
@@ -44,13 +44,13 @@
 }
 
 //取消
-- (void)cancleClick{
+- (void)cancleClick {
     if (self.cancleBlock) {
         self.cancleBlock();
     }
 }
 
-- (UIButton *)cancleButton{
+- (UIButton *)cancleButton {
     if (!_cancleButton) {
         _cancleButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _cancleButton.frame = CGRectMake(self.searchBar.width + 5, 0, 50, 30);

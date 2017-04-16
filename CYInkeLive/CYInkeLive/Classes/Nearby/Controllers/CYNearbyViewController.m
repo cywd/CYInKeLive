@@ -188,7 +188,7 @@
 
 - (void)tabBarSelect {
     
-    if (![self.collectionView isDisplayedInScreen]) {
+    if (![self.view isDisplayedInScreen]) {
         return;
     }
     

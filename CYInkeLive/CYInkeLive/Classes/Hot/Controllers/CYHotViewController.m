@@ -86,7 +86,7 @@
 
 - (void)tabBarSelect {
     
-    if (![self.tableView isDisplayedInScreen]) {
+    if (![self.view isDisplayedInScreen]) {
         return;
     }
     

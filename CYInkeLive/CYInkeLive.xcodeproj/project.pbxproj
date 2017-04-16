@@ -13,6 +13,8 @@
 		E7129A301EA0DB5D00D9E155 /* UIView+CYDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = E7129A2F1EA0DB5D00D9E155 /* UIView+CYDisplay.m */; };
 		E7129A331EA0DE0F00D9E155 /* CYSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7129A321EA0DE0F00D9E155 /* CYSearchView.m */; };
 		E7129A351EA0E1C200D9E155 /* index.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7129A341EA0E1C200D9E155 /* index.plist */; };
+		E7129A391EA0ED9A00D9E155 /* CYRecommendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7129A371EA0ED9A00D9E155 /* CYRecommendTableViewCell.m */; };
+		E7129A3A1EA0ED9A00D9E155 /* CYRecommendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7129A381EA0ED9A00D9E155 /* CYRecommendTableViewCell.xib */; };
 		E74A3E781E9B5334000339F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A3E771E9B5334000339F5 /* main.m */; };
 		E74A3E831E9B5334000339F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E74A3E821E9B5334000339F5 /* Assets.xcassets */; };
 		E74A3E861E9B5334000339F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E74A3E841E9B5334000339F5 /* LaunchScreen.storyboard */; };
@@ -197,6 +199,9 @@
 		E7129A311EA0DE0F00D9E155 /* CYSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYSearchView.h; sourceTree = "<group>"; };
 		E7129A321EA0DE0F00D9E155 /* CYSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSearchView.m; sourceTree = "<group>"; };
 		E7129A341EA0E1C200D9E155 /* index.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = index.plist; sourceTree = "<group>"; };
+		E7129A361EA0ED9A00D9E155 /* CYRecommendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRecommendTableViewCell.h; sourceTree = "<group>"; };
+		E7129A371EA0ED9A00D9E155 /* CYRecommendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRecommendTableViewCell.m; sourceTree = "<group>"; };
+		E7129A381EA0ED9A00D9E155 /* CYRecommendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYRecommendTableViewCell.xib; sourceTree = "<group>"; };
 		E74A3E731E9B5334000339F5 /* CYInkeLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYInkeLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74A3E771E9B5334000339F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E74A3E821E9B5334000339F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1022,6 +1027,9 @@
 			children = (
 				E7129A311EA0DE0F00D9E155 /* CYSearchView.h */,
 				E7129A321EA0DE0F00D9E155 /* CYSearchView.m */,
+				E7129A361EA0ED9A00D9E155 /* CYRecommendTableViewCell.h */,
+				E7129A371EA0ED9A00D9E155 /* CYRecommendTableViewCell.m */,
+				E7129A381EA0ED9A00D9E155 /* CYRecommendTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1208,6 +1216,7 @@
 				E74A3F1D1E9B81F8000339F5 /* angle-mask@2x.png in Resources */,
 				E74A3F221E9B81F8000339F5 /* animateSpine.fs in Resources */,
 				E74A3F771E9B8351000339F5 /* filterCurveAdjustRGB.fs in Resources */,
+				E7129A3A1EA0ED9A00D9E155 /* CYRecommendTableViewCell.xib in Resources */,
 				E74A3F7B1E9B8351000339F5 /* filterEnlargeEllipse.fs in Resources */,
 				E74A3F211E9B81F8000339F5 /* animateMask.vs in Resources */,
 				E74A3FAC1E9B84F9000339F5 /* normal2d.vs in Resources */,
@@ -1351,6 +1360,7 @@
 				E770B7781E9F25AE00B1F10E /* CYMainRefrashGifHeader.m in Sources */,
 				E7129A331EA0DE0F00D9E155 /* CYSearchView.m in Sources */,
 				E74A407B1E9C709A000339F5 /* CYTabBar.m in Sources */,
+				E7129A391EA0ED9A00D9E155 /* CYRecommendTableViewCell.m in Sources */,
 				E78F91541E9C8BF50033E336 /* CYLiveModel.m in Sources */,
 				E74A40821E9C709A000339F5 /* CYNearbyViewController.m in Sources */,
 				E74A40831E9C709A000339F5 /* AppDelegate.m in Sources */,
