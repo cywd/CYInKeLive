@@ -11,9 +11,9 @@
 
 @interface CYSearchView ()
 
-@property (nonatomic,strong) UISearchBar *searchBar;
+@property (nonatomic, strong) UISearchBar *searchBar;
 
-@property (nonatomic,strong) UIButton *cancleButton;
+@property (nonatomic, strong) UIButton *cancleButton;
 
 @end
 

@@ -11,22 +11,22 @@
 @interface CYBottomView ()
 
 // 消息弹幕
-@property (nonatomic,strong)UIButton *inforButton;
+@property (nonatomic, strong) UIButton *inforButton;
 
 // 礼物
-@property (nonatomic,strong)UIButton *giftButton;
+@property (nonatomic, strong) UIButton *giftButton;
 
 // 分享
-@property (nonatomic,strong)UIButton *shareButton;
+@property (nonatomic, strong) UIButton *shareButton;
 
-@property (nonatomic,strong)NSArray *imageArr;
+@property (nonatomic, strong) NSArray *imageArr;
 
 
 @end
 
 @implementation CYBottomView
 
-- (instancetype)initWithFrame:(CGRect)frame{
+- (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         
         [self creatUI];
@@ -34,7 +34,7 @@
     return self;
 }
 
-- (void)creatUI{
+- (void)creatUI {
     for (NSInteger i = 0; i < self.imageArr.count; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setImage:[UIImage imageNamed:self.imageArr[i]] forState:UIControlStateNormal];
@@ -49,16 +49,16 @@
     }
 }
 
-- (void)bottomClick:(id)sender{
+- (void)bottomClick:(id)sender {
     UIButton *tagButton = (UIButton *)sender;
     if (self.buttonClick) {
         self.buttonClick(tagButton.tag);
     }
 }
 
-- (NSArray *)imageArr{
+- (NSArray *)imageArr {
     if (_imageArr == nil) {
-        _imageArr = @[@"mg_room_btn_liao_h",@"mg_room_btn_liwu_h",@"mg_room_btn_fenxiang_h"];
+        _imageArr = @[@"mg_room_btn_liao_h", @"mg_room_btn_liwu_h", @"mg_room_btn_fenxiang_h"];
     }
     return _imageArr;
 }

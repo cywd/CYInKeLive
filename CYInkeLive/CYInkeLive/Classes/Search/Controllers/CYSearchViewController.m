@@ -42,7 +42,7 @@
     [self loadData];
 }
 
-- (void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated {
     self.navigationController.navigationBarHidden = NO;
 }
 
@@ -52,7 +52,7 @@
 }
 
 #pragma UITableViewDelegate,UITableViewDataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return section == self.sectionTitleArr.count ? self.recommdArr.count : 1;
 }
 
@@ -60,7 +60,7 @@
     return self.sectionTitleArr.count + 1;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     _titleView = [[[NSBundle mainBundle] loadNibNamed:@"CYRecommendTitleView" owner:self options:nil] lastObject];
     
     [_titleView setRecommdMoreClick:^(NSString *keyStr) {
@@ -70,21 +70,21 @@
     return _titleView;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 40;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 8;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return indexPath.section == self.sectionTitleArr.count ? 60 : 170;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section < self.sectionTitleArr.count){
+    if (indexPath.section < self.sectionTitleArr.count) {
         // 好声音、小清新、搞笑达人
         CYRecommendContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYRecommendContentTableViewCell"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -102,7 +102,7 @@
     }
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
 

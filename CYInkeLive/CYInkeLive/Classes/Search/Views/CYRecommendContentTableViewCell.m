@@ -29,19 +29,19 @@
     self.imageViewF.userInteractionEnabled = YES;
     self.imageViewS.userInteractionEnabled = YES;
     self.imageViewT.userInteractionEnabled = YES;
-    UILongPressGestureRecognizer *pressF = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressClick:)];
+    UILongPressGestureRecognizer *pressF = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressClick:)];
     pressF.minimumPressDuration = 0.3;
     [self.imageViewF addGestureRecognizer:pressF];
     UIView *singleTapView = [pressF view];
     singleTapView.tag = self.imageViewF.tag;
     
-    UILongPressGestureRecognizer *pressS = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressClick:)];
+    UILongPressGestureRecognizer *pressS = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressClick:)];
     pressS.minimumPressDuration = 0.3;
     [self.imageViewS addGestureRecognizer:pressS];
     UIView *singleTapViewS = [pressS view];
     singleTapViewS.tag = self.imageViewS.tag;
     
-    UILongPressGestureRecognizer *pressT = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressClick:)];
+    UILongPressGestureRecognizer *pressT = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressClick:)];
     pressT.minimumPressDuration = 0.3;
     [self.imageViewT addGestureRecognizer:pressT];
     UIView *singleTapViewT = [pressT view];
@@ -52,7 +52,7 @@
     [super setSelected:selected animated:animated];
 }
 
-//长按
+// 长按
 - (void)longPressClick:(UILongPressGestureRecognizer *)sender{
     NSInteger tag = [sender view].tag;
     if (sender.state == UIGestureRecognizerStateBegan) {

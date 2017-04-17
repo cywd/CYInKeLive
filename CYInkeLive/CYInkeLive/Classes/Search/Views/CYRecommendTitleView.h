@@ -10,6 +10,6 @@
 
 @interface CYRecommendTitleView : UIView
 
-@property (nonatomic,copy)void (^recommdMoreClick)(NSString *str);
+@property (nonatomic, copy) void (^recommdMoreClick)(NSString *str);
 
 @end

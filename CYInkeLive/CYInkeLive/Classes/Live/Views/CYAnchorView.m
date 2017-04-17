@@ -15,16 +15,16 @@
 @interface CYAnchorView ()
 
 // 头像
-@property (nonatomic,strong) UIImageView *iconImageView;
+@property (nonatomic, strong) UIImageView *iconImageView;
 
 // 直播
-@property (nonatomic,strong) UILabel *liveLabel;
+@property (nonatomic, strong) UILabel *liveLabel;
 
 // 在线人数
-@property (nonatomic,strong) UILabel *lineLabel;
+@property (nonatomic, strong) UILabel *lineLabel;
 
 // 关注
-@property (nonatomic,strong) UIButton *followButton;
+@property (nonatomic, strong) UIButton *followButton;
 
 @end
 

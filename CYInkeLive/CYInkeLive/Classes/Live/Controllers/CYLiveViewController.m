@@ -63,7 +63,7 @@
     [self repareStartPlay];
 }
 
-- (void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
 }
@@ -116,7 +116,7 @@
     [self.view insertSubview:playerVc.view atIndex:1];
 }
 
-- (UIView *)showView{
+- (UIView *)showView {
     if (_showView == nil) {
         _showView = [[UIView alloc]init];
         _showView.frame = self.view.bounds;
@@ -143,7 +143,7 @@
 }
 
 // 最上层视图
-- (UIView *)topSideView{
+- (UIView *)topSideView {
     if (_topSideView == nil) {
         _topSideView = [[UIView alloc]initWithFrame:self.view.bounds];
         _topSideView.backgroundColor = [UIColor clearColor];
@@ -152,7 +152,7 @@
 }
 
 // 关闭按钮
-- (UIButton *)closeButton{
+- (UIButton *)closeButton {
     if (_closeButton == nil) {
         _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_closeButton setImage:[UIImage imageNamed:@"mg_room_btn_guan_h"] forState:UIControlStateNormal];
@@ -162,7 +162,7 @@
 }
 
 // 关闭直播
-- (void)closeRoom{
+- (void)closeRoom {
     //有连麦窗口则不能直接关闭
     if (self.remoteArray.count > 0) {
         return;

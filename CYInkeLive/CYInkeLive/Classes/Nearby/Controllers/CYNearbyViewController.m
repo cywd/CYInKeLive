@@ -61,16 +61,16 @@
 }
 
 #pragma UICollectionViewDelegateFlowLayout
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(([UIScreen mainScreen].bounds.size.width - 2 * nearbyMargin)/3, ([UIScreen mainScreen].bounds.size.width - 2 * nearbyMargin)/3 * 1.3);
 }
 
 #pragma UICollectionViewDataSource
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.dataArray.count;
 }
 
-- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CYNearbyCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CYNearbyCollectionViewCell class]) forIndexPath:indexPath];
     cell.model = self.dataArray[indexPath.row];
     return cell;
@@ -85,11 +85,11 @@
     [nearCell showAnimation];
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     return CGSizeMake([UIScreen mainScreen].bounds.size.width, 50);
 }
 
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     UICollectionReusableView *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CYNearbyHeaderId" forIndexPath:indexPath];
     
     if ([reusableView isKindOfClass:[CYNearbyHeaderCollectionReusableView class]]) {
@@ -151,7 +151,7 @@
 }
 
 // 选择限制条件
-- (void)showAcition{
+- (void)showAcition {
     [self presentViewController:self.alertVc animated:YES completion:^{
         NSLog(@"已经弹出");
     }];
@@ -201,8 +201,7 @@
     self.lastSelectedIndex = self.tabBarController.selectedIndex;
 }
 
-- (NSMutableArray *)dataArray
-{
+- (NSMutableArray *)dataArray {
     if (!_dataArray) {
         _dataArray = [[NSMutableArray alloc] init];
     }
@@ -222,8 +221,7 @@
     return _locationManager;
 }
 
-- (UICollectionView *)collectionView
-{
+- (UICollectionView *)collectionView {
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
         layout.scrollDirection = UICollectionViewScrollDirectionVertical;
@@ -239,8 +237,7 @@
     return _collectionView;
 }
 
-- (UIAlertController *)alertVc
-{
+- (UIAlertController *)alertVc {
     if (!_alertVc) {
         _alertVc = [UIAlertController alertControllerWithTitle:@"选择" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
