@@ -8,11 +8,25 @@
 
 #import "CYSearchViewController.h"
 #import "CYSearchView.h"
+#import "CYRecommendTableViewCell.h"
+#import "CYRecommendContentTableViewCell.h"
+#import "CYRecommendTitleView.h"
+#import <AFNetworking.h>
+#import "YKAPI.h"
 
-@interface CYSearchViewController ()
+@interface CYSearchViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) CYSearchView *searchView;
 @property (nonatomic, strong) UITableView *tableView;
+
+//标题
+@property (nonatomic, strong) NSMutableArray *sectionTitleArr;
+
+@property (nonatomic, strong) NSMutableArray *dataArr;
+//今日推荐数组
+@property (nonatomic, strong) NSMutableArray *recommdArr;
+
+@property (nonatomic, strong) CYRecommendTitleView *titleView;
 
 @end
 
@@ -23,12 +37,90 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.titleView = self.searchView;
+    [self.view addSubview:self.tableView];
     
+    [self loadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma UITableViewDelegate,UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return section == self.sectionTitleArr.count ? self.recommdArr.count : 1;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return self.sectionTitleArr.count + 1;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    _titleView = [[[NSBundle mainBundle] loadNibNamed:@"CYRecommendTitleView" owner:self options:nil] lastObject];
+    
+    [_titleView setRecommdMoreClick:^(NSString *keyStr) {
+        
+    }];
+    
+    return _titleView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 40;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 8;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return indexPath.section == self.sectionTitleArr.count ? 60 : 170;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.section < self.sectionTitleArr.count){
+        // 好声音、小清新、搞笑达人
+        CYRecommendContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYRecommendContentTableViewCell"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    } else {
+        // 今日推荐
+        CYRecommendTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYRecommendTableViewCell"];
+        cell.indexPath = indexPath;
+        [cell setFollowBlock:^(NSIndexPath *tapIndexPath) {
+            
+        }];
+
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
+- (void)loadData {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager GET:SEARCHURL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *appDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        
+        // 字典那转Model
+        // ...
+        
+        
+        
+        [self.tableView reloadData];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 // 搜索栏
@@ -41,6 +133,41 @@
         }];
     }
     return _searchView;
+}
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [_tableView registerNib:[UINib nibWithNibName:@"CYRecommendTableViewCell" bundle:nil] forCellReuseIdentifier:@"CYRecommendTableViewCell"];
+        [_tableView registerNib:[UINib nibWithNibName:@"CYRecommendContentTableViewCell" bundle:nil] forCellReuseIdentifier:@"CYRecommendContentTableViewCell"];
+    }
+    return _tableView;
+}
+
+// 标题数组
+- (NSMutableArray *)sectionTitleArr {
+    if (!_sectionTitleArr) {
+        _sectionTitleArr = [NSMutableArray array];
+    }
+    return _sectionTitleArr;
+}
+
+- (NSMutableArray *)dataArr {
+    if (!_dataArr) {
+        _dataArr = [NSMutableArray array];
+    }
+    return _dataArr;
+}
+
+// 今日热门
+- (NSMutableArray *)recommdArr {
+    if (!_recommdArr) {
+        _recommdArr = [NSMutableArray array];
+    }
+    return _recommdArr;
 }
 
 

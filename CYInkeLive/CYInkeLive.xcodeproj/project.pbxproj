@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AF2C5CD3D1D5C427ED84186A /* libPods-CYInkeLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18AC734A7F524BABF08C161A /* libPods-CYInkeLive.a */; };
+		E7125CB91EA45C920076C791 /* CYRecommendTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7125CB81EA45C920076C791 /* CYRecommendTitleView.m */; };
+		E7125CBB1EA45CA70076C791 /* CYRecommendTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7125CBA1EA45CA70076C791 /* CYRecommendTitleView.xib */; };
+		E7125CBF1EA45FE80076C791 /* CYRecommendContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7125CBD1EA45FE80076C791 /* CYRecommendContentTableViewCell.m */; };
+		E7125CC01EA45FE80076C791 /* CYRecommendContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7125CBE1EA45FE80076C791 /* CYRecommendContentTableViewCell.xib */; };
 		E7129A271EA0A20800D9E155 /* CYBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7129A261EA0A20800D9E155 /* CYBottomView.m */; };
 		E7129A2D1EA0D82800D9E155 /* YKConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E7129A2C1EA0D82800D9E155 /* YKConst.m */; };
 		E7129A301EA0DB5D00D9E155 /* UIView+CYDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = E7129A2F1EA0DB5D00D9E155 /* UIView+CYDisplay.m */; };
@@ -190,6 +194,12 @@
 		18AC734A7F524BABF08C161A /* libPods-CYInkeLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CYInkeLive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		332A6B2B5F09DD74CF393A6C /* Pods-CYInkeLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYInkeLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-CYInkeLive/Pods-CYInkeLive.release.xcconfig"; sourceTree = "<group>"; };
 		751CB255170AA015BCF9D6B9 /* Pods-CYInkeLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYInkeLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CYInkeLive/Pods-CYInkeLive.debug.xcconfig"; sourceTree = "<group>"; };
+		E7125CB71EA45C920076C791 /* CYRecommendTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRecommendTitleView.h; sourceTree = "<group>"; };
+		E7125CB81EA45C920076C791 /* CYRecommendTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRecommendTitleView.m; sourceTree = "<group>"; };
+		E7125CBA1EA45CA70076C791 /* CYRecommendTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYRecommendTitleView.xib; sourceTree = "<group>"; };
+		E7125CBC1EA45FE80076C791 /* CYRecommendContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRecommendContentTableViewCell.h; sourceTree = "<group>"; };
+		E7125CBD1EA45FE80076C791 /* CYRecommendContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRecommendContentTableViewCell.m; sourceTree = "<group>"; };
+		E7125CBE1EA45FE80076C791 /* CYRecommendContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYRecommendContentTableViewCell.xib; sourceTree = "<group>"; };
 		E7129A251EA0A20800D9E155 /* CYBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYBottomView.h; sourceTree = "<group>"; };
 		E7129A261EA0A20800D9E155 /* CYBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYBottomView.m; sourceTree = "<group>"; };
 		E7129A2B1EA0D82800D9E155 /* YKConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKConst.h; sourceTree = "<group>"; };
@@ -1030,6 +1040,12 @@
 				E7129A361EA0ED9A00D9E155 /* CYRecommendTableViewCell.h */,
 				E7129A371EA0ED9A00D9E155 /* CYRecommendTableViewCell.m */,
 				E7129A381EA0ED9A00D9E155 /* CYRecommendTableViewCell.xib */,
+				E7125CBC1EA45FE80076C791 /* CYRecommendContentTableViewCell.h */,
+				E7125CBD1EA45FE80076C791 /* CYRecommendContentTableViewCell.m */,
+				E7125CBE1EA45FE80076C791 /* CYRecommendContentTableViewCell.xib */,
+				E7125CB71EA45C920076C791 /* CYRecommendTitleView.h */,
+				E7125CB81EA45C920076C791 /* CYRecommendTitleView.m */,
+				E7125CBA1EA45CA70076C791 /* CYRecommendTitleView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1210,6 +1226,7 @@
 				E74A3F841E9B8351000339F5 /* filterSaturationHSV.fs in Resources */,
 				E74A3F791E9B8351000339F5 /* filterEmboss.fs in Resources */,
 				E74A3FCC1E9B85CC000339F5 /* RoomGuideVertical.bundle in Resources */,
+				E7125CC01EA45FE80076C791 /* CYRecommendContentTableViewCell.xib in Resources */,
 				E74A3F2C1E9B8283000339F5 /* blend2d.vs in Resources */,
 				E74A3F811E9B8351000339F5 /* filterPencilDrawing.vs in Resources */,
 				E74A3FDD1E9B862E000339F5 /* texHead.fs in Resources */,
@@ -1234,6 +1251,7 @@
 				E74A3F751E9B8351000339F5 /* filterContrast.fs in Resources */,
 				E74A3FD81E9B8613000339F5 /* spineMask.vs in Resources */,
 				E74A3F741E9B8351000339F5 /* filterColorLevel.fs in Resources */,
+				E7125CBB1EA45CA70076C791 /* CYRecommendTitleView.xib in Resources */,
 				E74A3F361E9B82F1000339F5 /* debugFacePt.vs in Resources */,
 				E74A3FE61E9B86BC000339F5 /* ZMCert.bundle in Resources */,
 				E74A3F931E9B837A000339F5 /* geometry3d.fs in Resources */,
@@ -1352,6 +1370,7 @@
 				E74A407D1E9C709A000339F5 /* CYFollowViewController.m in Sources */,
 				E770B7751E9F246000B1F10E /* UIView+Add.m in Sources */,
 				E74A40801E9C709A000339F5 /* CYLiveViewController.m in Sources */,
+				E7125CB91EA45C920076C791 /* CYRecommendTitleView.m in Sources */,
 				E74A407E1E9C709A000339F5 /* CYHomeViewController.m in Sources */,
 				E74A40811E9C709A000339F5 /* CYMeViewController.m in Sources */,
 				E7CB7B8C1EA09159003E8C78 /* CYAnchorView.m in Sources */,
@@ -1363,6 +1382,7 @@
 				E7129A391EA0ED9A00D9E155 /* CYRecommendTableViewCell.m in Sources */,
 				E78F91541E9C8BF50033E336 /* CYLiveModel.m in Sources */,
 				E74A40821E9C709A000339F5 /* CYNearbyViewController.m in Sources */,
+				E7125CBF1EA45FE80076C791 /* CYRecommendContentTableViewCell.m in Sources */,
 				E74A40831E9C709A000339F5 /* AppDelegate.m in Sources */,
 				E78F91501E9C88820033E336 /* CYHotTableViewCell.m in Sources */,
 				E7129A2D1EA0D82800D9E155 /* YKConst.m in Sources */,

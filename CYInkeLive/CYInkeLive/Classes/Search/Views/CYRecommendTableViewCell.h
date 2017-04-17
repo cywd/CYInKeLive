@@ -10,4 +10,7 @@
 
 @interface CYRecommendTableViewCell : UITableViewCell
 
+@property (nonatomic, strong) NSIndexPath *indexPath;
+@property (nonatomic, copy) void (^followBlock)(NSIndexPath *indexPath);
+
 @end

@@ -181,14 +181,13 @@
         default:
             break;
     }
-    
-//    [self loadData];
+
     [self.collectionView.mj_header beginRefreshing];
 }
 
 - (void)tabBarSelect {
     
-    if (![self.view isDisplayedInScreen]) {
+    if (![self.collectionView isDisplayedInScreen]) {
         return;
     }
     

@@ -39,7 +39,9 @@
 
 
 - (IBAction)followClick:(id)sender {
-    
+    if (self.followBlock) {
+        self.followBlock(self.indexPath);
+    }
 }
 
 @end
