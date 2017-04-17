@@ -86,9 +86,10 @@
 
 - (void)tabBarSelect {
     
-    if (![self.tableView isDisplayedInScreen]) {
-        return;
-    }
+    // 判断window是否在窗口上
+    if (self.view.window == nil) return;
+    // 判断当前的view是否与窗口重合
+    if (![self.view cy_intersectsWithAnotherView:nil]) return;
     
     // 如果是连续点击2次，直接刷新
     if (self.lastSelectedIndex == self.tabBarController.selectedIndex && self.tabBarController.selectedViewController == self.navigationController) {

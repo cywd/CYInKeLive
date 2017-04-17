@@ -10,7 +10,7 @@
 
 @implementation UIView (CYDisplay)
 
-// 判断View是否显示在屏幕上
+// 判断View是否显示在屏幕上 
 - (BOOL)isDisplayedInScreen
 {
     if (self == nil) {
@@ -47,6 +47,22 @@
     }
     
     return YES;
+}
+
+/** 判断self和anotherView是否重叠 */
+- (BOOL)cy_intersectsWithAnotherView:(UIView *)anotherView
+{
+    
+    //如果anotherView为nil，那么就代表keyWindow
+    if (anotherView == nil) anotherView = [UIApplication sharedApplication].keyWindow;
+    
+    
+    CGRect selfRect = [self convertRect:self.bounds toView:nil];
+    
+    CGRect anotherRect = [anotherView convertRect:anotherView.bounds toView:nil];
+    
+    //CGRectIntersectsRect是否有交叉
+    return CGRectIntersectsRect(selfRect, anotherRect);
 }
 
 @end

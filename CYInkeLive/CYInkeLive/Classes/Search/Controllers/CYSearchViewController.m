@@ -15,6 +15,7 @@
 #import "YKAPI.h"
 #import <MJExtension.h>
 #import "CYRecommendModel.h"
+#import "CYRecommendMoreViewController.h"
 
 @interface CYSearchViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -82,8 +83,12 @@
             _titleView.recommendButton.hidden = YES;
         }
     }
+    __weak typeof(self) weakSelf = self;
     [_titleView setRecommdMoreClick:^(NSString *keyStr) {
         
+        CYRecommendMoreViewController *vc = [[CYRecommendMoreViewController alloc] init];
+        vc.keyword = keyStr;
+        [weakSelf.navigationController pushViewController:vc animated:YES];
     }];
     
     return _titleView;

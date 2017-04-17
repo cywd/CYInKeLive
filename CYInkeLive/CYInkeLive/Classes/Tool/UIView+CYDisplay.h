@@ -10,7 +10,10 @@
 
 @interface UIView (CYDisplay)
 
-// 判断View是否显示在屏幕上
+/** 判断View是否显示在屏幕上 */
 - (BOOL)isDisplayedInScreen;
+
+/** 判断self和anotherView是否重叠 */
+- (BOOL)cy_intersectsWithAnotherView:(UIView *)anotherView;
 
 @end

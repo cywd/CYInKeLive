@@ -13,6 +13,7 @@
 		E7125CBF1EA45FE80076C791 /* CYRecommendContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7125CBD1EA45FE80076C791 /* CYRecommendContentTableViewCell.m */; };
 		E7125CC01EA45FE80076C791 /* CYRecommendContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7125CBE1EA45FE80076C791 /* CYRecommendContentTableViewCell.xib */; };
 		E7125CC61EA474AD0076C791 /* CYRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E7125CC51EA474AD0076C791 /* CYRecommendModel.m */; };
+		E7125CC91EA4839B0076C791 /* CYRecommendMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7125CC81EA4839B0076C791 /* CYRecommendMoreViewController.m */; };
 		E7129A271EA0A20800D9E155 /* CYBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7129A261EA0A20800D9E155 /* CYBottomView.m */; };
 		E7129A2D1EA0D82800D9E155 /* YKConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E7129A2C1EA0D82800D9E155 /* YKConst.m */; };
 		E7129A301EA0DB5D00D9E155 /* UIView+CYDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = E7129A2F1EA0DB5D00D9E155 /* UIView+CYDisplay.m */; };
@@ -203,6 +204,8 @@
 		E7125CBE1EA45FE80076C791 /* CYRecommendContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYRecommendContentTableViewCell.xib; sourceTree = "<group>"; };
 		E7125CC41EA474AD0076C791 /* CYRecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRecommendModel.h; sourceTree = "<group>"; };
 		E7125CC51EA474AD0076C791 /* CYRecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRecommendModel.m; sourceTree = "<group>"; };
+		E7125CC71EA4839B0076C791 /* CYRecommendMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRecommendMoreViewController.h; sourceTree = "<group>"; };
+		E7125CC81EA4839B0076C791 /* CYRecommendMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRecommendMoreViewController.m; sourceTree = "<group>"; };
 		E7129A251EA0A20800D9E155 /* CYBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYBottomView.h; sourceTree = "<group>"; };
 		E7129A261EA0A20800D9E155 /* CYBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYBottomView.m; sourceTree = "<group>"; };
 		E7129A2B1EA0D82800D9E155 /* YKConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKConst.h; sourceTree = "<group>"; };
@@ -1026,6 +1029,8 @@
 			children = (
 				E74A40721E9C709A000339F5 /* CYSearchViewController.h */,
 				E74A40731E9C709A000339F5 /* CYSearchViewController.m */,
+				E7125CC71EA4839B0076C791 /* CYRecommendMoreViewController.h */,
+				E7125CC81EA4839B0076C791 /* CYRecommendMoreViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1371,6 +1376,7 @@
 			files = (
 				E78F915B1E9C91120033E336 /* CYFollowEmptyView.m in Sources */,
 				E770B7741E9F246000B1F10E /* UIControl+Add.m in Sources */,
+				E7125CC91EA4839B0076C791 /* CYRecommendMoreViewController.m in Sources */,
 				E74A3E781E9B5334000339F5 /* main.m in Sources */,
 				E74A407D1E9C709A000339F5 /* CYFollowViewController.m in Sources */,
 				E770B7751E9F246000B1F10E /* UIView+Add.m in Sources */,
