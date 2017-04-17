@@ -13,6 +13,8 @@
 #import "CYRecommendTitleView.h"
 #import <AFNetworking.h>
 #import "YKAPI.h"
+#import <MJExtension.h>
+#import "CYRecommendModel.h"
 
 @interface CYSearchViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -24,7 +26,7 @@
 
 @property (nonatomic, strong) NSMutableArray *dataArr;
 //今日推荐数组
-@property (nonatomic, strong) NSMutableArray *recommdArr;
+@property (nonatomic, strong) NSMutableArray *recommendArray;
 
 @property (nonatomic, strong) CYRecommendTitleView *titleView;
 
@@ -53,7 +55,7 @@
 
 #pragma UITableViewDelegate,UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return section == self.sectionTitleArr.count ? self.recommdArr.count : 1;
+    return section == self.sectionTitleArr.count ? self.recommendArray.count : 1;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -87,6 +89,7 @@
     if (indexPath.section < self.sectionTitleArr.count) {
         // 好声音、小清新、搞笑达人
         CYRecommendContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CYRecommendContentTableViewCell"];
+        cell.model = self.dataArr[indexPath.section];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else {
@@ -96,7 +99,7 @@
         [cell setFollowBlock:^(NSIndexPath *tapIndexPath) {
             
         }];
-
+        cell.model = self.recommendArray[indexPath.row];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
@@ -113,9 +116,15 @@
         NSDictionary *appDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         
         // 字典那转Model
-        // ...
-        
-        
+        CYRecommendModel *model = [CYRecommendModel mj_objectWithKeyValues:appDic];
+        for (NSInteger i = 0; i < model.live_nodes.count; i++) {
+            [self.sectionTitleArr addObject:model.live_nodes[i].title];
+            [self.dataArr addObject:model.live_nodes[i]];
+        }
+        //今日推荐
+        for (NSInteger i = 0; i < model.user_nodes[0].users.count; i++) {
+            [self.recommendArray addObject:model.user_nodes[0].users[i]];
+        }
         
         [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -163,11 +172,11 @@
 }
 
 // 今日热门
-- (NSMutableArray *)recommdArr {
-    if (!_recommdArr) {
-        _recommdArr = [NSMutableArray array];
+- (NSMutableArray *)recommendArray {
+    if (!_recommendArray) {
+        _recommendArray = [NSMutableArray array];
     }
-    return _recommdArr;
+    return _recommendArray;
 }
 
 

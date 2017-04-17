@@ -23,4 +23,33 @@
 
 @property (nonatomic, copy) NSString *distance;
 
+@property (nonatomic, copy) NSString *id;
+
+@property (nonatomic, assign) NSInteger room_id;
+
+@property (nonatomic, assign) NSInteger version;
+
+@property (nonatomic, assign) NSInteger rotate;
+
+@property (nonatomic, assign) NSInteger multi;
+
+@property (nonatomic, assign) NSInteger link;
+
+@property (nonatomic, copy) NSString *share_addr;
+
+@property (nonatomic, assign) NSInteger slot;
+
+@property (nonatomic, copy) NSString *image;
+
+@property (nonatomic, assign) NSInteger group;
+
+@property (nonatomic, assign) NSInteger pub_stat;
+
+@property (nonatomic, assign) NSInteger optimal;
+
+@property (nonatomic, copy) NSString *name;
+
+@property (nonatomic, assign) NSInteger status;
+
+
 @end

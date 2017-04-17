@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,7 +22,7 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LlZ-8g-blz">
                         <rect key="frame" x="15" y="10" width="40" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="EX4-to-CPX"/>
+                            <constraint firstAttribute="width" secondItem="LlZ-8g-blz" secondAttribute="height" multiplier="1:1" id="XUn-zJ-6gO"/>
                             <constraint firstAttribute="width" constant="40" id="as6-kl-DIn"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -32,19 +33,13 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrK-q8-pMT">
-                        <rect key="frame" x="55" y="10" width="223" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="Xoq-QT-vnd"/>
-                        </constraints>
+                        <rect key="frame" x="60" y="10" width="212" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdA-a4-0Sx">
-                        <rect key="frame" x="55" y="30" width="223" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="s4r-lf-Yk7"/>
-                        </constraints>
+                        <rect key="frame" x="60" y="30" width="212" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -63,19 +58,16 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="tdA-a4-0Sx" firstAttribute="top" secondItem="XrK-q8-pMT" secondAttribute="bottom" id="08P-qZ-w4t"/>
-                    <constraint firstItem="LNe-s8-jo9" firstAttribute="top" secondItem="qVa-Dh-T6l" secondAttribute="top" constant="10" id="8Ax-WZ-7Ku"/>
-                    <constraint firstItem="XrK-q8-pMT" firstAttribute="leading" secondItem="LlZ-8g-blz" secondAttribute="trailing" id="9eE-dy-bLA"/>
+                    <constraint firstItem="LNe-s8-jo9" firstAttribute="centerY" secondItem="qVa-Dh-T6l" secondAttribute="centerY" id="9LJ-4b-bd7"/>
+                    <constraint firstItem="XrK-q8-pMT" firstAttribute="leading" secondItem="LlZ-8g-blz" secondAttribute="trailing" constant="5" id="9eE-dy-bLA"/>
+                    <constraint firstItem="LlZ-8g-blz" firstAttribute="centerY" secondItem="qVa-Dh-T6l" secondAttribute="centerY" id="HSL-wF-IHz"/>
                     <constraint firstAttribute="trailing" secondItem="LNe-s8-jo9" secondAttribute="trailing" constant="3" id="Iz8-RQ-QoR"/>
                     <constraint firstAttribute="bottom" secondItem="tdA-a4-0Sx" secondAttribute="bottom" constant="9.5" id="NGn-ga-iIU"/>
-                    <constraint firstItem="LNe-s8-jo9" firstAttribute="leading" secondItem="tdA-a4-0Sx" secondAttribute="trailing" constant="-1" id="R5T-M1-soP"/>
-                    <constraint firstAttribute="bottom" secondItem="LlZ-8g-blz" secondAttribute="bottom" constant="9.5" id="RNa-dX-y88"/>
-                    <constraint firstItem="tdA-a4-0Sx" firstAttribute="leading" secondItem="LlZ-8g-blz" secondAttribute="trailing" id="TYx-df-ki8"/>
-                    <constraint firstItem="LlZ-8g-blz" firstAttribute="top" secondItem="qVa-Dh-T6l" secondAttribute="top" constant="10" id="VLZ-5T-Hcz"/>
+                    <constraint firstItem="tdA-a4-0Sx" firstAttribute="leading" secondItem="LlZ-8g-blz" secondAttribute="trailing" constant="5" id="TYx-df-ki8"/>
                     <constraint firstItem="LlZ-8g-blz" firstAttribute="leading" secondItem="qVa-Dh-T6l" secondAttribute="leading" constant="15" id="f9O-XG-cau"/>
-                    <constraint firstItem="LNe-s8-jo9" firstAttribute="leading" secondItem="tdA-a4-0Sx" secondAttribute="trailing" constant="-1" id="hLp-RV-gVF"/>
-                    <constraint firstAttribute="bottom" secondItem="LNe-s8-jo9" secondAttribute="bottom" constant="9.5" id="kdJ-U4-JPb"/>
-                    <constraint firstItem="LNe-s8-jo9" firstAttribute="leading" secondItem="XrK-q8-pMT" secondAttribute="trailing" constant="-1" id="mrw-N2-xtm"/>
+                    <constraint firstItem="LNe-s8-jo9" firstAttribute="leading" secondItem="tdA-a4-0Sx" secondAttribute="trailing" constant="5" id="hLp-RV-gVF"/>
+                    <constraint firstItem="LNe-s8-jo9" firstAttribute="leading" secondItem="XrK-q8-pMT" secondAttribute="trailing" constant="5" id="mrw-N2-xtm"/>
+                    <constraint firstItem="tdA-a4-0Sx" firstAttribute="height" secondItem="XrK-q8-pMT" secondAttribute="height" id="pD4-rF-Xvd"/>
                     <constraint firstItem="XrK-q8-pMT" firstAttribute="top" secondItem="qVa-Dh-T6l" secondAttribute="top" constant="10" id="qIA-YY-4Qs"/>
                     <constraint firstItem="tdA-a4-0Sx" firstAttribute="top" secondItem="XrK-q8-pMT" secondAttribute="bottom" id="vti-pW-xO1"/>
                 </constraints>

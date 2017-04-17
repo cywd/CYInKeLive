@@ -7,6 +7,10 @@
 //
 
 #import "CYRecommendContentTableViewCell.h"
+#import <UIImageView+WebCache.h>
+#import "CYRecommendModel.h"
+#import "CYLiveModel.h"
+#import "CYCreatorModel.h"
 
 @interface CYRecommendContentTableViewCell ()
 
@@ -79,6 +83,34 @@
         }];
     }
     
+}
+
+- (void)setModel:(Live_Nodes *)model {
+    _model = model;
+    for (NSInteger i = 0; i < model.lives.count; i++) {
+        NSString *str = model.lives[i].creator.portrait;
+        NSString *titleStr = [NSString stringWithFormat:@"%zd人",model.lives[i].online_users];
+        if ([str rangeOfString:@"http://img2.inke.cn/"].location == NSNotFound) {
+            str = [NSString stringWithFormat:@"http://img2.inke.cn/%@",str];
+        }
+        
+        switch (i) {
+            case 0:
+                [self.imageViewF sd_setImageWithURL:[NSURL URLWithString:str] placeholderImage:[UIImage imageNamed:@"default_head"] options:SDWebImageRetryFailed];
+                self.LabelF.text = titleStr;
+                break;
+            case 1:
+                [self.imageViewS sd_setImageWithURL:[NSURL URLWithString:str] placeholderImage:[UIImage imageNamed:@"default_head"] options:SDWebImageRetryFailed];
+                self.LabelS.text = titleStr;
+                break;
+            case 2:
+                [self.imageViewT sd_setImageWithURL:[NSURL URLWithString:str] placeholderImage:[UIImage imageNamed:@"default_head"] options:SDWebImageRetryFailed];
+                self.LabelT.text = titleStr;
+                break;
+            default:
+                break;
+        }
+    }
 }
 
 @end

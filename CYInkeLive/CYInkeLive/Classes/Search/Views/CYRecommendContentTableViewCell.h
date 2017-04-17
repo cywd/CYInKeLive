@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Live_Nodes;
 
 @interface CYRecommendContentTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) Live_Nodes *model;
 
 @end

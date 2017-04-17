@@ -7,6 +7,10 @@
 //
 
 #import "CYRecommendTableViewCell.h"
+#import "CYRecommendModel.h"
+#import "CYLiveModel.h"
+#import "CYCreatorModel.h"
+#import <UIImageView+WebCache.h>
 
 @interface CYRecommendTableViewCell ()
 
@@ -36,11 +40,30 @@
     // Configure the view for the selected state
 }
 
-
-
 - (IBAction)followClick:(id)sender {
     if (self.followBlock) {
         self.followBlock(self.indexPath);
+    }
+}
+
+- (void)setModel:(Users *)model {
+    _model = model;
+    
+    User *userModel = model.user;
+    NSString *relation = model.relation;
+    
+    NSString *str = userModel.portrait;
+    if ([str rangeOfString:@"http://img2.inke.cn/"].location == NSNotFound) {
+        str = [NSString stringWithFormat:@"http://img2.inke.cn/%@",str];
+    }
+    [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:str] placeholderImage:[UIImage imageNamed:@"default_head"] options:SDWebImageLowPriority|SDWebImageRetryFailed];
+    self.nickNameLabel.text = userModel.nick;
+    self.subTextLabel.text = userModel.hometown;
+    
+    if (relation.length > 4) {
+        [self.addButton setImage:[UIImage imageNamed:@"button_choose-on"] forState:UIControlStateNormal];
+    } else {
+        [self.addButton setImage:[UIImage imageNamed:@"icon_+"] forState:UIControlStateNormal];
     }
 }
 

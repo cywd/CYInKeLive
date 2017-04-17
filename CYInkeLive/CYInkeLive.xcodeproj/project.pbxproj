@@ -12,6 +12,7 @@
 		E7125CBB1EA45CA70076C791 /* CYRecommendTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7125CBA1EA45CA70076C791 /* CYRecommendTitleView.xib */; };
 		E7125CBF1EA45FE80076C791 /* CYRecommendContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7125CBD1EA45FE80076C791 /* CYRecommendContentTableViewCell.m */; };
 		E7125CC01EA45FE80076C791 /* CYRecommendContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7125CBE1EA45FE80076C791 /* CYRecommendContentTableViewCell.xib */; };
+		E7125CC61EA474AD0076C791 /* CYRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E7125CC51EA474AD0076C791 /* CYRecommendModel.m */; };
 		E7129A271EA0A20800D9E155 /* CYBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7129A261EA0A20800D9E155 /* CYBottomView.m */; };
 		E7129A2D1EA0D82800D9E155 /* YKConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E7129A2C1EA0D82800D9E155 /* YKConst.m */; };
 		E7129A301EA0DB5D00D9E155 /* UIView+CYDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = E7129A2F1EA0DB5D00D9E155 /* UIView+CYDisplay.m */; };
@@ -200,6 +201,8 @@
 		E7125CBC1EA45FE80076C791 /* CYRecommendContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRecommendContentTableViewCell.h; sourceTree = "<group>"; };
 		E7125CBD1EA45FE80076C791 /* CYRecommendContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRecommendContentTableViewCell.m; sourceTree = "<group>"; };
 		E7125CBE1EA45FE80076C791 /* CYRecommendContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYRecommendContentTableViewCell.xib; sourceTree = "<group>"; };
+		E7125CC41EA474AD0076C791 /* CYRecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYRecommendModel.h; sourceTree = "<group>"; };
+		E7125CC51EA474AD0076C791 /* CYRecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYRecommendModel.m; sourceTree = "<group>"; };
 		E7129A251EA0A20800D9E155 /* CYBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYBottomView.h; sourceTree = "<group>"; };
 		E7129A261EA0A20800D9E155 /* CYBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYBottomView.m; sourceTree = "<group>"; };
 		E7129A2B1EA0D82800D9E155 /* YKConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKConst.h; sourceTree = "<group>"; };
@@ -773,6 +776,8 @@
 				E78F91531E9C8BF50033E336 /* CYLiveModel.m */,
 				E78F91551E9C8C150033E336 /* CYCreatorModel.h */,
 				E78F91561E9C8C150033E336 /* CYCreatorModel.m */,
+				E7125CC41EA474AD0076C791 /* CYRecommendModel.h */,
+				E7125CC51EA474AD0076C791 /* CYRecommendModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1379,6 +1384,7 @@
 				E770B7781E9F25AE00B1F10E /* CYMainRefrashGifHeader.m in Sources */,
 				E7129A331EA0DE0F00D9E155 /* CYSearchView.m in Sources */,
 				E74A407B1E9C709A000339F5 /* CYTabBar.m in Sources */,
+				E7125CC61EA474AD0076C791 /* CYRecommendModel.m in Sources */,
 				E7129A391EA0ED9A00D9E155 /* CYRecommendTableViewCell.m in Sources */,
 				E78F91541E9C8BF50033E336 /* CYLiveModel.m in Sources */,
 				E74A40821E9C709A000339F5 /* CYNearbyViewController.m in Sources */,
