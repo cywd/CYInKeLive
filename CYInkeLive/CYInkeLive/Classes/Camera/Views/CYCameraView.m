@@ -16,21 +16,21 @@
 @interface CYCameraView ()
 
 // 直播
-@property (nonatomic,strong) UIButton *liveButton;
+@property (nonatomic, strong) UIButton *liveButton;
 
 // 短视频
-@property (nonatomic,strong) UIButton *videoButton;
+@property (nonatomic, strong) UIButton *videoButton;
 
-@property (nonatomic,strong) UIButton *closeButton;
+@property (nonatomic, strong) UIButton *closeButton;
 
-@property (nonatomic,strong) UIView *bgView;
+@property (nonatomic, strong) UIView *bgView;
 
 
 @end
 
 @implementation CYCameraView
 
-- (instancetype)initWithFrame:(CGRect)frame{
+- (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
         [self creatUI];
@@ -38,7 +38,7 @@
     return self;
 }
 
-- (void)creatUI{
+- (void)creatUI {
     [self addSubview:self.bgView];
     [self addSubview:self.liveButton];
     [self addSubview:self.videoButton];
@@ -50,11 +50,11 @@
     [keyWindow addSubview:self];
 }
 
-- (void)closeClick{
+- (void)closeClick {
     [self removeFromSuperview];
 }
 
-- (UIButton *)liveButton{
+- (UIButton *)liveButton {
     if (_liveButton == nil) {
         _liveButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _liveButton.backgroundColor = [UIColor clearColor];
@@ -76,7 +76,7 @@
     return _liveButton;
 }
 
-- (UIButton *)videoButton{
+- (UIButton *)videoButton {
     if (_videoButton == nil) {
         _videoButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _videoButton.backgroundColor = [UIColor clearColor];
@@ -97,7 +97,7 @@
     return _videoButton;
 }
 
-- (void)liveClick:(UIButton *)sender{
+- (void)liveClick:(UIButton *)sender {
     if (self.buttonClick) {
         self.buttonClick(sender.tag);
     }
@@ -106,7 +106,7 @@
 }
 
 // 点击上方灰色区域移除视图
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSSet *allTouches = [event allTouches];
     UITouch *touch = [allTouches anyObject];
     CGPoint point = [touch locationInView:self];
@@ -115,7 +115,7 @@
     }
 }
 
-- (UIButton *)closeButton{
+- (UIButton *)closeButton {
     if (_closeButton == nil) {
         _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _closeButton.backgroundColor = [UIColor whiteColor];
@@ -126,7 +126,7 @@
     return _closeButton;
 }
 
-- (UIView *)bgView{
+- (UIView *)bgView {
     if (_bgView == nil) {
         _bgView = [[UIView alloc]initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 50 - LiveWidth, [UIScreen mainScreen].bounds.size.width, LiveWidth)];
         _bgView.backgroundColor = [UIColor whiteColor];
