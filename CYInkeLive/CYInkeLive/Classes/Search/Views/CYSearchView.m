@@ -50,6 +50,10 @@
     }
 }
 
+- (void)endEdit {
+    [self.searchBar endEditing:YES];
+}
+
 - (UIButton *)cancleButton {
     if (!_cancleButton) {
         _cancleButton = [UIButton buttonWithType:UIButtonTypeCustom];

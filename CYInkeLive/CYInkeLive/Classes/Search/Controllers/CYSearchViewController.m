@@ -21,11 +21,11 @@
 @property (nonatomic, strong) CYSearchView *searchView;
 @property (nonatomic, strong) UITableView *tableView;
 
-//标题
+// 标题
 @property (nonatomic, strong) NSMutableArray *sectionTitleArr;
 
 @property (nonatomic, strong) NSMutableArray *dataArr;
-//今日推荐数组
+// 今日推荐数组
 @property (nonatomic, strong) NSMutableArray *recommendArray;
 
 @property (nonatomic, strong) CYRecommendTitleView *titleView;
@@ -48,9 +48,18 @@
     self.navigationController.navigationBarHidden = NO;
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.searchView endEdit];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.searchView endEdit];
 }
 
 #pragma UITableViewDelegate,UITableViewDataSource

@@ -12,4 +12,6 @@
 
 @property (nonatomic, copy) void (^cancleBlock)();
 
+- (void)endEdit;
+
 @end
