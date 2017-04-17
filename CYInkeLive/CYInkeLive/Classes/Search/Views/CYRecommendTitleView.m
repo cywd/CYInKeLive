@@ -10,12 +10,6 @@
 
 @interface CYRecommendTitleView ()
 
-// 好声音、小清新、搞笑达人
-@property (weak, nonatomic) IBOutlet UILabel *recommedTitle;
-
-// 更多
-@property (weak, nonatomic) IBOutlet UIButton *recommendButton;
-
 @end
 
 @implementation CYRecommendTitleView

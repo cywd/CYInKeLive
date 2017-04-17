@@ -65,6 +65,14 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     _titleView = [[[NSBundle mainBundle] loadNibNamed:@"CYRecommendTitleView" owner:self options:nil] lastObject];
     
+    if (self.sectionTitleArr.count > 0) {
+        if (section < self.sectionTitleArr.count) {
+            _titleView.recommedTitle.text = self.sectionTitleArr[section];
+        } else {
+            _titleView.recommedTitle.text = @"今日推荐";
+            _titleView.recommendButton.hidden = YES;
+        }
+    }
     [_titleView setRecommdMoreClick:^(NSString *keyStr) {
         
     }];
@@ -150,6 +158,8 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.showsHorizontalScrollIndicator = NO;
+        _tableView.showsVerticalScrollIndicator = NO;
         [_tableView registerNib:[UINib nibWithNibName:@"CYRecommendTableViewCell" bundle:nil] forCellReuseIdentifier:@"CYRecommendTableViewCell"];
         [_tableView registerNib:[UINib nibWithNibName:@"CYRecommendContentTableViewCell" bundle:nil] forCellReuseIdentifier:@"CYRecommendContentTableViewCell"];
     }
