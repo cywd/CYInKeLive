@@ -44,11 +44,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarSelect) name:CYTabBarDidSelectNotification object:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)loadData {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -121,6 +116,16 @@
         [_tableView registerClass:[CYHotTableViewCell class] forCellReuseIdentifier:NSStringFromClass([CYHotTableViewCell class])];
     }
     return _tableView;
+}
+
+// 最后做内存过高 dealloc 方法
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

@@ -55,11 +55,6 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(([UIScreen mainScreen].bounds.size.width - 2 * nearbyMargin)/3, ([UIScreen mainScreen].bounds.size.width - 2 * nearbyMargin)/3 * 1.3);
@@ -260,12 +255,17 @@
     return _alertVc;
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 - (void)dealloc {
     self.collectionView.dataSource = nil;
     self.collectionView.delegate = nil;
     self.locationManager.delegate = nil;
     
-    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

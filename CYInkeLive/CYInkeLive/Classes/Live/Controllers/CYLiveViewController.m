@@ -77,11 +77,6 @@
     [_player shutdown];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)creatUI {
     [self.view addSubview:self.showView];
     [self.showView addSubview:self.backdropView];
@@ -213,5 +208,9 @@
     return _bottomTool;
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 @end
