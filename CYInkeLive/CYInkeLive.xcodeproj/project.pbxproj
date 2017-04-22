@@ -173,6 +173,7 @@
 		E78F91691E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F91671E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.m */; };
 		E78F916A1E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78F91681E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.xib */; };
 		E7CB7B8C1EA09159003E8C78 /* CYAnchorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CB7B8B1EA09159003E8C78 /* CYAnchorView.m */; };
+		E7FD20501EAADAC4001C07C0 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E7FD204F1EAADAC4001C07C0 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -403,6 +404,8 @@
 		E78F91681E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYNearbyHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		E7CB7B8A1EA09159003E8C78 /* CYAnchorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAnchorView.h; sourceTree = "<group>"; };
 		E7CB7B8B1EA09159003E8C78 /* CYAnchorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAnchorView.m; sourceTree = "<group>"; };
+		E7FD204E1EAAD9A9001C07C0 /* YKDoc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKDoc.h; sourceTree = "<group>"; };
+		E7FD204F1EAADAC4001C07C0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -507,8 +510,10 @@
 			isa = PBXGroup;
 			children = (
 				E74A40161E9B98B1000339F5 /* YKAPI.h */,
+				E7FD204E1EAAD9A9001C07C0 /* YKDoc.h */,
 				E7129A2B1EA0D82800D9E155 /* YKConst.h */,
 				E7129A2C1EA0D82800D9E155 /* YKConst.m */,
+				E7FD204F1EAADAC4001C07C0 /* README.md */,
 				E74A3ED81E9B7FD9000339F5 /* Resources */,
 				E74A3E821E9B5334000339F5 /* Assets.xcassets */,
 				E74A3E841E9B5334000339F5 /* LaunchScreen.storyboard */,
@@ -1403,6 +1408,7 @@
 				E74A40791E9C709A000339F5 /* CYBaseNavViewController.m in Sources */,
 				E7129A301EA0DB5D00D9E155 /* UIView+CYDisplay.m in Sources */,
 				E74A40851E9C709A000339F5 /* UIView+Frame.m in Sources */,
+				E7FD20501EAADAC4001C07C0 /* README.md in Sources */,
 				E74A40841E9C709A000339F5 /* CYSearchViewController.m in Sources */,
 				E770B77B1E9F2C9600B1F10E /* CYCameraView.m in Sources */,
 				E74A407F1E9C709A000339F5 /* CYHotViewController.m in Sources */,
