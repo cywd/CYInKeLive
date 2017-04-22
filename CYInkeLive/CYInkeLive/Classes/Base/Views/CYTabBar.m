@@ -27,19 +27,30 @@
 
 #pragma mark - override
 // 从最下层往上遍历， 如果button在item下，最后找到的是item，响应item
+// Application -> Window -> RootView -> SubView
 // 响应超出superview的button
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    UIView *view = [super hitTest:point withEvent:event];
-    if (self.hidden) {
-        return view;
-    }
-    if (view == nil) {
-        CGPoint tmpPoint = [self.cameraButton convertPoint:point fromView:self];
-        if (CGRectContainsPoint(self.cameraButton.bounds, tmpPoint)) {
-            view = self.cameraButton;
+    
+    if (self.isHidden == NO) {
+        
+        CGPoint newP = [self convertPoint:point toView:self.cameraButton];
+        
+        // 增加圆角判断
+        CGFloat radius = CGRectGetWidth(self.cameraButton.frame) / 2;
+        CGPoint offset = CGPointMake(newP.x - radius, newP.y - radius);
+        
+        if ([self.cameraButton pointInside:newP withEvent:event]) {
+            if (sqrt(offset.x * offset.x + offset.y * offset.y) <= radius) {
+                return self.cameraButton;
+            } else {
+                return nil;
+            }
+        } else {
+            return [super hitTest:point withEvent:event];
         }
+    } else {
+        return [super hitTest:point withEvent:event];
     }
-    return view;
 }
 
 - (void)layoutSubviews {
@@ -78,7 +89,10 @@
         _cameraButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_cameraButton setBackgroundImage:[UIImage imageNamed:@"tab_launch"] forState:UIControlStateNormal];
         [_cameraButton addTarget:self action:@selector(cameraButtonClick) forControlEvents:UIControlEventTouchUpInside];
-        _cameraButton.frame = CGRectMake(0, 0, _cameraButton.currentBackgroundImage.size.width, _cameraButton.currentBackgroundImage.size.height);
+        CGFloat imgWidth = _cameraButton.currentBackgroundImage.size.width;
+        _cameraButton.frame = CGRectMake(0, 0, imgWidth, imgWidth);
+        _cameraButton.layer.cornerRadius = imgWidth/2.0;
+        _cameraButton.layer.masksToBounds = YES;
         self.backgroundColor = [UIColor whiteColor];
         [self addSubview:_cameraButton];
     }

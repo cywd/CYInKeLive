@@ -81,7 +81,7 @@
         _videoButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _videoButton.backgroundColor = [UIColor clearColor];
         [_videoButton setImage:[UIImage imageNamed:@"shortvideo_main_video"] forState:UIControlStateNormal];
-        [_videoButton setTitle:@"短视频" forState:UIControlStateNormal];
+        [_videoButton setTitle:@"视频" forState:UIControlStateNormal];
         [_videoButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         _videoButton.frame = CGRectMake(LiveWidth, [UIScreen mainScreen].bounds.size.height, LiveWidth, LiveWidth);
         _videoButton.tag = 51;
