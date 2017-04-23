@@ -8,8 +8,7 @@
 
 #import "CYHotViewController.h"
 #import "CYHotTableViewCell.h"
-#import <AFNetworking.h>
-#import "YKAPI.h"
+#import "CYNetworkManager.h"
 #import <MJExtension.h>
 #import "CYLiveModel.h"
 #import "CYCreatorModel.h"
@@ -45,9 +44,8 @@
 }
 
 - (void)loadData {
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manager GET:INKeUrl parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [[CYNetworkManager defaultManager] hotListWithParameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
         [self.dataArray removeAllObjects];
         NSDictionary *appDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         
