@@ -14,13 +14,14 @@
 #import <IJKMediaFramework/IJKMediaFramework.h>
 #import "CYAnchorView.h"
 #import "CYBottomView.h"
+#import "CYInPiaoView.h"
 
 @interface CYLiveViewController ()
 
 @property (nonatomic, strong) IJKFFMoviePlayerController *player;
 
 @property (nonatomic, strong) CYAnchorView *anchorView;
-
+@property (nonatomic, strong) CYInPiaoView *inPiaoView;
 @property (nonatomic, strong) CYBottomView *bottomTool;
 
 // 最上层的视图
@@ -84,6 +85,7 @@
     [self.view addSubview:self.closeButton];
     
     [self.view addSubview:self.anchorView];
+    [self.view addSubview:self.inPiaoView];
     self.anchorView.model = self.model;
     
     [self.topSideView addSubview:self.bottomTool];
@@ -168,7 +170,7 @@
 // 主播
 - (CYAnchorView *)anchorView {
     if (!_anchorView) {
-        _anchorView = [[CYAnchorView alloc]initWithFrame:CGRectMake(10, 30, 150, 36)];
+        _anchorView = [[CYAnchorView alloc] initWithFrame:CGRectMake(10, 30, 140, 36)];
     }
     return _anchorView;
 }
@@ -206,6 +208,13 @@
         }];
     }
     return _bottomTool;
+}
+
+- (CYInPiaoView *)inPiaoView {
+    if (!_inPiaoView) {
+        _inPiaoView = [[CYInPiaoView alloc] initWithFrame:CGRectMake(10, 70, 140, 30)];
+    }
+    return _inPiaoView;
 }
 
 - (void)didReceiveMemoryWarning {

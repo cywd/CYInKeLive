@@ -28,7 +28,6 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        
         [self creatUI];
     }
     return self;
@@ -42,7 +41,7 @@
         button.tag = 100+i;
         if (i == 0) {
             button.frame = CGRectMake(10, 10, 40, 40);
-        } else{
+        } else {
             button.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width-180)+(i-1) * 60, 10, 40, 40);
         }
         [self addSubview:button];

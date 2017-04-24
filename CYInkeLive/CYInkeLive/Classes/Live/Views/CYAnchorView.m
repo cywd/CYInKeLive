@@ -39,13 +39,20 @@
 
 - (void)createUI {
     
-    self.layer.cornerRadius = 15;
+    self.layer.cornerRadius = self.bounds.size.height/2;
     self.layer.masksToBounds = YES;
+    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
     
     [self addSubview:self.iconImageView];
     [self addSubview:self.liveLabel];
     [self addSubview:self.lineLabel];
+    [self addSubview:self.followButton];
     
+    
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
     [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(self).offset(2);
         make.width.height.equalTo(@32);
@@ -65,6 +72,13 @@
         make.right.equalTo(self.mas_right).offset(-10);
         make.height.equalTo(@16);
     }];
+    
+    [self.followButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.mas_right).offset(-5);
+        //        make.width.equalTo(@40);
+        make.top.equalTo(self).offset(5);
+        make.bottom.equalTo(self).offset(-5);
+    }];
 }
 
 - (void)setModel:(CYLiveModel *)model {
@@ -74,8 +88,8 @@
     [self.iconImageView sd_setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"default_head"] options:SDWebImageRefreshCached completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
     }];
     
-    self.lineLabel.text = [NSString stringWithFormat:@"%zd人在线",model.online_users];
-    self.liveLabel.text = [NSString stringWithFormat:@"%@", model.creator.nick];
+    self.lineLabel.text = [NSString stringWithFormat:@"%zd",model.online_users];
+//    self.liveLabel.text = [NSString stringWithFormat:@"%@", model.creator.nick];
 }
 
 - (UIImageView *)iconImageView {
@@ -92,7 +106,7 @@
         _lineLabel = [[UILabel alloc]init];
         _lineLabel.textColor = [UIColor whiteColor];
         _lineLabel.textAlignment = NSTextAlignmentLeft;
-        _lineLabel.font = [UIFont systemFontOfSize:8];
+        _lineLabel.font = [UIFont systemFontOfSize:10];
     }
     return _lineLabel;
 }
@@ -106,6 +120,17 @@
         _liveLabel.font = [UIFont systemFontOfSize:10];
     }
     return _liveLabel;
+}
+
+- (UIButton *)followButton {
+    if (!_followButton) {
+        _followButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_followButton setBackgroundImage:[UIImage imageNamed:@"live_guanzhu_"] forState:UIControlStateNormal];
+        [_followButton setTitle:@"关注" forState:UIControlStateNormal];
+        _followButton.titleLabel.font = [UIFont systemFontOfSize:12];
+        [_followButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    }
+    return _followButton;
 }
 
 @end

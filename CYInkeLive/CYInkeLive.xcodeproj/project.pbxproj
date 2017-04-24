@@ -165,6 +165,7 @@
 		E770B7781E9F25AE00B1F10E /* CYMainRefrashGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E770B7771E9F25AE00B1F10E /* CYMainRefrashGifHeader.m */; };
 		E770B77B1E9F2C9600B1F10E /* CYCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = E770B77A1E9F2C9600B1F10E /* CYCameraView.m */; };
 		E771BD821EABABD000DEA6C3 /* CYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E771BD811EABABD000DEA6C3 /* CYNetworkManager.m */; };
+		E776DE7C1EADB05600C8EBF3 /* CYInPiaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E776DE7B1EADB05600C8EBF3 /* CYInPiaoView.m */; };
 		E78F91501E9C88820033E336 /* CYHotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F914E1E9C88820033E336 /* CYHotTableViewCell.m */; };
 		E78F91541E9C8BF50033E336 /* CYLiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F91531E9C8BF50033E336 /* CYLiveModel.m */; };
 		E78F91571E9C8C150033E336 /* CYCreatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E78F91561E9C8C150033E336 /* CYCreatorModel.m */; };
@@ -392,6 +393,8 @@
 		E770B77A1E9F2C9600B1F10E /* CYCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYCameraView.m; sourceTree = "<group>"; };
 		E771BD801EABABD000DEA6C3 /* CYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYNetworkManager.h; sourceTree = "<group>"; };
 		E771BD811EABABD000DEA6C3 /* CYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYNetworkManager.m; sourceTree = "<group>"; };
+		E776DE7A1EADB05600C8EBF3 /* CYInPiaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYInPiaoView.h; sourceTree = "<group>"; };
+		E776DE7B1EADB05600C8EBF3 /* CYInPiaoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYInPiaoView.m; sourceTree = "<group>"; };
 		E78F914D1E9C88820033E336 /* CYHotTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYHotTableViewCell.h; sourceTree = "<group>"; };
 		E78F914E1E9C88820033E336 /* CYHotTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYHotTableViewCell.m; sourceTree = "<group>"; };
 		E78F91521E9C8BF50033E336 /* CYLiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLiveModel.h; sourceTree = "<group>"; };
@@ -936,6 +939,8 @@
 			children = (
 				E7CB7B8A1EA09159003E8C78 /* CYAnchorView.h */,
 				E7CB7B8B1EA09159003E8C78 /* CYAnchorView.m */,
+				E776DE7A1EADB05600C8EBF3 /* CYInPiaoView.h */,
+				E776DE7B1EADB05600C8EBF3 /* CYInPiaoView.m */,
 				E7129A251EA0A20800D9E155 /* CYBottomView.h */,
 				E7129A261EA0A20800D9E155 /* CYBottomView.m */,
 			);
@@ -1392,6 +1397,7 @@
 				E770B7751E9F246000B1F10E /* UIView+Add.m in Sources */,
 				E74A40801E9C709A000339F5 /* CYLiveViewController.m in Sources */,
 				E7125CB91EA45C920076C791 /* CYRecommendTitleView.m in Sources */,
+				E776DE7C1EADB05600C8EBF3 /* CYInPiaoView.m in Sources */,
 				E74A407E1E9C709A000339F5 /* CYHomeViewController.m in Sources */,
 				E74A40811E9C709A000339F5 /* CYMeViewController.m in Sources */,
 				E7CB7B8C1EA09159003E8C78 /* CYAnchorView.m in Sources */,
