@@ -27,7 +27,9 @@
 
 @end
 
-@implementation CYHotViewController
+@implementation CYHotViewController {
+    BOOL end;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,7 +45,13 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarSelect) name:CYTabBarDidSelectNotification object:nil];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    end = YES;
+}
+
 - (void)loadData {
+    end = YES;
     [[CYNetworkManager defaultManager] hotListWithParameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         [self.dataArray removeAllObjects];
@@ -52,9 +60,70 @@
         self.dataArray = [CYLiveModel mj_objectArrayWithKeyValuesArray:appDic[@"lives"]];
         [self.tableView reloadData];
         [self.tableView.mj_header endRefreshing];
+        [self myRunLoop];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.tableView.mj_header endRefreshing];
     }];
+}
+
+- (void)myRunLoop {
+    [NSThread detachNewThreadSelector:@selector(newThreadFunc) toTarget:self withObject:nil];
+}
+
+- (void)newThreadFunc {
+    @autoreleasepool {
+        end = NO;
+        NSRunLoop *myRunLoop = [NSRunLoop currentRunLoop];
+        CFRunLoopObserverContext context = {0, (__bridge void*)self, NULL, NULL, NULL};
+        CFRunLoopObserverRef observer = CFRunLoopObserverCreate(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, &myRunLoopObserver, &context);
+        if (observer) {
+            CFRunLoopRef cfRunloop = [myRunLoop getCFRunLoop];
+            CFRunLoopAddObserver(cfRunloop, observer, kCFRunLoopDefaultMode);
+        }
+        [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(timerprocess) userInfo:nil repeats:YES];
+        while (!end) {
+            [myRunLoop runUntilDate:[NSDate dateWithTimeIntervalSinceNow:3.0]];
+        }
+    }
+}
+
+- (void)timerprocess {
+    [[CYNetworkManager defaultManager] hotListWithParameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        [self.dataArray removeAllObjects];
+        NSDictionary *appDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        
+        self.dataArray = [CYLiveModel mj_objectArrayWithKeyValuesArray:appDic[@"lives"]];
+        [self.tableView reloadData];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+}
+
+void myRunLoopObserver(CFRunLoopObserverRef observer,CFRunLoopActivity activity,void* info)
+{
+    switch (activity) {
+        case kCFRunLoopEntry:
+            NSLog(@"run loop entry");
+            break;
+        case kCFRunLoopBeforeTimers:
+            NSLog(@"run loop before times");
+            break;
+        case kCFRunLoopBeforeSources:
+            NSLog(@"run loop before sources");
+            break;
+        case kCFRunLoopBeforeWaiting:
+            NSLog(@"run loop before waiting");
+            break;
+        case kCFRunLoopAfterWaiting:
+            NSLog(@"run loop after waiting");
+            break;
+        case kCFRunLoopExit:
+            NSLog(@"run loop exit");
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma mark - 数据源方法
