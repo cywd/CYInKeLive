@@ -17,13 +17,13 @@
  Create a snapshot image of the complete view hierarchy.
  This method should be called in main thread.
  */
-- (UIImage *)snapshotImage;
+- (UIImage *_Nonnull)snapshotImage;
 
 /**
  Create a snapshot PDF of the complete view hierarchy.
  This method should be called in main thread.
  */
-- (NSData *)snapshotPDF;
+- (NSData *_Nonnull)snapshotPDF;
 
 /**
  Shortcut to set the view.layer's shadow
@@ -32,13 +32,13 @@
  @param offset Shadow offset
  @param radius Shadow radius
  */
-- (void)setLayerShadow:(UIColor*)color offset:(CGSize)offset radius:(CGFloat)radius;
+- (void)setLayerShadow:(UIColor * _Nonnull)color offset:(CGSize)offset radius:(CGFloat)radius;
 /**
  *  设置阴影 郭liyuan+
  */
 - (void) makeInsetShadow;
 - (void) makeInsetShadowWithRadius:(float)radius Alpha:(float)alpha;
-- (void) makeInsetShadowWithRadius:(float)radius Color:(UIColor *)color Directions:(NSArray *)directions;
+- (void) makeInsetShadowWithRadius:(float)radius Color:(UIColor *_Nonnull)color Directions:(NSArray *_Nonnull)directions;
 
 /**
  Remove all subviews.
@@ -50,7 +50,7 @@
 /**
  Returns the view's view controller (may be nil).
  */
-@property (nonatomic, readonly) UIViewController *viewController;
+@property (nonatomic, readonly) UIViewController * _Nullable viewController;
 
 @property (nonatomic) CGFloat left;    ///< Shortcut for frame.origin.x.
 @property (nonatomic) CGFloat top;     ///< Shortcut for frame.origin.y

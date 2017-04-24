@@ -18,7 +18,7 @@
         [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
         image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
-    }else{
+    } else {
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0);
         [self.layer renderInContext:UIGraphicsGetCurrentContext()];
         image = UIGraphicsGetImageFromCurrentImageContext();
