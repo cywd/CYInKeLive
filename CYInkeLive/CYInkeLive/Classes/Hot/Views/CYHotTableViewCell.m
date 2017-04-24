@@ -106,7 +106,7 @@
         make.height.equalTo(@45);
     }];
     
-    _coverImageView = [[UIImageView alloc]init];
+    _coverImageView = [[UIImageView alloc] init];
     _coverImageView.contentMode = UIViewContentModeScaleAspectFill;
     [self.contentView addSubview:_coverImageView];
     [_coverImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -123,6 +123,18 @@
         make.right.equalTo(_coverImageView.mas_right).offset(-10);
         make.top.equalTo(_coverImageView.mas_top).offset(10);
         make.width.mas_equalTo(_logoImageView.mas_height).multipliedBy(1.3);
+    }];
+    
+    _moodLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    _moodLabel.textAlignment = NSTextAlignmentLeft;
+    _moodLabel.font = [UIFont systemFontOfSize:15];
+    _moodLabel.textColor = [UIColor whiteColor];
+    [self.contentView addSubview:_moodLabel];
+    [_moodLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.contentView);
+        make.left.equalTo(self.contentView.mas_left).offset(20);
+        make.right.equalTo(self.contentView.mas_right).offset(-20);
+        make.height.equalTo(@45);
     }];
 }
 
@@ -141,12 +153,12 @@
     
     _nameLabel.text = model.creator.nick;
     NSString *online_usersStr = [NSString stringWithFormat:@"%zd",model.online_users];
-    NSString *onLineText = [NSString stringWithFormat:@"%@人在看", online_usersStr];
+    NSString *onLineText = [NSString stringWithFormat:@"%@ 在看", online_usersStr];
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:onLineText];
     [str addAttribute:NSForegroundColorAttributeName value:[UIColor orangeColor] range:NSMakeRange(0, online_usersStr.length)];
     
     _onLineLabel.attributedText = str;
-    
+    _moodLabel.text = model.name;
     [_coverImageView sd_setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"live_empty_bg"]];
 }
 
