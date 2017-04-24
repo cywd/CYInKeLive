@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "room_jianbian_all.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "room_jianbian_all.png",
       "scale" : "2x"
     },
     {

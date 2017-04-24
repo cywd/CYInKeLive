@@ -15,14 +15,21 @@
 #import "CYAnchorView.h"
 #import "CYBottomView.h"
 #import "CYInPiaoView.h"
+#import "CYSendGiftView.h"
 
-@interface CYLiveViewController ()
+@interface CYLiveViewController () <UIScrollViewDelegate>
 
 @property (nonatomic, strong) IJKFFMoviePlayerController *player;
 
 @property (nonatomic, strong) CYAnchorView *anchorView;
 @property (nonatomic, strong) CYInPiaoView *inPiaoView;
 @property (nonatomic, strong) CYBottomView *bottomTool;
+@property (nonatomic, strong) CYSendGiftView *giftView;
+
+@property (nonatomic, strong) UIScrollView *scrollView;
+
+@property (nonatomic, strong) UILabel *ykNumLabel;
+@property (nonatomic, strong) UILabel *ykNumLabel1;
 
 // 最上层的视图
 @property (nonatomic, strong) UIView *topSideView;
@@ -78,22 +85,61 @@
     [_player shutdown];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat scale = scrollView.contentOffset.x/self.view.bounds.size.width;
+    self.ykNumLabel.alpha = scale;
+    self.ykNumLabel1.hidden = YES;
+    if (scale == 0) {
+        self.ykNumLabel1.hidden = NO;
+    }
+    
+}
+
 - (void)creatUI {
     [self.view addSubview:self.showView];
     [self.showView addSubview:self.backdropView];
-    [self.view insertSubview:self.topSideView aboveSubview:self.showView];
+    [self.view insertSubview:self.scrollView aboveSubview:self.showView];
+    
+    [self.scrollView addSubview:self.topSideView];
+    
+    // topSideView
     [self.view addSubview:self.closeButton];
     
-    [self.view addSubview:self.anchorView];
-    [self.view addSubview:self.inPiaoView];
+    [self.topSideView addSubview:self.bottomTool];
+    [self.topSideView addSubview:self.anchorView];
+    [self.topSideView addSubview:self.inPiaoView];
+    
+    [self.topSideView addSubview:self.ykNumLabel];
     self.anchorView.model = self.model;
     
-    [self.topSideView addSubview:self.bottomTool];
+    self.ykNumLabel.text = [NSString stringWithFormat:@"映客号:%@", self.model.id];
+    self.ykNumLabel1.text = [NSString stringWithFormat:@"映客号:%@", self.model.id];
+    
+    [self.ykNumLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.anchorView.mas_bottom).offset(5);
+        make.right.equalTo(self.topSideView.mas_right).offset(-10);
+        make.width.equalTo(@200);
+    }];
+    
+    [self.scrollView addSubview:self.ykNumLabel1];
+    [self.ykNumLabel1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(20);
+        make.right.equalTo(self.view.mas_right).offset(-10);
+        make.width.equalTo(@200);
+    }];
     
     [self.closeButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view).offset(-14);
         make.right.equalTo(self.view).offset(-10);
         make.width.height.equalTo(@40);
+    }];
+    
+    [self.giftView setGiftClick:^(NSInteger tag) {
+        
+    }];
+    __weak typeof(self) weakSelf = self;
+    [self.giftView setGrayClick:^{
+        weakSelf.bottomTool.hidden = NO;
     }];
 }
 
@@ -113,6 +159,21 @@
     [self.view insertSubview:playerVc.view atIndex:1];
 }
 
+- (UIScrollView *)scrollView {
+    if (!_scrollView) {
+        _scrollView = [[UIScrollView alloc] init];
+        _scrollView.delegate = self;
+        _scrollView.frame = self.view.bounds;
+        _scrollView.contentSize = CGSizeMake(self.view.bounds.size.width * 2, 0);
+        _scrollView.pagingEnabled = YES;
+        _scrollView.bounces = NO;
+        _scrollView.showsVerticalScrollIndicator = NO;
+        _scrollView.showsHorizontalScrollIndicator = NO;
+        _scrollView.contentOffset = CGPointMake(self.view.bounds.size.width, 0);
+    }
+    return _scrollView;
+}
+
 - (UIView *)showView {
     if (_showView == nil) {
         _showView = [[UIView alloc]init];
@@ -121,7 +182,6 @@
     }
     return _showView;
 }
-
 
 - (UIImageView *)backdropView {
     if (_backdropView == nil) {
@@ -142,8 +202,11 @@
 // 最上层视图
 - (UIView *)topSideView {
     if (_topSideView == nil) {
-        _topSideView = [[UIView alloc]initWithFrame:self.view.bounds];
+        _topSideView = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.view.bounds), self.view.bounds.origin.y, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
         _topSideView.backgroundColor = [UIColor clearColor];
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:_topSideView.bounds];
+        imgView.image = [UIImage imageNamed:@"room_jianbian_all"];
+        [_topSideView addSubview:imgView];
     }
     return _topSideView;
 }
@@ -179,7 +242,7 @@
     
     if (_bottomTool == nil) {
         _bottomTool = [[CYBottomView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 64, [UIScreen mainScreen].bounds.size.width, 64)];
-
+        __weak typeof(self) weakSelf = self;
         [_bottomTool setButtonClick:^(NSInteger tag) {
             switch (tag) {
                 case 100:
@@ -191,7 +254,8 @@
                 case 101:
                     // 礼物
                 {
-                    
+                    [weakSelf.giftView popShow];
+                    weakSelf.bottomTool.hidden = YES;
                 }
                     
                     break;
@@ -215,6 +279,33 @@
         _inPiaoView = [[CYInPiaoView alloc] initWithFrame:CGRectMake(10, 70, 140, 30)];
     }
     return _inPiaoView;
+}
+
+- (CYSendGiftView *)giftView {
+    if (!_giftView) {
+        _giftView = [[CYSendGiftView alloc] initWithFrame:self.view.bounds];
+    }
+    return _giftView;
+}
+
+- (UILabel *)ykNumLabel {
+    if (!_ykNumLabel) {
+        _ykNumLabel = [[UILabel alloc] init];
+        _ykNumLabel.textColor = [UIColor whiteColor];
+        _ykNumLabel.textAlignment = NSTextAlignmentRight;
+        _ykNumLabel.font = [UIFont systemFontOfSize:12];
+    }
+    return _ykNumLabel;
+}
+
+- (UILabel *)ykNumLabel1 {
+    if (!_ykNumLabel1) {
+        _ykNumLabel1 = [[UILabel alloc] init];
+        _ykNumLabel1.textColor = [UIColor whiteColor];
+        _ykNumLabel1.textAlignment = NSTextAlignmentRight;
+        _ykNumLabel1.font = [UIFont systemFontOfSize:12];
+    }
+    return _ykNumLabel1;
 }
 
 - (void)didReceiveMemoryWarning {

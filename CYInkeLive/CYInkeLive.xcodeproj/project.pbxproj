@@ -159,6 +159,9 @@
 		E74A40841E9C709A000339F5 /* CYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40731E9C709A000339F5 /* CYSearchViewController.m */; };
 		E74A40851E9C709A000339F5 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40781E9C709A000339F5 /* UIView+Frame.m */; };
 		E74A40881E9C70F7000339F5 /* CYTopTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E74A40871E9C70F7000339F5 /* CYTopTitleView.m */; };
+		E7560DCC1EADDAAF00BDF928 /* CYSendGiftView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7560DCB1EADDAAF00BDF928 /* CYSendGiftView.m */; };
+		E7560DD01EADDACB00BDF928 /* CYGiftCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7560DCE1EADDACB00BDF928 /* CYGiftCollectionViewCell.m */; };
+		E7560DD41EADE73600BDF928 /* FlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E7560DD31EADE73600BDF928 /* FlowLayout.m */; };
 		E770B76F1E9F20DE00B1F10E /* CYStartLiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = E770B76E1E9F20DE00B1F10E /* CYStartLiveView.m */; };
 		E770B7741E9F246000B1F10E /* UIControl+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = E770B7711E9F246000B1F10E /* UIControl+Add.m */; };
 		E770B7751E9F246000B1F10E /* UIView+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = E770B7731E9F246000B1F10E /* UIView+Add.m */; };
@@ -380,6 +383,12 @@
 		E74A40781E9C709A000339F5 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		E74A40861E9C70F7000339F5 /* CYTopTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTopTitleView.h; sourceTree = "<group>"; };
 		E74A40871E9C70F7000339F5 /* CYTopTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTopTitleView.m; sourceTree = "<group>"; };
+		E7560DCA1EADDAAF00BDF928 /* CYSendGiftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYSendGiftView.h; sourceTree = "<group>"; };
+		E7560DCB1EADDAAF00BDF928 /* CYSendGiftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSendGiftView.m; sourceTree = "<group>"; };
+		E7560DCD1EADDACB00BDF928 /* CYGiftCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYGiftCollectionViewCell.h; sourceTree = "<group>"; };
+		E7560DCE1EADDACB00BDF928 /* CYGiftCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYGiftCollectionViewCell.m; sourceTree = "<group>"; };
+		E7560DD21EADE73600BDF928 /* FlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowLayout.h; sourceTree = "<group>"; };
+		E7560DD31EADE73600BDF928 /* FlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowLayout.m; sourceTree = "<group>"; };
 		E770B76D1E9F20DE00B1F10E /* CYStartLiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYStartLiveView.h; sourceTree = "<group>"; };
 		E770B76E1E9F20DE00B1F10E /* CYStartLiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYStartLiveView.m; sourceTree = "<group>"; };
 		E770B7701E9F246000B1F10E /* UIControl+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+Add.h"; sourceTree = "<group>"; };
@@ -940,6 +949,12 @@
 				E776DE7B1EADB05600C8EBF3 /* CYInPiaoView.m */,
 				E7129A251EA0A20800D9E155 /* CYBottomView.h */,
 				E7129A261EA0A20800D9E155 /* CYBottomView.m */,
+				E7560DCA1EADDAAF00BDF928 /* CYSendGiftView.h */,
+				E7560DCB1EADDAAF00BDF928 /* CYSendGiftView.m */,
+				E7560DCD1EADDACB00BDF928 /* CYGiftCollectionViewCell.h */,
+				E7560DCE1EADDACB00BDF928 /* CYGiftCollectionViewCell.m */,
+				E7560DD21EADE73600BDF928 /* FlowLayout.h */,
+				E7560DD31EADE73600BDF928 /* FlowLayout.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1402,15 +1417,18 @@
 				E78F915F1E9CABA50033E336 /* CYNearbyCollectionViewCell.m in Sources */,
 				E770B7781E9F25AE00B1F10E /* CYMainRefrashGifHeader.m in Sources */,
 				E7129A331EA0DE0F00D9E155 /* CYSearchView.m in Sources */,
+				E7560DD41EADE73600BDF928 /* FlowLayout.m in Sources */,
 				E74A407B1E9C709A000339F5 /* CYTabBar.m in Sources */,
 				E7125CC61EA474AD0076C791 /* CYRecommendModel.m in Sources */,
 				E7129A391EA0ED9A00D9E155 /* CYRecommendTableViewCell.m in Sources */,
+				E7560DCC1EADDAAF00BDF928 /* CYSendGiftView.m in Sources */,
 				E78F91541E9C8BF50033E336 /* CYLiveModel.m in Sources */,
 				E74A40821E9C709A000339F5 /* CYNearbyViewController.m in Sources */,
 				E7125CBF1EA45FE80076C791 /* CYRecommendContentTableViewCell.m in Sources */,
 				E74A40831E9C709A000339F5 /* AppDelegate.m in Sources */,
 				E78F91501E9C88820033E336 /* CYHotTableViewCell.m in Sources */,
 				E7129A2D1EA0D82800D9E155 /* YKConst.m in Sources */,
+				E7560DD01EADDACB00BDF928 /* CYGiftCollectionViewCell.m in Sources */,
 				E771BD821EABABD000DEA6C3 /* CYNetworkManager.m in Sources */,
 				E74A40881E9C70F7000339F5 /* CYTopTitleView.m in Sources */,
 				E78F91691E9CE71C0033E336 /* CYNearbyHeaderCollectionReusableView.m in Sources */,
