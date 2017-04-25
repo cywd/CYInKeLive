@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) CYLiveModel *model;
 
+@property (nonatomic, copy) void (^followBlock)(CYLiveModel *selModel) ;
+
 @end

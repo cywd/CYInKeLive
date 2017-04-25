@@ -47,8 +47,7 @@
     [self addSubview:self.liveLabel];
     [self addSubview:self.lineLabel];
     [self addSubview:self.followButton];
-    
-    
+
 }
 
 - (void)layoutSubviews {
@@ -81,6 +80,10 @@
     }];
 }
 
+- (void)followButtonTap {
+    if (self.followBlock) self.followBlock(self.model);
+}
+
 - (void)setModel:(CYLiveModel *)model {
     _model = model;
     
@@ -103,7 +106,7 @@
 
 - (UILabel *)lineLabel {
     if (!_lineLabel) {
-        _lineLabel = [[UILabel alloc]init];
+        _lineLabel = [[UILabel alloc] init];
         _lineLabel.textColor = [UIColor whiteColor];
         _lineLabel.textAlignment = NSTextAlignmentLeft;
         _lineLabel.font = [UIFont systemFontOfSize:10];
@@ -113,7 +116,7 @@
 
 - (UILabel *)liveLabel {
     if (!_liveLabel) {
-        _liveLabel = [[UILabel alloc]init];
+        _liveLabel = [[UILabel alloc] init];
         _liveLabel.textColor = [UIColor whiteColor];
         _liveLabel.text = @"直播";
         _liveLabel.textAlignment = NSTextAlignmentLeft;
@@ -129,6 +132,7 @@
         [_followButton setTitle:@"关注" forState:UIControlStateNormal];
         _followButton.titleLabel.font = [UIFont systemFontOfSize:12];
         [_followButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_followButton addTarget:self action:@selector(followButtonTap) forControlEvents:UIControlEventTouchUpInside];
     }
     return _followButton;
 }

@@ -234,6 +234,9 @@
 - (CYAnchorView *)anchorView {
     if (!_anchorView) {
         _anchorView = [[CYAnchorView alloc] initWithFrame:CGRectMake(10, 30, 140, 36)];
+        [_anchorView setFollowBlock:^(CYLiveModel *mode){
+            
+        }];
     }
     return _anchorView;
 }
