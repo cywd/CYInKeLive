@@ -144,10 +144,40 @@
 }
 
 - (void)repareStartPlay {
+    // http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8
+    
+    IJKFFOptions *options = [IJKFFOptions optionsByDefault];
+    
+    // http://www.jianshu.com/p/d6a5d8756eec ijkplay播放直播流延时控制小结
+    // http://blog.csdn.net/a345017062/article/details/46356331
+    
+    // Set param
+//    [options setFormatOptionIntValue:1024 * 16 forKey:@"probsize"];
+//    [options setFormatOptionIntValue:50000 forKey:@"analyzeduration"];
+//    [options setPlayerOptionIntValue:0 forKey:@"videotoolbox"];
+//    [options setCodecOptionIntValue:IJK_AVDISCARD_DEFAULT forKey:@"skip_loop_filter"];
+//    [options setCodecOptionIntValue:IJK_AVDISCARD_DEFAULT forKey:@"skip_frame"];
+
+//    if (_isLive) {
+//        // Param for living
+//        [options setPlayerOptionIntValue:3000 forKey:@"max_cached_duration"];   // 最大缓存大小是3秒，可以依据自己的需求修改
+//        [options setPlayerOptionIntValue:1 forKey:@"infbuf"];  // 无限读
+//        [options setPlayerOptionIntValue:0 forKey:@"packet-buffering"];  //  关闭播放器缓冲
+//    } else {
+//        // Param for playback
+//        [options setPlayerOptionIntValue:0 forKey:@"max_cached_duration"];
+//        [options setPlayerOptionIntValue:0 forKey:@"infbuf"];
+//        [options setPlayerOptionIntValue:1 forKey:@"packet-buffering"];
+//    }
     
     // 创建IJKFFMoviePlayerController：专门用来直播，传入拉流地址就好了
-    IJKFFMoviePlayerController *playerVc = [[IJKFFMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:self.model.stream_addr] withOptions:nil];
-
+    IJKFFMoviePlayerController *playerVc = [[IJKFFMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:self.model.stream_addr] withOptions:options];
+    // 可以实时观察音视频缓冲区的大小
+    playerVc.shouldShowHudView = YES;
+    
+    // 自动播放
+    // self.player.shouldAutoplay = YES;
+    
     // 准备播放
     [playerVc prepareToPlay];
 
