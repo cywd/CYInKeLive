@@ -82,7 +82,7 @@
         }
         [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(timerprocess) userInfo:nil repeats:YES];
         while (!end) {
-            [myRunLoop runUntilDate:[NSDate dateWithTimeIntervalSinceNow:3.0]];
+            [myRunLoop runUntilDate:[NSDate dateWithTimeIntervalSinceNow:10.0]];
         }
     }
 }
@@ -175,7 +175,11 @@ void myRunLoopObserver(CFRunLoopObserverRef observer,CFRunLoopActivity activity,
 - (UITableView *)tableView
 {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-113) style:UITableViewStylePlain];
+        CGFloat statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
+        CGFloat navigationHeight = self.navigationController.navigationBar.frame.size.height;
+        CGFloat navH = statusHeight+navigationHeight;
+        CGFloat tabbarHeight = self.tabBarController.tabBar.frame.size.height;
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-tabbarHeight-navH) style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate = self;
         _tableView.rowHeight = [UIScreen mainScreen].bounds.size.width * 1.3 + 1;
