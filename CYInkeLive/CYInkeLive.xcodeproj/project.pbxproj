@@ -403,6 +403,7 @@
 		E771BD811EABABD000DEA6C3 /* CYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYNetworkManager.m; sourceTree = "<group>"; };
 		E776DE7A1EADB05600C8EBF3 /* CYInPiaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYInPiaoView.h; sourceTree = "<group>"; };
 		E776DE7B1EADB05600C8EBF3 /* CYInPiaoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYInPiaoView.m; sourceTree = "<group>"; };
+		E789A1CC20C8C96500D9CAC9 /* YKDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKDefine.h; sourceTree = "<group>"; };
 		E78F914D1E9C88820033E336 /* CYHotTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYHotTableViewCell.h; sourceTree = "<group>"; };
 		E78F914E1E9C88820033E336 /* CYHotTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYHotTableViewCell.m; sourceTree = "<group>"; };
 		E78F91521E9C8BF50033E336 /* CYLiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLiveModel.h; sourceTree = "<group>"; };
@@ -526,6 +527,7 @@
 				E7FD204E1EAAD9A9001C07C0 /* YKDoc.h */,
 				E7129A2B1EA0D82800D9E155 /* YKConst.h */,
 				E7129A2C1EA0D82800D9E155 /* YKConst.m */,
+				E789A1CC20C8C96500D9CAC9 /* YKDefine.h */,
 				E74A3ED81E9B7FD9000339F5 /* Resources */,
 				E74A3E821E9B5334000339F5 /* Assets.xcassets */,
 				E74A3E841E9B5334000339F5 /* LaunchScreen.storyboard */,
@@ -1173,7 +1175,7 @@
 				TargetAttributes = {
 					E74A3E721E9B5334000339F5 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 7ENE4DHQ7N;
+						DevelopmentTeam = JXJV99SFC3;
 						ProvisioningStyle = Automatic;
 					};
 					E74A3E8B1E9B5334000339F5 = {
@@ -1583,7 +1585,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 7ENE4DHQ7N;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CYInkeLive/Lib",
@@ -1602,7 +1604,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 7ENE4DHQ7N;
+				DEVELOPMENT_TEAM = JXJV99SFC3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CYInkeLive/Lib",

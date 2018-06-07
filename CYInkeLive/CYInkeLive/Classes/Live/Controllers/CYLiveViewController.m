@@ -16,6 +16,7 @@
 #import "CYBottomView.h"
 #import "CYInPiaoView.h"
 #import "CYSendGiftView.h"
+#import "YKDefine.h"
 
 @interface CYLiveViewController () <UIScrollViewDelegate>
 
@@ -123,13 +124,13 @@
     
     [self.scrollView addSubview:self.ykNumLabel1];
     [self.ykNumLabel1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(20);
+        make.top.equalTo(self.view.mas_top).offset(CY_STATUS_H);
         make.right.equalTo(self.view.mas_right).offset(-10);
         make.width.equalTo(@200);
     }];
     
     [self.closeButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.view).offset(-14);
+        make.bottom.equalTo(self.view).offset(-14-CY_TabbarSafeBottomMargin);
         make.right.equalTo(self.view).offset(-10);
         make.width.height.equalTo(@40);
     }];
@@ -185,6 +186,7 @@
     _player = playerVc;
 
     playerVc.view.frame = [UIScreen mainScreen].bounds;
+    playerVc.scalingMode = MPMovieScalingModeAspectFill;
 
     [self.view insertSubview:playerVc.view atIndex:1];
 }
@@ -263,7 +265,7 @@
 // 主播
 - (CYAnchorView *)anchorView {
     if (!_anchorView) {
-        _anchorView = [[CYAnchorView alloc] initWithFrame:CGRectMake(10, 30, 140, 36)];
+        _anchorView = [[CYAnchorView alloc] initWithFrame:CGRectMake(10, 10 + CY_STATUS_H, 140, 36)];
         [_anchorView setFollowBlock:^(CYLiveModel *mode){
             
         }];
@@ -274,7 +276,7 @@
 - (CYBottomView *)bottomTool{
     
     if (_bottomTool == nil) {
-        _bottomTool = [[CYBottomView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 64, [UIScreen mainScreen].bounds.size.width, 64)];
+        _bottomTool = [[CYBottomView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 64 - CY_TabbarSafeBottomMargin, [UIScreen mainScreen].bounds.size.width, 64)];
         __weak typeof(self) weakSelf = self;
         [_bottomTool setButtonClick:^(NSInteger tag) {
             switch (tag) {
@@ -309,7 +311,7 @@
 
 - (CYInPiaoView *)inPiaoView {
     if (!_inPiaoView) {
-        _inPiaoView = [[CYInPiaoView alloc] initWithFrame:CGRectMake(10, 70, 140, 30)];
+        _inPiaoView = [[CYInPiaoView alloc] initWithFrame:CGRectMake(10, 10+CY_STATUS_H+40, 140, 30)];
     }
     return _inPiaoView;
 }

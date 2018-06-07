@@ -8,9 +8,10 @@
 
 #import "CYCameraView.h"
 #import <Masonry.h>
+#import "YKDefine.h"
 
 #define LiveWidth [UIScreen mainScreen].bounds.size.width/2 // button的宽高
-#define LiveGetY [UIScreen mainScreen].bounds.size.height - 50 - [UIScreen mainScreen].bounds.size.width/2 // 灰色区域高度
+#define LiveGetY [UIScreen mainScreen].bounds.size.height - 50 - [UIScreen mainScreen].bounds.size.width/2 - CY_TabbarSafeBottomMargin // 灰色区域高度
 
 
 @interface CYCameraView ()
@@ -120,7 +121,7 @@
         _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _closeButton.backgroundColor = [UIColor whiteColor];
         [_closeButton setImage:[UIImage imageNamed:@"shortvideo_launch_close"] forState:UIControlStateNormal];
-        _closeButton.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 50, [UIScreen mainScreen].bounds.size.width, 50);
+        _closeButton.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 50 - CY_TabbarSafeBottomMargin, [UIScreen mainScreen].bounds.size.width, 50);
         [_closeButton addTarget:self action:@selector(closeClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _closeButton;
@@ -128,7 +129,7 @@
 
 - (UIView *)bgView {
     if (_bgView == nil) {
-        _bgView = [[UIView alloc]initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 50 - LiveWidth, [UIScreen mainScreen].bounds.size.width, LiveWidth)];
+        _bgView = [[UIView alloc]initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 50 - LiveWidth-CY_TabbarSafeBottomMargin, [UIScreen mainScreen].bounds.size.width, LiveWidth+50+CY_TabbarSafeBottomMargin)];
         _bgView.backgroundColor = [UIColor whiteColor];
     }
     return _bgView;
